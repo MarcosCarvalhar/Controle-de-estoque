@@ -1,0 +1,70 @@
+unit U_empresa;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, cxSpinEdit, cxDBEdit, cxCalendar, cxMaskEdit,
+  cxDropDownEdit, cxBlobEdit, cxTextEdit, Vcl.DBCtrls;
+
+type
+  Tfrm_empresa = class(Tfrm_Padrao)
+    Q_padraoID_EMPRESA: TIntegerField;
+    Q_padraoRAZAO_SOCIAL: TStringField;
+    Q_padraoN_FANTASIA: TStringField;
+    Q_padraoENDERECO: TStringField;
+    Q_padraoBAIRRO: TStringField;
+    Q_padraoCIDADE: TStringField;
+    Q_padraoUF: TStringField;
+    Q_padraoCEP: TStringField;
+    Q_padraoTELEFONE: TStringField;
+    Q_padraoCNPJ: TStringField;
+    Q_padraoEMAIL: TStringField;
+    Q_padraoLOGO: TBlobField;
+    Q_padraoCADASTRO: TDateField;
+    Label1: TLabel;
+    cxDBTextEdit1: TcxDBTextEdit;
+    Label2: TLabel;
+    cxDBTextEdit2: TcxDBTextEdit;
+    Label3: TLabel;
+    cxDBTextEdit3: TcxDBTextEdit;
+    Label4: TLabel;
+    cxDBTextEdit4: TcxDBTextEdit;
+    Label5: TLabel;
+    cxDBTextEdit5: TcxDBTextEdit;
+    Label6: TLabel;
+    cxDBTextEdit6: TcxDBTextEdit;
+    Label7: TLabel;
+    cxDBTextEdit7: TcxDBTextEdit;
+    Label8: TLabel;
+    cxDBTextEdit8: TcxDBTextEdit;
+    Label9: TLabel;
+    cxDBTextEdit9: TcxDBTextEdit;
+    Label10: TLabel;
+    cxDBTextEdit10: TcxDBTextEdit;
+    Label11: TLabel;
+    cxDBBlobEdit1: TcxDBBlobEdit;
+    Label12: TLabel;
+    cxDBDateEdit1: TcxDBDateEdit;
+    Label13: TLabel;
+    cxDBSpinEdit1: TcxDBSpinEdit;
+    Q_padraoNUMERO: TIntegerField;
+    Label14: TLabel;
+    cxDBSpinEdit2: TcxDBSpinEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_empresa: Tfrm_empresa;
+
+implementation
+
+{$R *.dfm}
+
+end.

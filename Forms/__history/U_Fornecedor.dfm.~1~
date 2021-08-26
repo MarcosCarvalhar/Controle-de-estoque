@@ -1,0 +1,24 @@
+inherited frm_Fornecedor: Tfrm_Fornecedor
+  Caption = 'Cadastro de Fornecedor'
+  ExplicitWidth = 770
+  ExplicitHeight = 482
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    inherited btnGravar: TBitBtn
+      Left = 441
+      ExplicitLeft = 441
+    end
+    inherited DBNavigator2: TDBNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited Q_padrao: TFDQuery
+    Left = 248
+    Top = 408
+  end
+  inherited DS_padrao: TDataSource
+    Left = 312
+    Top = 408
+  end
+end

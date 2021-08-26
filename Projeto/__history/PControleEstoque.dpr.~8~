@@ -1,0 +1,21 @@
+program PControleEstoque;
+
+uses
+  Vcl.Forms,
+  U_DM in '..\Forms\U_DM.pas' {DM: TDataModule},
+  U_padrao in '..\Forms\U_padrao.pas' {frm_Padrao},
+  U_Principal in '..\Forms\U_Principal.pas' {frmPrincipal},
+  U_usuario in '..\Forms\U_usuario.pas' {frm_Usuarios},
+  U_empresa in '..\Forms\U_empresa.pas' {frm_empresa},
+  U_Cliente in '..\Forms\U_Cliente.pas' {frm_Cliente},
+  U_Fornecedor in '..\Forms\U_Fornecedor.pas' {frm_Fornecedor};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TDM, DM);
+  Application.Run;
+end.

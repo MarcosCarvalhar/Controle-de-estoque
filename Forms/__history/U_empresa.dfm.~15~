@@ -1,0 +1,357 @@
+inherited frm_empresa: Tfrm_empresa
+  Caption = 'CADASTRO DA EMPRESA'
+  ClientHeight = 558
+  ExplicitHeight = 586
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel [0]
+    Left = 89
+    Top = 151
+    Width = 78
+    Height = 13
+    Caption = 'RAZAO_SOCIAL'
+    FocusControl = DB_razao_social
+  end
+  object Label2: TLabel [1]
+    Left = 89
+    Top = 199
+    Width = 63
+    Height = 13
+    Caption = 'N_FANTASIA'
+    FocusControl = DB_n_fantasia
+  end
+  object Label3: TLabel [2]
+    Left = 89
+    Top = 245
+    Width = 54
+    Height = 13
+    Caption = 'ENDERECO'
+    FocusControl = DB_endereco
+  end
+  object Label4: TLabel [3]
+    Left = 355
+    Top = 359
+    Width = 39
+    Height = 13
+    Caption = 'BAIRRO'
+    FocusControl = DB_bairro
+  end
+  object Label5: TLabel [4]
+    Left = 89
+    Top = 356
+    Width = 38
+    Height = 13
+    Caption = 'CIDADE'
+    FocusControl = DB_cidade
+  end
+  object Label6: TLabel [5]
+    Left = 609
+    Top = 359
+    Width = 13
+    Height = 13
+    Caption = 'UF'
+    FocusControl = DB_uf
+  end
+  object Label7: TLabel [6]
+    Left = 538
+    Top = 295
+    Width = 19
+    Height = 13
+    Caption = 'CEP'
+    FocusControl = DB_cep
+  end
+  object Label8: TLabel [7]
+    Left = 539
+    Top = 408
+    Width = 50
+    Height = 13
+    Caption = 'TELEFONE'
+    FocusControl = DB_telefone
+  end
+  object Label9: TLabel [8]
+    Left = 89
+    Top = 295
+    Width = 25
+    Height = 13
+    Caption = 'CNPJ'
+    FocusControl = DB_cnpj
+  end
+  object Label10: TLabel [9]
+    Left = 89
+    Top = 408
+    Width = 30
+    Height = 13
+    Caption = 'EMAIL'
+    FocusControl = DB_email
+  end
+  object Label12: TLabel [10]
+    Left = 232
+    Top = 101
+    Width = 55
+    Height = 13
+    Caption = 'CADASTRO'
+    FocusControl = DB_cadastro
+  end
+  object Label13: TLabel [11]
+    Left = 89
+    Top = 101
+    Width = 63
+    Height = 13
+    Caption = 'ID_EMPRESA'
+    FocusControl = DB_id_empresa
+  end
+  object Label14: TLabel [12]
+    Left = 538
+    Top = 242
+    Width = 43
+    Height = 13
+    Caption = 'NUMERO'
+    FocusControl = DB_numero
+  end
+  inherited Panel1: TPanel
+    TabOrder = 12
+    ExplicitLeft = 0
+    ExplicitTop = 0
+    ExplicitWidth = 760
+    inherited btn_Pesquisar: TBitBtn
+      Left = 210
+      ExplicitLeft = 210
+    end
+    inherited btn_Deletar: TBitBtn
+      Left = 570
+      ExplicitLeft = 570
+    end
+    inherited btn_Editar: TBitBtn
+      Left = 330
+      ExplicitLeft = 330
+    end
+    inherited btn_Novo: TBitBtn
+      Left = 450
+      ExplicitLeft = 450
+    end
+    inherited btnAtualizar: TBitBtn
+      Left = 90
+      ExplicitLeft = 90
+    end
+  end
+  object DB_razao_social: TcxDBTextEdit [14]
+    Left = 89
+    Top = 170
+    DataBinding.DataField = 'RAZAO_SOCIAL'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 1
+    Width = 571
+  end
+  object DB_n_fantasia: TcxDBTextEdit [15]
+    Left = 89
+    Top = 218
+    DataBinding.DataField = 'N_FANTASIA'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 2
+    Width = 571
+  end
+  object DB_endereco: TcxDBTextEdit [16]
+    Left = 89
+    Top = 261
+    DataBinding.DataField = 'ENDERECO'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 3
+    Width = 428
+  end
+  object DB_bairro: TcxDBTextEdit [17]
+    Left = 351
+    Top = 378
+    DataBinding.DataField = 'BAIRRO'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 8
+    Width = 230
+  end
+  object DB_cidade: TcxDBTextEdit [18]
+    Left = 89
+    Top = 375
+    DataBinding.DataField = 'CIDADE'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 7
+    Width = 230
+  end
+  object DB_uf: TcxDBTextEdit [19]
+    Left = 609
+    Top = 375
+    DataBinding.DataField = 'UF'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 9
+    Width = 50
+  end
+  object DB_cep: TcxDBTextEdit [20]
+    Left = 539
+    Top = 314
+    DataBinding.DataField = 'CEP'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 6
+    Width = 121
+  end
+  object DB_telefone: TcxDBTextEdit [21]
+    Left = 539
+    Top = 427
+    DataBinding.DataField = 'TELEFONE'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 11
+    Width = 121
+  end
+  object DB_cnpj: TcxDBTextEdit [22]
+    Left = 89
+    Top = 314
+    DataBinding.DataField = 'CNPJ'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 5
+    Width = 428
+  end
+  object DB_email: TcxDBTextEdit [23]
+    Left = 89
+    Top = 427
+    DataBinding.DataField = 'EMAIL'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 10
+    Width = 428
+  end
+  object DB_cadastro: TcxDBDateEdit [24]
+    Left = 232
+    Top = 120
+    DataBinding.DataField = 'CADASTRO'
+    DataBinding.DataSource = DS_padrao
+    Enabled = False
+    TabOrder = 13
+    Width = 121
+  end
+  object DB_id_empresa: TcxDBSpinEdit [25]
+    Left = 89
+    Top = 120
+    DataBinding.DataField = 'ID_EMPRESA'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 0
+    Width = 121
+  end
+  object DB_numero: TcxDBSpinEdit [26]
+    Left = 538
+    Top = 261
+    DataBinding.DataField = 'NUMERO'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 4
+    Width = 121
+  end
+  inherited Panel2: TPanel
+    Top = 488
+    TabOrder = 14
+    ExplicitTop = 488
+    ExplicitWidth = 760
+    inherited DBNavigator2: TDBNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited Q_padrao: TFDQuery
+    UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
+    UpdateOptions.FetchGeneratorsPoint = gpImmediate
+    UpdateOptions.GeneratorName = 'GEN_ID_EMPRESA'
+    UpdateOptions.AutoIncFields = 'ID_EMPRESA'
+    SQL.Strings = (
+      'SELECT ID_EMPRESA,'
+      '       RAZAO_SOCIAL,'
+      '       N_FANTASIA,'
+      '       ENDERECO,'
+      '       NUMERO,'
+      '       BAIRRO,'
+      '       CIDADE,'
+      '       UF,'
+      '       TELEFONE,'
+      '       CNPJ,'
+      '       EMAIL,'
+      '       CADASTRO,'
+      '       CEP'
+      '       FROM EMPRESA')
+    Left = 380
+    Top = 504
+    object Q_padraoID_EMPRESA: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID_EMPRESA'
+      Origin = 'ID_EMPRESA'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object Q_padraoRAZAO_SOCIAL: TStringField
+      FieldName = 'RAZAO_SOCIAL'
+      Origin = 'RAZAO_SOCIAL'
+      Required = True
+      Size = 100
+    end
+    object Q_padraoN_FANTASIA: TStringField
+      FieldName = 'N_FANTASIA'
+      Origin = 'N_FANTASIA'
+      Required = True
+      Size = 100
+    end
+    object Q_padraoENDERECO: TStringField
+      FieldName = 'ENDERECO'
+      Origin = 'ENDERECO'
+      Required = True
+      Size = 100
+    end
+    object Q_padraoBAIRRO: TStringField
+      FieldName = 'BAIRRO'
+      Origin = 'BAIRRO'
+      Required = True
+      Size = 100
+    end
+    object Q_padraoCIDADE: TStringField
+      FieldName = 'CIDADE'
+      Origin = 'CIDADE'
+      Required = True
+      Size = 100
+    end
+    object Q_padraoUF: TStringField
+      FieldName = 'UF'
+      Origin = 'UF'
+      Required = True
+      FixedChar = True
+      Size = 2
+    end
+    object Q_padraoCEP: TStringField
+      FieldName = 'CEP'
+      Origin = 'CEP'
+      Required = True
+      EditMask = '00000\-999;0;_'
+      Size = 14
+    end
+    object Q_padraoTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Origin = 'TELEFONE'
+      Required = True
+      EditMask = '!\(99\)0000-0000;0;_'
+      Size = 15
+    end
+    object Q_padraoCNPJ: TStringField
+      FieldName = 'CNPJ'
+      Origin = 'CNPJ'
+      Required = True
+      EditMask = '00.000.000/0000-00;0;'
+    end
+    object Q_padraoEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Origin = 'EMAIL'
+      Required = True
+      Size = 100
+    end
+    object Q_padraoCADASTRO: TDateField
+      FieldName = 'CADASTRO'
+      Origin = 'CADASTRO'
+      Required = True
+    end
+    object Q_padraoNUMERO: TIntegerField
+      FieldName = 'NUMERO'
+      Origin = 'NUMERO'
+      Required = True
+    end
+  end
+  inherited DS_padrao: TDataSource
+    Left = 300
+    Top = 504
+  end
+end

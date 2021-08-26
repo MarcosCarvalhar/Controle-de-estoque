@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/02/20 08:47:50.000.927,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2019/05/02 10:27:35.000.682,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/03/02 15:19:14.000.520,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/03/09 10:48:54.000.786,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/03/17 16:36:12.000.355,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/03/23 16:11:06.000.126,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/04/27 15:14:45.000.543,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/06/10 11:11:25.000.555,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/06/15 14:06:25.000.472,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/06/15 14:09:06.000.476,C:\ESTOQUE\Forms\U_Principal.dfm=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2021/06/15 14:09:06.000.476,C:\ESTOQUE\Forms\U_Principal.pas=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/06/15 14:09:37.000.211,C:\ESTOQUE\Projeto\Controle_estoque.dproj=C:\Users\User\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/06/15 15:32:58.000.872,=C:\ESTOQUE\Projeto\Unit1.pas</Transaction>
+    <Transaction>2021/06/15 15:33:30.000.806,C:\ESTOQUE\Forms\U_DM.pas=C:\ESTOQUE\Projeto\Unit1.pas</Transaction>
+    <Transaction>2021/06/15 15:33:30.000.806,C:\ESTOQUE\Forms\U_DM.dfm=C:\ESTOQUE\Projeto\Unit1.dfm</Transaction>
+    <Transaction>2021/07/16 15:13:14.000.808,=C:\ESTOQUE\Projeto\Unit1.pas</Transaction>
+    <Transaction>2021/07/16 15:14:13.000.421,C:\ESTOQUE\Forms\U_padrao.pas=C:\ESTOQUE\Projeto\Unit1.pas</Transaction>
+    <Transaction>2021/07/16 15:14:13.000.421,C:\ESTOQUE\Forms\U_padrao.dfm=C:\ESTOQUE\Projeto\Unit1.dfm</Transaction>
+    <Transaction>2021/07/28 11:19:39.000.530,=C:\ESTOQUE\Projeto\Unit1.pas</Transaction>
+    <Transaction>2021/07/28 11:21:01.000.376,C:\ESTOQUE\Forms\U_usuario.pas=C:\ESTOQUE\Projeto\Unit1.pas</Transaction>
+    <Transaction>2021/07/28 11:21:01.000.376,C:\ESTOQUE\Forms\U_usuario.dfm=C:\ESTOQUE\Projeto\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

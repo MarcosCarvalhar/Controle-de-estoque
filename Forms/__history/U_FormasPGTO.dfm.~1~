@@ -1,0 +1,25 @@
+inherited frm_formasPGTO: Tfrm_formasPGTO
+  Caption = 'CADASTRO DE FORMAS DE PAGAMENTO'
+  ClientHeight = 579
+  ExplicitHeight = 607
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    Top = 509
+    inherited btnGravar: TBitBtn
+      Left = 441
+      ExplicitLeft = 441
+    end
+    inherited DBNavigator2: TDBNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited Q_padrao: TFDQuery
+    Left = 280
+    Top = 512
+  end
+  inherited DS_padrao: TDataSource
+    Left = 336
+    Top = 512
+  end
+end

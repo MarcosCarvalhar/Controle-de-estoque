@@ -1,0 +1,42 @@
+unit U_Form_pesquisa_padrao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Mask, Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons,
+  Data.FMTBcd, Data.DB, Data.SqlExpr;
+
+type
+  Tfrm_Pesquisa_Padrao = class(TForm)
+    Panel1: TPanel;
+    cb_Chave_pesquisa: TComboBox;
+    Label1: TLabel;
+    ed_Nome: TEdit;
+    mk_Inicio: TMaskEdit;
+    mk_Fim: TMaskEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    DBGrid1: TDBGrid;
+    Panel2: TPanel;
+    BitBtn3: TBitBtn;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    BitBtn4: TBitBtn;
+    ds_pesq_padrao: TDataSource;
+    q_pesq_padrao: TSQLQuery;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao;
+
+implementation
+
+{$R *.dfm}
+
+end.

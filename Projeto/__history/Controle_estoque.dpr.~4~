@@ -1,0 +1,15 @@
+program Controle_estoque;
+
+uses
+  Vcl.Forms,
+  U_Principal in '..\Forms\U_Principal.pas' {frmPrincipal},
+  U_DM in '..\Forms\U_DM.pas' {DM: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.Run;
+end.
