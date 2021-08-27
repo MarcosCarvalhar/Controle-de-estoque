@@ -46,7 +46,7 @@ uses U_DM;
 
 procedure Tfrm_Pesquisa_Padrao.cb_Chave_pesquisaChange(Sender: TObject);
 begin
-  case cb_Chave_pesquisa.ItemIndex of
+
     0..1:
     begin        // pesquisa por codigo e nome
       ed_nome.enabled   := true;
@@ -80,6 +80,7 @@ begin
       mk_Inicio.SetFocus;
     end;
   end;
+end;
 
 end;
 

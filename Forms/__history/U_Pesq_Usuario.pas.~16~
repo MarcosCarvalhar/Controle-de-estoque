@@ -51,7 +51,7 @@ begin
 
     1:
     begin
-      q_pesq_padrao.SQL.Add('WHERE NOME LIKE :PNOME'); //cria o parametro
+      q_pesq_padrao.SQL.Add('WHERE NOME = :PNOME'); //cria o parametro
       q_pesq_padrao.ParamByName('PNOME').AsString := '%' +ed_nome.Text  + '%';  //aponta para o campo do parametro
     end;
 

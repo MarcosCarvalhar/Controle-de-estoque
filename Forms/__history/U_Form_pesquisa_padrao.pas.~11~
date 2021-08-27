@@ -28,7 +28,6 @@ type
     BitBtn4: TBitBtn;
     BitBtn1: TBitBtn;
     cb_Chave_pesquisa: TComboBox;
-    procedure cb_Chave_pesquisaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,44 +42,5 @@ implementation
 {$R *.dfm}
 
 uses U_DM;
-
-procedure Tfrm_Pesquisa_Padrao.cb_Chave_pesquisaChange(Sender: TObject);
-begin
-  case cb_Chave_pesquisa.ItemIndex of
-    0..1:
-    begin        // pesquisa por codigo e nome
-      ed_nome.enabled   := true;
-      mk_inicio.enabled := false;
-      mk_fim.enabled    := false;
-      lbl_Valor.enabled := true;
-      lbl_Data1.enabled := false;
-      lbl_Data2.enabled := false;
-      ed_nome.SetFocus;
-    end;
-
-    2:
-    begin      // pesquisa por cadastro
-      ed_nome.enabled   := false;
-      mk_inicio.enabled := true;
-      mk_fim.enabled    := false;
-      lbl_Valor.enabled := false;
-      lbl_Data1.enabled := false;
-      lbl_Data2.enabled := false;
-      mk_Inicio.SetFocus;
-    end;
-
-    3:
-    begin    // pesquisa por periodo
-      ed_nome.enabled   := false;
-      mk_inicio.enabled := true;
-      mk_fim.enabled    := true;
-      lbl_Valor.enabled := false;
-      lbl_Data1.enabled := true;
-      lbl_Data2.enabled := true;
-      mk_Inicio.SetFocus;
-    end;
-  end;
-
-end;
 
 end.

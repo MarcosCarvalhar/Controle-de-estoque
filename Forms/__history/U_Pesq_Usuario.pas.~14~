@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_Form_pesquisa_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons,
-  Vcl.Mask, Vcl.ExtCtrls, System.UITypes;
+  Vcl.Mask, Vcl.ExtCtrls;
 
 type
   Tfrm_Pesq_Usuario = class(Tfrm_Pesquisa_Padrao)
@@ -51,21 +51,10 @@ begin
 
     1:
     begin
-      q_pesq_padrao.SQL.Add('WHERE NOME LIKE :PNOME'); //cria o parametro
-      q_pesq_padrao.ParamByName('PNOME').AsString := '%' +ed_nome.Text  + '%';  //aponta para o campo do parametro
+      q_pesq_padrao.SQL.Add('WHERE NOME = :PNOME'); //cria o parametro
+      q_pesq_padrao.ParamByName('PNOME').AsString := ed_nome.Text;  //aponta para o campo do parametro
     end;
 
-    2:
-    begin
-      q_pesq_padrao.SQL.Add('WHERE CADASTRO = :PCADASTRO'); //cria o parametro
-      q_pesq_padrao.ParamByName('PCADASTRO').AsString := mk_Inicio.Text;  //aponta para o campo do parametro
-    end;
-
-    3:
-    begin
-      q_pesq_padrao.SQL.Add('WHERE NOME LIKE :PNOME'); //cria o parametro
-      q_pesq_padrao.ParamByName('PNOME').AsString := ed_nome.Text; //aponta para o campo do parametro
-    end;
   end;
 
   q_pesq_padrao.Open;  //abre a query e mostra o resultado

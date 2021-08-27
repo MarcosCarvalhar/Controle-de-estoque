@@ -5,9 +5,7 @@ object DM: TDM
   object conexao: TFDConnection
     ConnectionName = 'ESTOQUE'
     Params.Strings = (
-      
-        'Database=C:\Fontes\Estoque\Controle-de-estoque\XE\BANCO\ESTOQUE.' +
-        'FDB'
+      'Database=C:\Fontes\Estoque\XE\BANCO\ESTOQUE.FDB'
       'User_Name=SYSDBA'
       'Password=masterkey'
       'Protocol=TCPIP'
