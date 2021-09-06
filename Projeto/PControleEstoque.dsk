@@ -83,9 +83,9 @@ EditViewName=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Usuario.pas
 [View2]
 CustomEditViewType=TEditView
 Module=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Form_pesquisa_padrao.pas
-CursorX=72
-CursorY=78
-TopLine=67
+CursorX=74
+CursorY=55
+TopLine=46
 LeftCol=1
 Elisions=
 Bookmarks=
