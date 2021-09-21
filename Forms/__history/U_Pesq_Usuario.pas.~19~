@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_Form_pesquisa_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons,
-  Vcl.Mask, Vcl.ExtCtrls;
+  Vcl.Mask, Vcl.ExtCtrls, System.UITypes;
 
 type
   Tfrm_Pesq_Usuario = class(Tfrm_Pesquisa_Padrao)
@@ -44,9 +44,28 @@ begin
 
   case cb_Chave_pesquisa.ItemIndex of
     0:
-    begin
+    begin // pesquisa por codigo
       q_pesq_padrao.SQL.Add('WHERE ID_USUARIO = :PID_USUARIO'); //cria o parametro
       q_pesq_padrao.ParamByName('PID_USUARIO').AsString := ed_nome.Text;  //aponta para o campo do parametro
+    end;
+
+    1:
+    begin // pesquisa por nome
+      q_pesq_padrao.SQL.Add('WHERE NOME LIKE :PNOME'); //cria o parametro
+      q_pesq_padrao.ParamByName('PNOME').AsString := '%' +ed_nome.Text  + '%';  //aponta para o campo do parametro
+    end;
+
+    2:
+    begin // pesquisa por data
+      q_pesq_padrao.SQL.Add('WHERE CADASTRO = :PCADASTRO'); //cria o parametro
+      q_pesq_padrao.ParamByName('PCADASTRO').AsDate := StrToDate(mk_Inicio.Text);  //aponta para o campo do parametro
+    end;
+
+    3:
+    begin // pesquisa por periodo
+      q_pesq_padrao.SQL.Add('WHERE CADASTRO BETWEEN :PINICIO AND :PFIM'); //cria o parametro
+      q_pesq_padrao.ParamByName('PINICIO').AsDate   := StrToDate(mk_Inicio.Text); //aponta para o campo do parametro
+      q_pesq_padrao.ParamByName('PFIM').AsDate      := StrToDate(mk_Fim.Text); //aponta para o campo do parametro
     end;
   end;
 
@@ -67,25 +86,34 @@ begin
 
     0..1:
     begin        // pesquisa por codigo e nome
-      ed_nome.Visible   := true;
-      mk_inicio.Visible := false;
-      mk_fim.Visible    := false;
+      ed_nome.enabled   := true;
+      mk_inicio.enabled := false;
+      mk_fim.enabled    := false;
+      lbl_Valor.enabled := true;
+      lbl_Data1.enabled := false;
+      lbl_Data2.enabled := false;
       ed_nome.SetFocus;
     end;
 
     2:
     begin      // pesquisa por cadastro
-      ed_nome.Visible   := false;
-      mk_inicio.Visible := true;
-      mk_fim.Visible    := false;
+      ed_nome.enabled   := false;
+      mk_inicio.enabled := true;
+      mk_fim.enabled    := false;
+      lbl_Valor.enabled := false;
+      lbl_Data1.enabled := false;
+      lbl_Data2.enabled := false;
       mk_Inicio.SetFocus;
     end;
 
     3:
     begin    // pesquisa por periodo
-      ed_nome.Visible   :=false;
-      mk_inicio.Visible :=true;
-      mk_fim.Visible    :=true;
+      ed_nome.enabled   := false;
+      mk_inicio.enabled := true;
+      mk_fim.enabled    := true;
+      lbl_Valor.enabled := false;
+      lbl_Data1.enabled := true;
+      lbl_Data2.enabled := true;
       mk_Inicio.SetFocus;
     end;
   end;

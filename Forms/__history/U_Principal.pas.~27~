@@ -75,7 +75,7 @@ implementation
 
 {$R *.dfm}
 
-uses U_usuario, U_DM, U_empresa, U_Cliente, U_Fornecedor, U_Produto, U_FormasPGTO, U_Pesq_Usuario;
+uses U_usuario, U_DM, U_empresa, U_Cliente, U_Fornecedor, U_Produto, U_FormasPGTO;
 
 procedure TfrmPrincipal.Timer1Timer(Sender: TObject);
 begin
@@ -166,27 +166,15 @@ begin
   end;
 end;
 
-//procedure TfrmPrincipal.Abre_Tela_Usuario;
-//begin
-//  frm_Usuarios := Tfrm_Usuarios.Create(self);
-//  frm_Usuarios.ShowModal;
-//  try
-//
-//  finally
-//    frm_usuarios.free;
-//    frm_usuarios := nil;
-//  end;
-//end;
-
 procedure TfrmPrincipal.Abre_Tela_Usuario;
 begin
-  frm_Pesq_Usuario := Tfrm_Pesq_Usuario.Create(self);
-  frm_Pesq_Usuario.ShowModal;
+  frm_Usuarios := Tfrm_Usuarios.Create(self);
+  frm_Usuarios.ShowModal;
   try
 
   finally
-    frm_Pesq_Usuario.free;
-    frm_Pesq_Usuario := nil;
+    frm_usuarios.free;
+    frm_usuarios := nil;
   end;
 end;
 

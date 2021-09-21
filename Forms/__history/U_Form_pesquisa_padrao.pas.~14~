@@ -11,6 +11,14 @@ uses
 
 type
   Tfrm_Pesquisa_Padrao = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    ed_Nome: TEdit;
+    mk_Inicio: TMaskEdit;
+    mk_Fim: TMaskEdit;
+    lbl_Valor: TLabel;
+    lbl_Data1: TLabel;
+    lbl_Data2: TLabel;
     DBGrid1: TDBGrid;
     ds_pesq_padrao: TDataSource;
     q_pesq_padrao: TFDQuery;
@@ -18,7 +26,8 @@ type
     BitBtn3: TBitBtn;
     BitBtn2: TBitBtn;
     BitBtn4: TBitBtn;
-    BitBtn5: TBitBtn;
+    BitBtn1: TBitBtn;
+    cb_Chave_pesquisa: TComboBox;
     procedure cb_Chave_pesquisaChange(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
   private
@@ -34,7 +43,7 @@ implementation
 
 {$R *.dfm}
 
-uses U_DM, U_usuario;
+uses U_DM;
 
 procedure Tfrm_Pesquisa_Padrao.cb_Chave_pesquisaChange(Sender: TObject);
 begin

@@ -1,10 +1,7 @@
 inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
-  Align = alCustom
   Caption = 'PESQUISA DE USU'#193'RIOS'
-  ClientHeight = 460
-  ClientWidth = 779
-  ExplicitWidth = 785
-  ExplicitHeight = 488
+  ClientWidth = 793
+  ExplicitWidth = 799
   PixelsPerInch = 96
   TextHeight = 13
   object Label5: TLabel [0]
@@ -14,24 +11,25 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
     Height = 13
     Caption = 'NOME'
   end
+  object Label7: TLabel [1]
+    Left = 456
+    Top = 144
+    Width = 36
+    Height = 13
+    Caption = 'SENHA'
+  end
+  object Label8: TLabel [2]
+    Left = 456
+    Top = 184
+    Width = 27
+    Height = 13
+    Caption = 'TIPO'
+  end
   inherited Panel1: TPanel
-    Width = 779
+    Width = 793
     Height = 77
-    ExplicitTop = -6
-    ExplicitWidth = 779
+    ExplicitWidth = 793
     ExplicitHeight = 77
-    inherited mk_Inicio: TMaskEdit
-      Width = 118
-      EditMask = '!99/99/0000;1;_'
-      Text = '  /  /    '
-      ExplicitWidth = 118
-    end
-    inherited mk_Fim: TMaskEdit
-      Width = 118
-      EditMask = '!99/99/0000;1;_'
-      Text = '  /  /    '
-      ExplicitWidth = 118
-    end
     inherited BitBtn1: TBitBtn
       Left = 665
       Top = 34
@@ -40,18 +38,13 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
       ExplicitTop = 34
     end
     inherited cb_Chave_pesquisa: TComboBox
-      Items.Strings = (
-        'C'#211'DIGO'
-        'NOME'
-        'CADASTRO'
-        'PER'#205'ODO'
-        'TODOS')
+      OnChange = cb_Chave_pesquisaChange
     end
   end
   inherited DBGrid1: TDBGrid
     Top = 77
-    Width = 654
-    Height = 338
+    Width = 793
+    Height = 324
     DataSource = ds_pesq_padrao
     Columns = <
       item
@@ -62,13 +55,11 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
       item
         Expanded = False
         FieldName = 'NOME'
-        Width = 350
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'TIPO'
-        Width = 128
         Visible = True
       end
       item
@@ -78,20 +69,12 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
       end>
   end
   inherited Panel2: TPanel
-    Top = 77
-    Height = 383
-    ExplicitLeft = 0
-    ExplicitTop = 76
-    ExplicitHeight = 391
-    inherited BitBtn5: TBitBtn
-      OnClick = BitBtn5Click
+    Width = 793
+    ExplicitWidth = 793
+    inherited BitBtn3: TBitBtn
+      Left = 665
+      ExplicitLeft = 665
     end
-  end
-  inherited BitBtn3: TBitBtn
-    Left = 665
-    Top = 422
-    ExplicitLeft = 665
-    ExplicitTop = 422
   end
   inherited ds_pesq_padrao: TDataSource
     DataSet = q_pesq_padrao

@@ -24,7 +24,6 @@ object frmPrincipal: TfrmPrincipal
     Color = 8355711
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1185
     object btn_Usuario: TSpeedButton
       Left = 2
       Top = 0
@@ -3415,7 +3414,6 @@ object frmPrincipal: TfrmPrincipal
       item
         Width = 50
       end>
-    ExplicitWidth = 1185
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer

@@ -16,10 +16,9 @@ type
     q_pesq_padraoTIPO: TStringField;
     q_pesq_padraoCADASTRO: TDateField;
     Label5: TLabel;
-    Label7: TLabel;
-    Label8: TLabel;
     procedure BitBtn1Click(Sender: TObject);
     procedure cb_Chave_pesquisaChange(Sender: TObject);
+    procedure BitBtn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,6 +32,8 @@ implementation
 
 {$R *.dfm}
 
+uses U_usuario;
+
 procedure Tfrm_Pesq_Usuario.BitBtn1Click(Sender: TObject);
 begin
   q_pesq_padrao.Close;   //fecha
@@ -44,27 +45,33 @@ begin
 
   case cb_Chave_pesquisa.ItemIndex of
     0:
-    begin
+    begin // pesquisa por codigo
       q_pesq_padrao.SQL.Add('WHERE ID_USUARIO = :PID_USUARIO'); //cria o parametro
       q_pesq_padrao.ParamByName('PID_USUARIO').AsString := ed_nome.Text;  //aponta para o campo do parametro
     end;
 
     1:
-    begin
+    begin // pesquisa por nome
       q_pesq_padrao.SQL.Add('WHERE NOME LIKE :PNOME'); //cria o parametro
       q_pesq_padrao.ParamByName('PNOME').AsString := '%' +ed_nome.Text  + '%';  //aponta para o campo do parametro
     end;
 
     2:
-    begin
+    begin // pesquisa por data
       q_pesq_padrao.SQL.Add('WHERE CADASTRO = :PCADASTRO'); //cria o parametro
-      q_pesq_padrao.ParamByName('PCADASTRO').AsString := mk_Inicio.Text;  //aponta para o campo do parametro
+      q_pesq_padrao.ParamByName('PCADASTRO').AsDate := StrToDate(mk_Inicio.Text);  //aponta para o campo do parametro
     end;
 
     3:
-    begin
-      q_pesq_padrao.SQL.Add('WHERE NOME LIKE :PNOME'); //cria o parametro
-      q_pesq_padrao.ParamByName('PNOME').AsString := ed_nome.Text; //aponta para o campo do parametro
+    begin // pesquisa por periodo
+      q_pesq_padrao.SQL.Add('WHERE CADASTRO BETWEEN :PINICIO AND :PFIM'); //cria o parametro
+      q_pesq_padrao.ParamByName('PINICIO').AsDate := StrToDate(mk_Inicio.Text); //aponta para o campo do parametro
+      q_pesq_padrao.ParamByName('PFIM').AsDate    := StrToDate(mk_Fim.Text); //aponta para o campo do parametro
+    end;
+
+    4:
+    begin // mostra todos os usuarios
+      q_pesq_padrao.SQL.Add('ORDER BY ID_USUARIO'); //ordena por código
     end;
   end;
 
@@ -77,6 +84,19 @@ begin
     else
     abort;
 
+end;
+
+procedure Tfrm_Pesq_Usuario.BitBtn5Click(Sender: TObject);
+begin
+  inherited;
+  frm_Usuarios := Tfrm_Usuarios.Create(self);
+  frm_Usuarios.ShowModal;
+  try
+
+  finally
+    frm_usuarios.free;
+    frm_usuarios := nil;
+  end;
 end;
 
 procedure Tfrm_Pesq_Usuario.cb_Chave_pesquisaChange(Sender: TObject);
