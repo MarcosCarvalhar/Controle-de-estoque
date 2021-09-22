@@ -15,7 +15,6 @@ object frm_Padrao: Tfrm_Padrao
   KeyPreview = True
   OldCreateOrder = False
   Position = poScreenCenter
-  OnCreate = FormCreate
   OnKeyPress = FormKeyPress
   PixelsPerInch = 96
   TextHeight = 13
@@ -28,6 +27,7 @@ object frm_Padrao: Tfrm_Padrao
     Color = 8355711
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 764
     object btn_Deletar: TBitBtn
       Left = 232
       Top = 19
@@ -375,6 +375,7 @@ object frm_Padrao: Tfrm_Padrao
     Color = 8355711
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 764
     object BitBtn10: TBitBtn
       Left = 560
       Top = 24

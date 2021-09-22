@@ -48,7 +48,6 @@ inherited frm_Usuarios: Tfrm_Usuarios
   inherited Panel1: TPanel
     Width = 711
     TabOrder = 5
-    ExplicitWidth = 711
     inherited btn_Deletar: TBitBtn
       Left = 208
       Enabled = False
@@ -70,7 +69,6 @@ inherited frm_Usuarios: Tfrm_Usuarios
     Height = 57
     TabOrder = 6
     ExplicitTop = 368
-    ExplicitWidth = 711
     ExplicitHeight = 57
     inherited BitBtn10: TBitBtn
       Left = 544
@@ -168,14 +166,9 @@ inherited frm_Usuarios: Tfrm_Usuarios
       '  tipo,'
       '  cadastro'
       ' from usuario'
-      'where id_usuario = :pid_usuario')
+      ' order by id_usuario')
     Left = 184
     Top = 312
-    ParamData = <
-      item
-        Name = 'PID_USUARIO'
-        ParamType = ptInput
-      end>
     object Q_padraoID_USUARIO: TIntegerField
       AutoGenerateValue = arAutoInc
       FieldName = 'ID_USUARIO'

@@ -31,7 +31,7 @@ type
     btnVisualizar: TBitBtn;
     btnEditar: TBitBtn;
     btnAdicionar: TBitBtn;
-    btnDeletar: TBitBtn;
+    btnExcluir: TBitBtn;
     btnAtualizar: TBitBtn;
     procedure cb_Chave_pesquisaChange(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);

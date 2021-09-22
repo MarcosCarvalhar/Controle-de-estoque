@@ -3,20 +3,18 @@ inherited frm_Usuarios: Tfrm_Usuarios
   BorderStyle = bsToolWindow
   Caption = 'CADASTRO DE USU'#193'RIOS'
   ClientHeight = 425
-  ClientWidth = 711
-  ExplicitWidth = 717
   ExplicitHeight = 449
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel [0]
-    Left = 72
+    Left = 88
     Top = 118
     Width = 72
     Height = 13
     Caption = 'ID_USUARIO'
   end
   object Label2: TLabel [1]
-    Left = 76
+    Left = 92
     Top = 178
     Width = 31
     Height = 13
@@ -24,7 +22,7 @@ inherited frm_Usuarios: Tfrm_Usuarios
     FocusControl = db_nome
   end
   object Label3: TLabel [2]
-    Left = 72
+    Left = 88
     Top = 234
     Width = 36
     Height = 13
@@ -32,74 +30,64 @@ inherited frm_Usuarios: Tfrm_Usuarios
     FocusControl = db_senha
   end
   object Label4: TLabel [3]
-    Left = 314
+    Left = 330
     Top = 234
     Width = 27
     Height = 13
     Caption = 'TIPO'
   end
   object Label5: TLabel [4]
-    Left = 552
+    Left = 568
     Top = 234
     Width = 61
     Height = 13
     Caption = 'CADASTRO'
   end
   inherited Panel1: TPanel
-    Width = 711
     TabOrder = 5
-    ExplicitWidth = 711
     inherited btn_Deletar: TBitBtn
-      Left = 208
       Enabled = False
-      ExplicitLeft = 208
     end
     inherited btn_Editar: TBitBtn
-      Left = 383
       Enabled = False
-      ExplicitLeft = 383
-    end
-    inherited btnAtualizar: TBitBtn
-      Left = 544
-      ExplicitLeft = 544
     end
   end
   inherited Panel2: TPanel
     Top = 368
-    Width = 711
     Height = 57
     TabOrder = 6
     ExplicitTop = 368
-    ExplicitWidth = 711
     ExplicitHeight = 57
     inherited BitBtn10: TBitBtn
-      Left = 544
+      Left = 638
       Top = 16
-      ExplicitLeft = 544
+      ExplicitLeft = 638
       ExplicitTop = 16
     end
     inherited btnCancelar: TBitBtn
-      Left = 448
+      Left = 542
       Top = 16
       Align = alCustom
       Enabled = False
-      ExplicitLeft = 448
+      ExplicitLeft = 542
       ExplicitTop = 16
     end
     inherited DBNavigator2: TDBNavigator [2]
+      Left = 40
       Top = 15
       Hints.Strings = ()
+      ExplicitLeft = 40
       ExplicitTop = 15
     end
     inherited btnGravar: TBitBtn [3]
-      Left = 346
+      Left = 440
       Top = 16
-      ExplicitLeft = 346
+      ExplicitLeft = 440
       ExplicitTop = 16
     end
   end
   object db_nome: TcxDBTextEdit [7]
-    Left = 72
+    Left = 88
     Top = 197
     DataBinding.DataField = 'NOME'
     DataBinding.DataSource = DS_padrao
@@ -107,10 +95,10 @@ inherited frm_Usuarios: Tfrm_Usuarios
     Properties.CharCase = ecUpperCase
     Properties.ReadOnly = False
     TabOrder = 1
-    Width = 562
+    Width = 600
   end
   object db_senha: TcxDBTextEdit [8]
-    Left = 72
+    Left = 88
     Top = 253
     DataBinding.DataField = 'SENHA'
     DataBinding.DataSource = DS_padrao
@@ -122,17 +110,17 @@ inherited frm_Usuarios: Tfrm_Usuarios
     Width = 200
   end
   object db_cadastro: TcxDBTextEdit [9]
-    Left = 551
+    Left = 567
     Top = 253
     DataBinding.DataField = 'CADASTRO'
     DataBinding.DataSource = DS_padrao
     Enabled = False
     Properties.ReadOnly = True
     TabOrder = 4
-    Width = 83
+    Width = 121
   end
   object db_tipo: TDBComboBox [10]
-    Left = 314
+    Left = 330
     Top = 253
     Width = 208
     Height = 21
@@ -145,7 +133,7 @@ inherited frm_Usuarios: Tfrm_Usuarios
     TabOrder = 3
   end
   object db_id_usuario: TcxDBTextEdit [11]
-    Left = 72
+    Left = 88
     Top = 137
     DataBinding.DataField = 'ID_USUARIO'
     DataBinding.DataSource = DS_padrao
@@ -168,14 +156,9 @@ inherited frm_Usuarios: Tfrm_Usuarios
       '  tipo,'
       '  cadastro'
       ' from usuario'
-      'where id_usuario = :pid_usuario')
+      ' order by id_usuario')
     Left = 184
     Top = 312
-    ParamData = <
-      item
-        Name = 'PID_USUARIO'
-        ParamType = ptInput
-      end>
     object Q_padraoID_USUARIO: TIntegerField
       AutoGenerateValue = arAutoInc
       FieldName = 'ID_USUARIO'

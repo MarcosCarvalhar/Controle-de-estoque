@@ -88,6 +88,7 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
     end
     inherited btnDeletar: TBitBtn
       ParentFont = False
+      OnClick = btnExcluirClick
     end
   end
   inherited BitBtn3: TBitBtn

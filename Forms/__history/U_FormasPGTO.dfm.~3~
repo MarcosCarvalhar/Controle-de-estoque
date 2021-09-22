@@ -1,65 +1,50 @@
 inherited frm_formasPGTO: Tfrm_formasPGTO
   Caption = 'CADASTRO DE FORMAS DE PAGAMENTO'
   ClientHeight = 318
-  ClientWidth = 723
-  ExplicitWidth = 729
+  ClientWidth = 753
+  ExplicitWidth = 759
   ExplicitHeight = 346
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel [0]
-    Left = 72
+    Left = 88
     Top = 120
-    Width = 97
+    Width = 86
     Height = 13
     Caption = 'ID_FORMA_PGTO'
     FocusControl = DB_id_forma_pgto
   end
   object Label2: TLabel [1]
-    Left = 72
+    Left = 88
     Top = 176
-    Width = 64
+    Width = 59
     Height = 13
     Caption = 'DESCRICAO'
     FocusControl = DB_descricao
   end
   object Label3: TLabel [2]
-    Left = 215
+    Left = 231
     Top = 120
-    Width = 61
+    Width = 55
     Height = 13
     Caption = 'CADASTRO'
   end
   inherited Panel1: TPanel
-    Width = 723
-    ExplicitWidth = 753
-    inherited btnAtualizar: TBitBtn
-      Left = 552
-      ExplicitLeft = 552
-    end
+    Width = 753
   end
   inherited Panel2: TPanel
     Top = 248
-    Width = 723
-    ExplicitTop = 248
-    ExplicitWidth = 753
-    inherited BitBtn10: TBitBtn
-      Left = 552
-      ExplicitLeft = 552
-    end
-    inherited btnCancelar: TBitBtn
-      Left = 456
-      ExplicitLeft = 456
-    end
+    Width = 753
     inherited btnGravar: TBitBtn
-      Left = 354
-      ExplicitLeft = 354
+      Left = 441
+      ExplicitLeft = 441
     end
     inherited DBNavigator2: TDBNavigator
       Hints.Strings = ()
     end
   end
   object DB_id_forma_pgto: TcxDBSpinEdit [5]
-    Left = 72
+    Left = 88
     Top = 136
     DataBinding.DataField = 'ID_FORMA_PGTO'
     DataBinding.DataSource = DS_padrao
@@ -67,7 +52,7 @@ inherited frm_formasPGTO: Tfrm_formasPGTO
     Width = 121
   end
   object DB_descricao: TcxDBTextEdit [6]
-    Left = 72
+    Left = 88
     Top = 195
     DataBinding.DataField = 'DESCRICAO'
     DataBinding.DataSource = DS_padrao
@@ -75,7 +60,7 @@ inherited frm_formasPGTO: Tfrm_formasPGTO
     Width = 570
   end
   object DB_cadastro: TcxDBTextEdit [7]
-    Left = 215
+    Left = 231
     Top = 136
     DataBinding.DataField = 'CADASTRO'
     DataBinding.DataSource = DS_padrao

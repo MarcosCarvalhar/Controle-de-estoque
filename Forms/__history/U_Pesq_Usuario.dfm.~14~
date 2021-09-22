@@ -69,6 +69,9 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
   end
   inherited Panel2: TPanel
     ParentCtl3D = False
+    ExplicitLeft = -4
+    ExplicitTop = 94
+    ExplicitHeight = 369
     inherited btnVisualizar: TBitBtn
       Top = 40
       OnClick = BitBtn5Click
@@ -79,14 +82,13 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
       Align = alCustom
       Anchors = [akLeft]
       ParentBiDiMode = False
-      ExplicitTop = 97
+      ExplicitTop = 98
     end
     inherited btnAdicionar: TBitBtn
       Top = 164
-      OnClick = btnAdicionarClick
       ExplicitTop = 164
     end
-    inherited btnDeletar: TBitBtn
+    inherited btnExcluir: TBitBtn
       ParentFont = False
     end
   end

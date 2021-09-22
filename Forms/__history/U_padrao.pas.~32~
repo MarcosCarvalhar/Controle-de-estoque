@@ -29,7 +29,7 @@ type
     procedure btnGravarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnAtualizarClick(Sender: TObject);
-//    procedure trataBotoes();
+    procedure trataBotoes();
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
@@ -47,7 +47,7 @@ implementation
 procedure Tfrm_Padrao.btnAtualizarClick(Sender: TObject);
 begin
   // atualiza os registros
-
+  trataBotoes;
   Q_padrao.Refresh;
   MessageDlg('Registro atualizado com sucesso!', mtInformation, [mbOK], 0);
 end;
@@ -55,7 +55,7 @@ end;
 procedure Tfrm_Padrao.btnCancelarClick(Sender: TObject);
 begin
   // cancela as alterações
-
+  trataBotoes;
   Q_padrao.Cancel;
   MessageDlg('Ação cancelada pelo usuário!', mtInformation, [mbOK], 0);
 end;
@@ -63,7 +63,7 @@ end;
 procedure Tfrm_Padrao.btnGravarClick(Sender: TObject);
 begin
   // grava as alterações
-
+  trataBotoes;
   Q_padrao.Post;
   MessageDlg('Registro salvo com sucesso!', mtInformation, [mbOK], 0);
 end;
@@ -71,22 +71,22 @@ end;
 procedure Tfrm_Padrao.btn_DeletarClick(Sender: TObject);
 begin
   // deleta o registro
-
+  trataBotoes;
   if MessageDlg('Deseja deletar este registro?', mtConfirmation, [mbOK, mbNo], 0) = mrOk then
     begin
       Q_padrao.Delete;
       MessageDlg('Registro deletado com sucesso!', mtInformation, [mbOK], 0);
-
+      trataBotoes;
     end
     else
-
+    trataBotoes;
     abort;
 end;
 
 procedure Tfrm_Padrao.btn_EditarClick(Sender: TObject);
 begin
   // edita o registro
-
+  trataBotoes;
 //  if Q_padrao.Active = True then btn_Editar.Enabled := True;
 
   if MessageDlg('Deseja editar este registro?', mtConfirmation, [mbOK, mbNo], 0) = mrOk then
@@ -94,14 +94,14 @@ begin
       Q_padrao.edit;
     end
     else
-
+    trataBotoes;
     abort;
 end;
 
 procedure Tfrm_Padrao.btn_NovoClick(Sender: TObject);
 begin
   // cria um novo registro
-
+  trataBotoes;
   Q_padrao.Open();
   Q_padrao.Append;
 end;
@@ -122,16 +122,16 @@ begin
     end;
 end;
 
-//procedure Tfrm_Padrao.trataBotoes;
-//begin
-//  // habilita ou desabilita botões
-////  if Q_padrao.Active = True then btn_Editar.Enabled := True;
-//  btn_Novo.Enabled := not btn_Novo.Enabled;
-//  btn_Editar.Enabled := not btn_Editar.Enabled;
-//  btn_Deletar.Enabled := not btn_Deletar.Enabled;
-//  btnGravar.Enabled := not btnGravar.Enabled;
-//  btnAtualizar.Enabled := not btnAtualizar.Enabled;
-//  btnCancelar.Enabled := not btnCancelar.Enabled;
-//end;
+procedure Tfrm_Padrao.trataBotoes;
+begin
+  // habilita ou desabilita botões
+//  if Q_padrao.Active = True then btn_Editar.Enabled := True;
+  btn_Novo.Enabled := not btn_Novo.Enabled;
+  btn_Editar.Enabled := not btn_Editar.Enabled;
+  btn_Deletar.Enabled := not btn_Deletar.Enabled;
+  btnGravar.Enabled := not btnGravar.Enabled;
+  btnAtualizar.Enabled := not btnAtualizar.Enabled;
+  btnCancelar.Enabled := not btnCancelar.Enabled;
+end;
 
 end.

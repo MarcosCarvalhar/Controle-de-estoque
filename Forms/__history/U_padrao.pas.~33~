@@ -29,6 +29,7 @@ type
     procedure btnGravarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnAtualizarClick(Sender: TObject);
+    procedure acao(ch :char);
 //    procedure trataBotoes();
     procedure FormCreate(Sender: TObject);
   private

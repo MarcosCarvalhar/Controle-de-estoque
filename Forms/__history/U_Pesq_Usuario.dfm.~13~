@@ -1,6 +1,10 @@
 inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
   Align = alCustom
   Caption = 'PESQUISA DE USU'#193'RIOS'
+  ClientHeight = 460
+  ClientWidth = 779
+  ExplicitWidth = 785
+  ExplicitHeight = 488
   PixelsPerInch = 96
   TextHeight = 13
   object Label5: TLabel [0]
@@ -11,7 +15,10 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
     Caption = 'NOME'
   end
   inherited Panel1: TPanel
-    ParentShowHint = False
+    Width = 779
+    Height = 77
+    ExplicitWidth = 779
+    ExplicitHeight = 77
     inherited mk_Inicio: TMaskEdit
       Width = 118
       EditMask = '!99/99/0000;1;_'
@@ -40,8 +47,9 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
     end
   end
   inherited DBGrid1: TDBGrid
-    Top = 97
-    Width = 651
+    Top = 77
+    Width = 654
+    Height = 338
     DataSource = ds_pesq_padrao
     Columns = <
       item
@@ -68,43 +76,19 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
       end>
   end
   inherited Panel2: TPanel
-    ParentCtl3D = False
-    inherited btnVisualizar: TBitBtn
-      Top = 40
+    Top = 77
+    Height = 383
+    ExplicitTop = 77
+    ExplicitHeight = 383
+    inherited BitBtn5: TBitBtn
       OnClick = BitBtn5Click
-      ExplicitTop = 40
-    end
-    inherited btnEditar: TBitBtn
-      Top = 97
-      Align = alCustom
-      Anchors = [akLeft]
-      ParentBiDiMode = False
-      ExplicitTop = 97
-    end
-    inherited btnAdicionar: TBitBtn
-      Top = 164
-      OnClick = btnAdicionarClick
-      ExplicitTop = 164
-    end
-    inherited btnDeletar: TBitBtn
-      ParentFont = False
     end
   end
   inherited BitBtn3: TBitBtn
     Left = 665
-    Top = 427
+    Top = 422
     ExplicitLeft = 665
-    ExplicitTop = 427
-  end
-  inherited btnImprimir: TBitBtn
-    Left = 550
-    Top = 427
-    ExplicitLeft = 550
-    ExplicitTop = 427
-  end
-  inherited btnBaixar: TBitBtn
-    Top = 427
-    ExplicitTop = 427
+    ExplicitTop = 422
   end
   inherited ds_pesq_padrao: TDataSource
     DataSet = q_pesq_padrao

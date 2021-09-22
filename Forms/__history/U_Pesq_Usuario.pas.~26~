@@ -19,10 +19,6 @@ type
     procedure BitBtn1Click(Sender: TObject);
     procedure cb_Chave_pesquisaChange(Sender: TObject);
     procedure BitBtn5Click(Sender: TObject);
-    procedure btnEditarClick(Sender: TObject);
-    procedure abre_cadastro_usuario;
-    procedure btnAdicionarClick(Sender: TObject);
-    procedure btnDeletarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,25 +35,6 @@ implementation
 uses U_usuario;
 
 
-
-procedure Tfrm_Pesq_Usuario.abre_cadastro_usuario;
-begin
-  frm_Usuarios := Tfrm_Usuarios.Create(self);
-  frm_Pesq_Usuario.Hide;
-
-// passa o valor do dbgrid para a query e abre o cadastro do usuario
-  frm_Usuarios.Q_padrao.close;
-  frm_Usuarios.Q_padrao.ParamByName('PID_USUARIO').AsInteger := q_pesq_padraoID_USUARIO.AsInteger;
-  frm_Usuarios.Q_padrao.Open;
-  frm_Usuarios.ShowModal;
-  try
-
-  finally
-    frm_usuarios.free;
-    frm_usuarios := nil;
-    frm_Pesq_Usuario.Show;
-  end;
-end;
 
 procedure Tfrm_Pesq_Usuario.BitBtn1Click(Sender: TObject);
 begin
@@ -80,6 +57,12 @@ begin
       q_pesq_padrao.SQL.Add('WHERE NOME LIKE :PNOME'); //cria o parametro
       q_pesq_padrao.ParamByName('PNOME').AsString := '%' +ed_nome.Text  + '%';  //aponta para o campo do parametro
     end;
+
+//    2:
+//    begin // pesquisa por data
+//      q_pesq_padrao.SQL.Add('WHERE CADASTRO = :PCADASTRO'); //cria o parametro
+//      q_pesq_padrao.ParamByName('PCADASTRO').AsDate := StrToDate(mk_Inicio.Text);  //aponta para o campo do parametro
+//    end;
 
     2:
     begin // pesquisa por periodo
@@ -108,35 +91,21 @@ end;
 procedure Tfrm_Pesq_Usuario.BitBtn5Click(Sender: TObject);
 begin
   inherited;
-  abre_cadastro_usuario;
-  frm_Usuarios.acao := 'V';
-end;
+  frm_Usuarios := Tfrm_Usuarios.Create(self);
+  frm_Pesq_Usuario.Hide;
 
-procedure Tfrm_Pesq_Usuario.btnAdicionarClick(Sender: TObject);
-begin
-  inherited;
-  abre_cadastro_usuario;
-  frm_Usuarios.acao := 'A';
-end;
 
-procedure Tfrm_Pesq_Usuario.btnEditarClick(Sender: TObject);
-begin
-  inherited;
-  abre_cadastro_usuario;
-  frm_Usuarios.acao := 'E';
-//  if MessageDlg('Deseja editar este registro?', mtConfirmation, [mbOK, mbNo], 0) = mrOk then
-//    begin
-//      q_pesq_padrao.edit;
-//    end
-//    else
-//    abort;
-end;
 
-procedure Tfrm_Pesq_Usuario.btnDeletarClick(Sender: TObject);
-begin
-  inherited;
-  abre_cadastro_usuario;
-  frm_Usuarios.acao := 'D';
+  frm_Usuarios.ShowModal;
+  try
+
+  finally
+    frm_usuarios.free;
+    frm_usuarios := nil;
+    frm_Pesq_Usuario.Show;
+  end;
+  q_pesq_padrao.SQL.Add('WHERE ID_USUARIO = :PID_USUARIO'); //cria o parametro
+//  q_pesq_padrao.ParamByName('PID_USUARIO').AsString := DBGrid1.DataSource.DataSet.FieldByName(DBGrid1.it[0];  //aponta para o campo do parametro
 end;
 
 procedure Tfrm_Pesq_Usuario.cb_Chave_pesquisaChange(Sender: TObject);

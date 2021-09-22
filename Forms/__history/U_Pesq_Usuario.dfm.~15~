@@ -83,10 +83,9 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
     end
     inherited btnAdicionar: TBitBtn
       Top = 164
-      OnClick = btnAdicionarClick
       ExplicitTop = 164
     end
-    inherited btnDeletar: TBitBtn
+    inherited btnExcluir: TBitBtn
       ParentFont = False
     end
   end

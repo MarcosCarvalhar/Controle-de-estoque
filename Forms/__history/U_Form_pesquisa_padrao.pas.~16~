@@ -24,15 +24,11 @@ type
     q_pesq_padrao: TFDQuery;
     Panel2: TPanel;
     BitBtn3: TBitBtn;
-    btnImprimir: TBitBtn;
-    btnBaixar: TBitBtn;
+    BitBtn2: TBitBtn;
+    BitBtn4: TBitBtn;
     BitBtn1: TBitBtn;
     cb_Chave_pesquisa: TComboBox;
-    btnVisualizar: TBitBtn;
-    btnEditar: TBitBtn;
-    btnAdicionar: TBitBtn;
-    btnDeletar: TBitBtn;
-    btnAtualizar: TBitBtn;
+    BitBtn5: TBitBtn;
     procedure cb_Chave_pesquisaChange(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
   private
