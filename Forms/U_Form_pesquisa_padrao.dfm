@@ -525,6 +525,7 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000}
       TabOrder = 3
+      OnClick = btnDeletarClick
     end
     object btnAtualizar: TBitBtn
       Left = 16

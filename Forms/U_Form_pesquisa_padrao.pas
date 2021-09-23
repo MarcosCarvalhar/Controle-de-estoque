@@ -35,6 +35,7 @@ type
     btnAtualizar: TBitBtn;
     procedure cb_Chave_pesquisaChange(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure btnDeletarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,6 +50,21 @@ implementation
 {$R *.dfm}
 
 uses U_DM, U_usuario;
+
+procedure Tfrm_Pesquisa_Padrao.btnDeletarClick(Sender: TObject);
+begin
+  // deleta o registro
+
+  if MessageDlg('Deseja deletar este registro?', mtConfirmation, [mbOK, mbNo], 0) = mrOk then
+    begin
+      q_pesq_padrao.Delete;
+      MessageDlg('Registro deletado com sucesso!', mtInformation, [mbOK], 0);
+
+    end
+    else
+
+    abort;
+end;
 
 procedure Tfrm_Pesquisa_Padrao.cb_Chave_pesquisaChange(Sender: TObject);
 begin
