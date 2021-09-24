@@ -8,26 +8,26 @@ uses
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, cxGraphics, cxControls,
   cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, Vcl.DBCtrls, cxDBEdit, cxTextEdit, cxMaskEdit,
-  cxSpinEdit, U_DM, FireDAC.UI.Intf, FireDAC.VCLUI.Wait, FireDAC.Comp.UI;
+  cxSpinEdit, U_DM, FireDAC.UI.Intf, FireDAC.VCLUI.Wait, FireDAC.Comp.UI, Vcl.Mask;
 
 type
   Tfrm_Usuarios = class(Tfrm_Padrao)
     Label1: TLabel;
     Label2: TLabel;
-    db_nome: TcxDBTextEdit;
     Label3: TLabel;
-    db_senha: TcxDBTextEdit;
     Label4: TLabel;
     Label5: TLabel;
-    db_cadastro: TcxDBTextEdit;
     db_tipo: TDBComboBox;
-    db_id_usuario: TcxDBTextEdit;
     Q_padraoNOME: TStringField;
     Q_padraoTIPO: TStringField;
     Q_padraoCADASTRO: TDateField;
     Q_padraoID_USUARIO: TIntegerField;
     Q_padraoSENHA: TStringField;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    db_id_usuario: TDBEdit;
+    db_nome: TDBEdit;
+    db_senha: TDBEdit;
+    db_cadastro: TDBEdit;
     procedure btn_NovoClick(Sender: TObject);
     procedure btn_EditarClick(Sender: TObject);
     procedure trataCampos();

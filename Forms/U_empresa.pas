@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, cxGraphics, cxControls,
   cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, cxSpinEdit, cxDBEdit, cxCalendar, cxMaskEdit,
-  cxDropDownEdit, cxBlobEdit, cxTextEdit, Vcl.DBCtrls;
+  cxDropDownEdit, cxBlobEdit, cxTextEdit, Vcl.DBCtrls, Vcl.Mask;
 
 type
   Tfrm_empresa = class(Tfrm_Padrao)
@@ -25,32 +25,32 @@ type
     Q_padraoEMAIL: TStringField;
     Q_padraoCADASTRO: TDateField;
     Label1: TLabel;
-    DB_razao_social: TcxDBTextEdit;
     Label2: TLabel;
-    DB_n_fantasia: TcxDBTextEdit;
     Label3: TLabel;
-    DB_endereco: TcxDBTextEdit;
     Label4: TLabel;
-    DB_bairro: TcxDBTextEdit;
     Label5: TLabel;
-    DB_cidade: TcxDBTextEdit;
     Label6: TLabel;
-    DB_uf: TcxDBTextEdit;
     Label7: TLabel;
-    DB_cep: TcxDBTextEdit;
     Label8: TLabel;
-    DB_telefone: TcxDBTextEdit;
     Label9: TLabel;
-    DB_cnpj: TcxDBTextEdit;
     Label10: TLabel;
-    DB_email: TcxDBTextEdit;
     Label12: TLabel;
     Label13: TLabel;
-    DB_id_empresa: TcxDBSpinEdit;
     Q_padraoNUMERO: TIntegerField;
     Label14: TLabel;
-    DB_numero: TcxDBTextEdit;
-    DB_Cadastro: TcxDBTextEdit;
+    db_id_empresa: TDBEdit;
+    db_cadastro: TDBEdit;
+    db_razao_social: TDBEdit;
+    db_n_fantasia: TDBEdit;
+    db_email: TDBEdit;
+    db_telefone: TDBEdit;
+    db_CNPJ: TDBEdit;
+    db_CEP: TDBEdit;
+    db_endereco: TDBEdit;
+    db_numero: TDBEdit;
+    db_bairro: TDBEdit;
+    db_cidade: TDBEdit;
+    db_UF: TDBEdit;
     procedure btn_NovoClick(Sender: TObject);
   private
     { Private declarations }

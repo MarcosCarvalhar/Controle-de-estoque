@@ -23,37 +23,35 @@ type
     Q_padraoTELEFONE: TStringField;
     Q_padraoCNPJ: TStringField;
     Q_padraoEMAIL: TStringField;
-    Q_padraoLOGO: TBlobField;
     Q_padraoCADASTRO: TDateField;
     Label1: TLabel;
-    cxDBTextEdit1: TcxDBTextEdit;
+    DB_razao_social: TcxDBTextEdit;
     Label2: TLabel;
-    cxDBTextEdit2: TcxDBTextEdit;
+    DB_n_fantasia: TcxDBTextEdit;
     Label3: TLabel;
-    cxDBTextEdit3: TcxDBTextEdit;
+    DB_endereco: TcxDBTextEdit;
     Label4: TLabel;
-    cxDBTextEdit4: TcxDBTextEdit;
+    DB_bairro: TcxDBTextEdit;
     Label5: TLabel;
-    cxDBTextEdit5: TcxDBTextEdit;
+    DB_cidade: TcxDBTextEdit;
     Label6: TLabel;
-    cxDBTextEdit6: TcxDBTextEdit;
+    DB_uf: TcxDBTextEdit;
     Label7: TLabel;
-    cxDBTextEdit7: TcxDBTextEdit;
+    DB_cep: TcxDBTextEdit;
     Label8: TLabel;
-    cxDBTextEdit8: TcxDBTextEdit;
+    DB_telefone: TcxDBTextEdit;
     Label9: TLabel;
-    cxDBTextEdit9: TcxDBTextEdit;
+    DB_cnpj: TcxDBTextEdit;
     Label10: TLabel;
-    cxDBTextEdit10: TcxDBTextEdit;
-    Label11: TLabel;
-    cxDBBlobEdit1: TcxDBBlobEdit;
+    DB_email: TcxDBTextEdit;
     Label12: TLabel;
-    cxDBDateEdit1: TcxDBDateEdit;
     Label13: TLabel;
-    cxDBSpinEdit1: TcxDBSpinEdit;
+    DB_id_empresa: TcxDBSpinEdit;
     Q_padraoNUMERO: TIntegerField;
     Label14: TLabel;
-    cxDBSpinEdit2: TcxDBSpinEdit;
+    DB_numero: TcxDBTextEdit;
+    DB_Cadastro: TcxDBTextEdit;
+    procedure btn_NovoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -66,5 +64,12 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure Tfrm_empresa.btn_NovoClick(Sender: TObject);
+begin
+  inherited;
+  DB_cadastro.Text := DateToStr(now);
+  DB_razao_social.SetFocus;
+end;
 
 end.

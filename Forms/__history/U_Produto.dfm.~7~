@@ -12,10 +12,11 @@ inherited frm_Produto: Tfrm_Produto
     Width = 74
     Height = 13
     Caption = 'ID_PRODUTO'
+    FocusControl = DB_id_produto
   end
   object Label2: TLabel [1]
     Left = 210
-    Top = 93
+    Top = 89
     Width = 61
     Height = 13
     Caption = 'CADASTRO'
@@ -26,6 +27,7 @@ inherited frm_Produto: Tfrm_Produto
     Width = 125
     Height = 13
     Caption = 'PRODUTO_DESCRICAO'
+    FocusControl = DB_produto_descricao
   end
   object Label4: TLabel [3]
     Left = 57
@@ -33,6 +35,7 @@ inherited frm_Produto: Tfrm_Produto
     Width = 92
     Height = 13
     Caption = 'ID_FORNECEDOR'
+    FocusControl = DB_fornecedor
   end
   object Label5: TLabel [4]
     Left = 57
@@ -40,6 +43,7 @@ inherited frm_Produto: Tfrm_Produto
     Width = 57
     Height = 13
     Caption = 'VL_CUSTO'
+    FocusControl = DB_vl_custo
   end
   object Label6: TLabel [5]
     Left = 210
@@ -47,6 +51,7 @@ inherited frm_Produto: Tfrm_Produto
     Width = 56
     Height = 13
     Caption = 'VL_VENDA'
+    FocusControl = DB_vl_venda
   end
   object Label7: TLabel [6]
     Left = 362
@@ -54,6 +59,7 @@ inherited frm_Produto: Tfrm_Produto
     Width = 50
     Height = 13
     Caption = 'ESTOQUE'
+    FocusControl = DB_estoque
   end
   object Label8: TLabel [7]
     Left = 506
@@ -61,6 +67,7 @@ inherited frm_Produto: Tfrm_Produto
     Width = 79
     Height = 13
     Caption = 'ESTOQUE_MIN'
+    FocusControl = DB_estoque_min
   end
   object Label9: TLabel [8]
     Left = 577
@@ -75,10 +82,12 @@ inherited frm_Produto: Tfrm_Produto
     Width = 106
     Height = 13
     Caption = 'NOME FORNECEDOR'
+    FocusControl = DB_nome_fornecedor
   end
   inherited Panel1: TPanel
     Width = 706
-    ExplicitWidth = 706
+    TabOrder = 9
+    ExplicitWidth = 768
     inherited btn_Deletar: TBitBtn
       Left = 225
       ExplicitLeft = 225
@@ -99,8 +108,9 @@ inherited frm_Produto: Tfrm_Produto
   inherited Panel2: TPanel
     Top = 391
     Width = 706
+    TabOrder = 10
     ExplicitTop = 391
-    ExplicitWidth = 706
+    ExplicitWidth = 768
     inherited BitBtn10: TBitBtn
       Left = 537
       ExplicitLeft = 537
@@ -119,7 +129,83 @@ inherited frm_Produto: Tfrm_Produto
       ExplicitLeft = 57
     end
   end
-  object DB_unidade: TDBComboBox [12]
+  object DB_id_produto: TcxDBSpinEdit [12]
+    Left = 57
+    Top = 108
+    DataBinding.DataField = 'ID_PRODUTO'
+    DataBinding.DataSource = DS_padrao
+    Enabled = False
+    TabOrder = 0
+    Width = 121
+  end
+  object DB_produto_descricao: TcxDBTextEdit [13]
+    Left = 57
+    Top = 160
+    DataBinding.DataField = 'PRODUTO_DESCRICAO'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 2
+    Width = 497
+  end
+  object DB_fornecedor: TcxDBSpinEdit [14]
+    Left = 57
+    Top = 284
+    DataBinding.DataField = 'ID_FORNECEDOR'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 7
+    Width = 121
+  end
+  object DB_vl_custo: TcxDBCurrencyEdit [15]
+    Left = 57
+    Top = 210
+    DataBinding.DataField = 'VL_CUSTO'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 3
+    Width = 121
+  end
+  object DB_vl_venda: TcxDBCurrencyEdit [16]
+    Left = 210
+    Top = 210
+    DataBinding.DataField = 'VL_VENDA'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 4
+    Width = 121
+  end
+  object DB_estoque: TcxDBCurrencyEdit [17]
+    Left = 362
+    Top = 210
+    DataBinding.DataField = 'ESTOQUE'
+    DataBinding.DataSource = DS_padrao
+    Properties.AssignedValues.DisplayFormat = True
+    TabOrder = 5
+    Width = 121
+  end
+  object DB_estoque_min: TcxDBCurrencyEdit [18]
+    Left = 506
+    Top = 210
+    DataBinding.DataField = 'ESTOQUE_MIN'
+    DataBinding.DataSource = DS_padrao
+    Properties.AssignedValues.DisplayFormat = True
+    TabOrder = 6
+    Width = 121
+  end
+  object DB_cadastro: TcxDBTextEdit [19]
+    Left = 210
+    Top = 108
+    DataBinding.DataField = 'CADASTRO'
+    DataBinding.DataSource = DS_padrao
+    Enabled = False
+    TabOrder = 1
+    Width = 121
+  end
+  object DB_nome_fornecedor: TcxDBTextEdit [20]
+    Left = 57
+    Top = 339
+    DataBinding.DataField = 'NOME'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 8
+    Width = 570
+  end
+  object DB_unidade: TDBComboBox [21]
     Left = 577
     Top = 160
     Width = 50
@@ -132,71 +218,7 @@ inherited frm_Produto: Tfrm_Produto
       'P'#199
       'UN'
       'LT')
-    TabOrder = 2
-  end
-  object db_id_produto: TDBEdit [13]
-    Left = 57
-    Top = 112
-    Width = 121
-    Height = 21
-    TabOrder = 3
-  end
-  object DBEdit1: TDBEdit [14]
-    Left = 210
-    Top = 112
-    Width = 121
-    Height = 21
-    TabOrder = 4
-  end
-  object DBEdit2: TDBEdit [15]
-    Left = 57
-    Top = 160
-    Width = 497
-    Height = 21
-    TabOrder = 5
-  end
-  object DBEdit3: TDBEdit [16]
-    Left = 57
-    Top = 210
-    Width = 121
-    Height = 21
-    TabOrder = 6
-  end
-  object DBEdit4: TDBEdit [17]
-    Left = 506
-    Top = 210
-    Width = 121
-    Height = 21
-    TabOrder = 7
-  end
-  object DBEdit5: TDBEdit [18]
-    Left = 362
-    Top = 210
-    Width = 121
-    Height = 21
-    TabOrder = 8
-  end
-  object DBEdit6: TDBEdit [19]
-    Left = 210
-    Top = 210
-    Width = 121
-    Height = 21
-    TabOrder = 9
-  end
-  object DBEdit8: TDBEdit [20]
-    Left = 57
-    Top = 287
-    Width = 121
-    Height = 21
-    TabOrder = 10
-  end
-  object DB_nome_fornecedor: TcxDBTextEdit [21]
-    Left = 57
-    Top = 339
-    DataBinding.DataField = 'NOME'
-    DataBinding.DataSource = DS_padrao
     TabOrder = 11
-    Width = 570
   end
   inherited Q_padrao: TFDQuery
     UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]

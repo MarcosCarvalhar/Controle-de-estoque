@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, cxGraphics,
   cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, cxCurrencyEdit, cxDBEdit, cxTextEdit,
-  cxMaskEdit, cxSpinEdit, Vcl.Mask;
+  cxMaskEdit, cxSpinEdit;
 
 type
   Tfrm_Produto = class(Tfrm_Padrao)
@@ -22,26 +22,26 @@ type
     Q_padraoESTOQUE_MIN: TBCDField;
     Q_padraoUNIDADE: TStringField;
     Label1: TLabel;
+    DB_id_produto: TcxDBSpinEdit;
     Label2: TLabel;
     Label3: TLabel;
+    DB_produto_descricao: TcxDBTextEdit;
     Label4: TLabel;
+    DB_fornecedor: TcxDBSpinEdit;
     Label5: TLabel;
+    DB_vl_custo: TcxDBCurrencyEdit;
     Label6: TLabel;
+    DB_vl_venda: TcxDBCurrencyEdit;
     Label7: TLabel;
+    DB_estoque: TcxDBCurrencyEdit;
     Label8: TLabel;
+    DB_estoque_min: TcxDBCurrencyEdit;
     Label9: TLabel;
+    DB_cadastro: TcxDBTextEdit;
     Q_padraoNOME: TStringField;
     Label10: TLabel;
-    DB_unidade: TDBComboBox;
-    db_id_produto: TDBEdit;
-    DBEdit1: TDBEdit;
-    DBEdit2: TDBEdit;
-    DBEdit3: TDBEdit;
-    DBEdit4: TDBEdit;
-    DBEdit5: TDBEdit;
-    DBEdit6: TDBEdit;
-    DBEdit8: TDBEdit;
     DB_nome_fornecedor: TcxDBTextEdit;
+    DB_unidade: TDBComboBox;
     procedure btn_NovoClick(Sender: TObject);
   private
     { Private declarations }

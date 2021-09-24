@@ -16,12 +16,11 @@ inherited frm_Usuarios: Tfrm_Usuarios
     Caption = 'ID_USUARIO'
   end
   object Label2: TLabel [1]
-    Left = 76
+    Left = 72
     Top = 178
     Width = 31
     Height = 13
     Caption = 'NOME'
-    FocusControl = db_nome
   end
   object Label3: TLabel [2]
     Left = 72
@@ -29,7 +28,6 @@ inherited frm_Usuarios: Tfrm_Usuarios
     Width = 36
     Height = 13
     Caption = 'SENHA'
-    FocusControl = db_senha
   end
   object Label4: TLabel [3]
     Left = 314
@@ -39,7 +37,7 @@ inherited frm_Usuarios: Tfrm_Usuarios
     Caption = 'TIPO'
   end
   object Label5: TLabel [4]
-    Left = 552
+    Left = 551
     Top = 234
     Width = 61
     Height = 13
@@ -98,40 +96,7 @@ inherited frm_Usuarios: Tfrm_Usuarios
       ExplicitTop = 16
     end
   end
-  object db_nome: TcxDBTextEdit [7]
-    Left = 72
-    Top = 197
-    DataBinding.DataField = 'NOME'
-    DataBinding.DataSource = DS_padrao
-    Enabled = False
-    Properties.CharCase = ecUpperCase
-    Properties.ReadOnly = False
-    TabOrder = 1
-    Width = 562
-  end
-  object db_senha: TcxDBTextEdit [8]
-    Left = 72
-    Top = 253
-    DataBinding.DataField = 'SENHA'
-    DataBinding.DataSource = DS_padrao
-    Enabled = False
-    Properties.EchoMode = eemPassword
-    Properties.PasswordChar = '*'
-    Properties.ReadOnly = False
-    TabOrder = 2
-    Width = 200
-  end
-  object db_cadastro: TcxDBTextEdit [9]
-    Left = 551
-    Top = 253
-    DataBinding.DataField = 'CADASTRO'
-    DataBinding.DataSource = DS_padrao
-    Enabled = False
-    Properties.ReadOnly = True
-    TabOrder = 4
-    Width = 83
-  end
-  object db_tipo: TDBComboBox [10]
+  object db_tipo: TDBComboBox [7]
     Left = 314
     Top = 253
     Width = 208
@@ -144,16 +109,48 @@ inherited frm_Usuarios: Tfrm_Usuarios
       'APOIO')
     TabOrder = 3
   end
-  object db_id_usuario: TcxDBTextEdit [11]
+  object db_id_usuario: TDBEdit [8]
     Left = 72
     Top = 137
-    DataBinding.DataField = 'ID_USUARIO'
-    DataBinding.DataSource = DS_padrao
-    Enabled = False
-    Properties.CharCase = ecUpperCase
-    Properties.ReadOnly = True
-    TabOrder = 0
     Width = 63
+    Height = 21
+    CharCase = ecUpperCase
+    DataField = 'ID_USUARIO'
+    DataSource = DS_padrao
+    Enabled = False
+    TabOrder = 0
+  end
+  object db_nome: TDBEdit [9]
+    Left = 72
+    Top = 197
+    Width = 562
+    Height = 21
+    CharCase = ecUpperCase
+    DataField = 'NOME'
+    DataSource = DS_padrao
+    Enabled = False
+    TabOrder = 1
+  end
+  object db_senha: TDBEdit [10]
+    Left = 72
+    Top = 253
+    Width = 200
+    Height = 21
+    DataField = 'SENHA'
+    DataSource = DS_padrao
+    Enabled = False
+    PasswordChar = '*'
+    TabOrder = 2
+  end
+  object db_cadastro: TDBEdit [11]
+    Left = 549
+    Top = 253
+    Width = 85
+    Height = 21
+    DataField = 'CADASTRO'
+    DataSource = DS_padrao
+    Enabled = False
+    TabOrder = 4
   end
   inherited Q_padrao: TFDQuery
     UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]

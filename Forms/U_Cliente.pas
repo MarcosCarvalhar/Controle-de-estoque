@@ -7,7 +7,8 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, cxGraphics,
-  cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, cxDBEdit, cxTextEdit, cxMaskEdit, cxSpinEdit;
+  cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, cxDBEdit, cxTextEdit, cxMaskEdit, cxSpinEdit,
+  Vcl.Mask;
 
 type
   Tfrm_Cliente = class(Tfrm_Padrao)
@@ -24,29 +25,29 @@ type
     Q_padraoEMAIL: TStringField;
     Q_padraoCADASTRO: TDateField;
     Label1: TLabel;
-    DB_id_empresa: TcxDBSpinEdit;
     Label2: TLabel;
-    DB_nome: TcxDBTextEdit;
     Label3: TLabel;
-    DB_endereco: TcxDBTextEdit;
     Label4: TLabel;
     Label5: TLabel;
-    DB_bairro: TcxDBTextEdit;
     Label6: TLabel;
-    DB_cidade: TcxDBTextEdit;
     Label7: TLabel;
-    DB_UF: TcxDBTextEdit;
     Label8: TLabel;
-    DB_CEP: TcxDBTextEdit;
     Label9: TLabel;
-    DB_telefone: TcxDBTextEdit;
     Label10: TLabel;
-    DB_CPF: TcxDBTextEdit;
     Label11: TLabel;
-    DB_email: TcxDBTextEdit;
     Label12: TLabel;
-    DB_numero: TcxDBTextEdit;
-    DB_cadastro: TcxDBTextEdit;
+    db_id_empresa: TDBEdit;
+    db_cadastro: TDBEdit;
+    db_nome: TDBEdit;
+    db_CPF: TDBEdit;
+    db_email: TDBEdit;
+    db_telefone: TDBEdit;
+    db_CEP: TDBEdit;
+    db_endereco: TDBEdit;
+    db_numero: TDBEdit;
+    db_UF: TDBEdit;
+    db_bairro: TDBEdit;
+    db_cidade: TDBEdit;
     procedure btn_NovoClick(Sender: TObject);
   private
     { Private declarations }

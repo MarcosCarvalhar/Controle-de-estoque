@@ -12,6 +12,7 @@ inherited frm_formasPGTO: Tfrm_formasPGTO
     Width = 97
     Height = 13
     Caption = 'ID_FORMA_PGTO'
+    FocusControl = DB_id_forma_pgto
   end
   object Label2: TLabel [1]
     Left = 72
@@ -19,6 +20,7 @@ inherited frm_formasPGTO: Tfrm_formasPGTO
     Width = 64
     Height = 13
     Caption = 'DESCRICAO'
+    FocusControl = DB_descricao
   end
   object Label3: TLabel [2]
     Left = 215
@@ -29,7 +31,7 @@ inherited frm_formasPGTO: Tfrm_formasPGTO
   end
   inherited Panel1: TPanel
     Width = 723
-    ExplicitWidth = 723
+    ExplicitWidth = 753
     inherited btnAtualizar: TBitBtn
       Left = 552
       ExplicitLeft = 552
@@ -39,7 +41,7 @@ inherited frm_formasPGTO: Tfrm_formasPGTO
     Top = 248
     Width = 723
     ExplicitTop = 248
-    ExplicitWidth = 723
+    ExplicitWidth = 753
     inherited BitBtn10: TBitBtn
       Left = 552
       ExplicitLeft = 552
@@ -56,26 +58,30 @@ inherited frm_formasPGTO: Tfrm_formasPGTO
       Hints.Strings = ()
     end
   end
-  object db_cadastro: TDBEdit [5]
-    Left = 215
-    Top = 139
-    Width = 121
-    Height = 21
-    TabOrder = 2
-  end
-  object db_id_forma_pgto: TDBEdit [6]
+  object DB_id_forma_pgto: TcxDBSpinEdit [5]
     Left = 72
-    Top = 139
+    Top = 136
+    DataBinding.DataField = 'ID_FORMA_PGTO'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 2
     Width = 121
-    Height = 21
-    TabOrder = 3
   end
-  object db_descricao: TDBEdit [7]
+  object DB_descricao: TcxDBTextEdit [6]
     Left = 72
     Top = 195
+    DataBinding.DataField = 'DESCRICAO'
+    DataBinding.DataSource = DS_padrao
+    TabOrder = 3
     Width = 570
-    Height = 21
+  end
+  object DB_cadastro: TcxDBTextEdit [7]
+    Left = 215
+    Top = 136
+    DataBinding.DataField = 'CADASTRO'
+    DataBinding.DataSource = DS_padrao
+    Enabled = False
     TabOrder = 4
+    Width = 121
   end
   inherited Q_padrao: TFDQuery
     UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]

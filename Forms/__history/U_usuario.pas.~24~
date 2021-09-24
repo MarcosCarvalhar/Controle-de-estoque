@@ -21,20 +21,22 @@ type
     Label5: TLabel;
     db_cadastro: TcxDBTextEdit;
     db_tipo: TDBComboBox;
-    cxDBTextEdit1: TcxDBTextEdit;
+    db_id_usuario: TcxDBTextEdit;
     Q_padraoNOME: TStringField;
     Q_padraoTIPO: TStringField;
     Q_padraoCADASTRO: TDateField;
     Q_padraoID_USUARIO: TIntegerField;
     Q_padraoSENHA: TStringField;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
-    BitBtn1: TBitBtn;
-    DBNavigator1: TDBNavigator;
     procedure btn_NovoClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
+    procedure btn_EditarClick(Sender: TObject);
+    procedure trataCampos();
+    procedure btn_PesquisarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
+    acao :char;
     { Public declarations }
   end;
 
@@ -45,18 +47,48 @@ implementation
 
 {$R *.dfm}
 
+uses U_Pesq_Usuario;
+
+
+procedure Tfrm_Usuarios.btnCancelarClick(Sender: TObject);
+begin
+  inherited;
+  trataCampos();
+end;
+
+procedure Tfrm_Usuarios.btn_EditarClick(Sender: TObject);
+begin
+  inherited;
+  trataCampos();
+  db_nome.SetFocus;
+end;
+
 procedure Tfrm_Usuarios.btn_NovoClick(Sender: TObject);
 begin
   inherited;
+  trataCampos();
   db_cadastro.Text := DateToStr(now);
   db_nome.SetFocus;
 end;
 
-procedure Tfrm_Usuarios.FormCreate(Sender: TObject);
+procedure Tfrm_Usuarios.btn_PesquisarClick(Sender: TObject);
 begin
-  inherited;
-  Q_padrao.Open();
+  frm_Pesq_Usuario := Tfrm_Pesq_Usuario.Create(self);
+  frm_Pesq_Usuario.ShowModal;
+  try
 
+  finally
+    frm_pesq_usuario.Free;
+    frm_Pesq_Usuario := nil;
+  end;
+end;
+
+procedure Tfrm_Usuarios.trataCampos;
+begin
+  db_nome.Enabled     := not db_nome.Enabled;
+  db_senha.Enabled    := not db_senha.Enabled;
+  db_tipo.Enabled     := not db_tipo.Enabled;
+//  db_id_usuario       := not db_id_usuario.Enabled;
 end;
 
 end.
