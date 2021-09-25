@@ -6,9 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, cxGraphics,
-  cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, cxDBEdit, cxTextEdit, cxMaskEdit, cxSpinEdit,
-  Vcl.Mask;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask;
 
 type
   Tfrm_Cliente = class(Tfrm_Padrao)
@@ -45,9 +43,9 @@ type
     db_CEP: TDBEdit;
     db_endereco: TDBEdit;
     db_numero: TDBEdit;
-    db_UF: TDBEdit;
     db_bairro: TDBEdit;
     db_cidade: TDBEdit;
+    DBComboBox1: TDBComboBox;
     procedure btn_NovoClick(Sender: TObject);
   private
     { Private declarations }

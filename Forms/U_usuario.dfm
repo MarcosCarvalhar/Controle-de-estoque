@@ -5,22 +5,22 @@ inherited frm_Usuarios: Tfrm_Usuarios
   ClientHeight = 425
   ClientWidth = 711
   ExplicitWidth = 717
-  ExplicitHeight = 449
+  ExplicitHeight = 454
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel [0]
     Left = 72
     Top = 118
-    Width = 72
+    Width = 44
     Height = 13
-    Caption = 'ID_USUARIO'
+    Caption = 'C'#211'DIGO'
   end
   object Label2: TLabel [1]
     Left = 72
     Top = 178
-    Width = 31
+    Width = 103
     Height = 13
-    Caption = 'NOME'
+    Caption = 'NOME DE USU'#193'RIO'
   end
   object Label3: TLabel [2]
     Left = 72
@@ -101,6 +101,7 @@ inherited frm_Usuarios: Tfrm_Usuarios
     Top = 253
     Width = 208
     Height = 21
+    CharCase = ecUpperCase
     DataField = 'TIPO'
     DataSource = DS_padrao
     Enabled = False
@@ -205,11 +206,6 @@ inherited frm_Usuarios: Tfrm_Usuarios
   end
   inherited DS_padrao: TDataSource
     Left = 248
-    Top = 312
-  end
-  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
-    Provider = 'Forms'
-    Left = 336
     Top = 312
   end
 end

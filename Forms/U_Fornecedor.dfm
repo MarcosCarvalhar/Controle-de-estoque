@@ -1,91 +1,91 @@
 inherited frm_Fornecedor: Tfrm_Fornecedor
   Caption = 'Cadastro de Fornecedor'
-  ClientHeight = 484
+  ClientHeight = 449
   ClientWidth = 755
   ExplicitWidth = 761
-  ExplicitHeight = 512
+  ExplicitHeight = 478
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel [0]
-    Left = 72
-    Top = 88
-    Width = 92
+    Left = 71
+    Top = 103
+    Width = 44
     Height = 13
-    Caption = 'ID_FORNECEDOR'
+    Caption = 'C'#211'DIGO'
   end
   object Label2: TLabel [1]
     Left = 208
-    Top = 88
+    Top = 103
     Width = 61
     Height = 13
     Caption = 'CADASTRO'
   end
   object Label3: TLabel [2]
     Left = 71
-    Top = 140
+    Top = 156
     Width = 31
     Height = 13
     Caption = 'NOME'
   end
   object Label4: TLabel [3]
-    Left = 72
-    Top = 237
+    Left = 496
+    Top = 156
     Width = 27
     Height = 13
     Caption = 'CNPJ'
   end
   object Label5: TLabel [4]
-    Left = 521
-    Top = 237
+    Left = 71
+    Top = 262
     Width = 20
     Height = 13
     Caption = 'CEP'
   end
   object Label6: TLabel [5]
-    Left = 72
-    Top = 287
+    Left = 178
+    Top = 262
     Width = 56
     Height = 13
     Caption = 'ENDERECO'
   end
   object Label7: TLabel [6]
-    Left = 592
-    Top = 287
-    Width = 47
+    Left = 607
+    Top = 262
+    Width = 28
     Height = 13
-    Caption = 'NUMERO'
+    Caption = 'NUM.'
   end
   object Label8: TLabel [7]
-    Left = 319
-    Top = 333
+    Left = 335
+    Top = 308
     Width = 44
     Height = 13
     Caption = 'BAIRRO'
   end
   object Label9: TLabel [8]
     Left = 71
-    Top = 333
+    Top = 308
     Width = 42
     Height = 13
     Caption = 'CIDADE'
   end
   object Label10: TLabel [9]
-    Left = 592
-    Top = 333
+    Left = 607
+    Top = 308
     Width = 14
     Height = 13
     Caption = 'UF'
   end
   object Label11: TLabel [10]
-    Left = 72
-    Top = 189
+    Left = 71
+    Top = 205
     Width = 35
     Height = 13
     Caption = 'EMAIL'
   end
   object Label12: TLabel [11]
-    Left = 521
-    Top = 186
+    Left = 496
+    Top = 202
     Width = 52
     Height = 13
     Caption = 'TELEFONE'
@@ -93,122 +93,183 @@ inherited frm_Fornecedor: Tfrm_Fornecedor
   inherited Panel1: TPanel
     Width = 755
     ExplicitWidth = 755
-    inherited btn_Deletar: TBitBtn
-      Left = 224
-      ExplicitLeft = 224
+    inherited btn_Editar: TBitBtn
+      Left = 410
+      ExplicitLeft = 410
     end
     inherited btn_Novo: TBitBtn
       Left = 71
       ExplicitLeft = 71
     end
     inherited btnAtualizar: TBitBtn
-      Left = 549
-      ExplicitLeft = 549
+      Left = 567
+      ExplicitLeft = 567
     end
   end
   inherited Panel2: TPanel
-    Top = 414
+    Top = 379
     Width = 755
-    ExplicitTop = 414
+    ExplicitLeft = 112
+    ExplicitTop = 511
     ExplicitWidth = 755
     inherited BitBtn10: TBitBtn
-      Left = 552
-      ExplicitLeft = 552
+      Left = 567
+      ExplicitLeft = 567
     end
     inherited btnCancelar: TBitBtn
-      Left = 456
-      ExplicitLeft = 456
+      Left = 471
+      ExplicitLeft = 471
     end
     inherited btnGravar: TBitBtn
-      Left = 354
-      ExplicitLeft = 354
+      Left = 369
+      ExplicitLeft = 369
     end
     inherited DBNavigator2: TDBNavigator
+      Left = 71
       Hints.Strings = ()
+      ExplicitLeft = 71
     end
   end
-  object DBEdit1: TDBEdit [14]
+  object db_id_fornecedor: TDBEdit [14]
     Left = 71
-    Top = 107
+    Top = 122
     Width = 121
     Height = 21
+    DataField = 'ID_FORNECEDOR'
+    DataSource = DS_padrao
     TabOrder = 2
   end
-  object DBEdit2: TDBEdit [15]
+  object db_cadastro: TDBEdit [15]
     Left = 208
-    Top = 107
+    Top = 122
     Width = 121
     Height = 21
+    DataField = 'CADASTRO'
+    DataSource = DS_padrao
+    Enabled = False
     TabOrder = 3
   end
-  object DBEdit3: TDBEdit [16]
-    Left = 72
-    Top = 162
-    Width = 570
+  object db_nome: TDBEdit [16]
+    Left = 71
+    Top = 172
+    Width = 401
     Height = 21
+    CharCase = ecUpperCase
+    DataField = 'NOME'
+    DataSource = DS_padrao
     TabOrder = 4
   end
-  object DBEdit4: TDBEdit [17]
-    Left = 592
-    Top = 306
+  object db_numero: TDBEdit [17]
+    Left = 607
+    Top = 281
     Width = 50
     Height = 21
+    DataField = 'NUMERO'
+    DataSource = DS_padrao
     TabOrder = 5
   end
-  object DBEdit5: TDBEdit [18]
-    Left = 72
-    Top = 306
-    Width = 499
+  object db_endereco: TDBEdit [18]
+    Left = 178
+    Top = 281
+    Width = 415
     Height = 21
+    CharCase = ecUpperCase
+    DataField = 'ENDERECO'
+    DataSource = DS_padrao
     TabOrder = 6
   end
-  object DBEdit6: TDBEdit [19]
-    Left = 521
-    Top = 253
-    Width = 121
+  object db_CEP: TDBEdit [19]
+    Left = 71
+    Top = 281
+    Width = 89
     Height = 21
+    DataField = 'CEP'
+    DataSource = DS_padrao
     TabOrder = 7
   end
-  object DBEdit7: TDBEdit [20]
-    Left = 71
-    Top = 253
-    Width = 429
+  object db_CNPJ: TDBEdit [20]
+    Left = 495
+    Top = 172
+    Width = 162
     Height = 21
+    DataField = 'CNPJ'
+    DataSource = DS_padrao
     TabOrder = 8
   end
-  object DBEdit8: TDBEdit [21]
-    Left = 521
-    Top = 205
-    Width = 121
+  object db_telefone: TDBEdit [21]
+    Left = 496
+    Top = 221
+    Width = 161
     Height = 21
+    DataField = 'TELEFONE'
+    DataSource = DS_padrao
     TabOrder = 9
   end
-  object DBEdit9: TDBEdit [22]
+  object db_email: TDBEdit [22]
     Left = 71
-    Top = 205
-    Width = 429
+    Top = 221
+    Width = 402
     Height = 21
+    DataField = 'EMAIL'
+    DataSource = DS_padrao
     TabOrder = 10
   end
-  object DBEdit10: TDBEdit [23]
-    Left = 592
-    Top = 352
-    Width = 50
+  object db_bairro: TDBEdit [23]
+    Left = 335
+    Top = 324
+    Width = 258
     Height = 21
+    CharCase = ecUpperCase
+    DataField = 'BAIRRO'
+    DataSource = DS_padrao
     TabOrder = 11
   end
-  object DBEdit11: TDBEdit [24]
-    Left = 319
-    Top = 349
-    Width = 252
+  object db_cidade: TDBEdit [24]
+    Left = 71
+    Top = 324
+    Width = 251
     Height = 21
+    CharCase = ecUpperCase
+    DataField = 'CIDADE'
+    DataSource = DS_padrao
     TabOrder = 12
   end
-  object DBEdit12: TDBEdit [25]
-    Left = 71
-    Top = 349
-    Width = 234
+  object db_UF: TDBComboBox [25]
+    Left = 607
+    Top = 324
+    Width = 50
     Height = 21
+    CharCase = ecUpperCase
+    DataField = 'UF'
+    DataSource = DS_padrao
+    Items.Strings = (
+      'AC'
+      'AL'
+      'AP'
+      'AM'
+      'BA'
+      'CE'
+      'ES'
+      'GO'
+      'MA'
+      'MT'
+      'MS'
+      'MG'
+      'PA'
+      'PB'
+      'PR'
+      'PE'
+      'PI'
+      'RJ'
+      'RN'
+      'RS'
+      'RO'
+      'RR'
+      'SC'
+      'SP'
+      'SE'
+      'TO'
+      'DF')
     TabOrder = 13
   end
   inherited Q_padrao: TFDQuery
@@ -231,8 +292,7 @@ inherited frm_Fornecedor: Tfrm_Fornecedor
       '  EMAIL,'
       '  TELEFONE'
       ' FROM FORNECEDOR')
-    Left = 8
-    Top = 312
+    Top = 296
     object Q_padraoID_FORNECEDOR: TFDAutoIncField
       FieldName = 'ID_FORNECEDOR'
       Origin = 'ID_FORNECEDOR'

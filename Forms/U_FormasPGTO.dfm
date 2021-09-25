@@ -3,22 +3,22 @@ inherited frm_formasPGTO: Tfrm_formasPGTO
   ClientHeight = 318
   ClientWidth = 723
   ExplicitWidth = 729
-  ExplicitHeight = 346
+  ExplicitHeight = 347
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel [0]
     Left = 72
     Top = 120
-    Width = 97
+    Width = 44
     Height = 13
-    Caption = 'ID_FORMA_PGTO'
+    Caption = 'C'#211'DIGO'
   end
   object Label2: TLabel [1]
     Left = 72
     Top = 176
-    Width = 64
+    Width = 129
     Height = 13
-    Caption = 'DESCRICAO'
+    Caption = 'FORMA DE PAGAMENTO'
   end
   object Label3: TLabel [2]
     Left = 215
@@ -29,6 +29,7 @@ inherited frm_formasPGTO: Tfrm_formasPGTO
   end
   inherited Panel1: TPanel
     Width = 723
+    TabOrder = 3
     ExplicitWidth = 723
     inherited btnAtualizar: TBitBtn
       Left = 552
@@ -38,6 +39,7 @@ inherited frm_formasPGTO: Tfrm_formasPGTO
   inherited Panel2: TPanel
     Top = 248
     Width = 723
+    TabOrder = 4
     ExplicitTop = 248
     ExplicitWidth = 723
     inherited BitBtn10: TBitBtn
@@ -61,21 +63,27 @@ inherited frm_formasPGTO: Tfrm_formasPGTO
     Top = 139
     Width = 121
     Height = 21
-    TabOrder = 2
+    DataField = 'CADASTRO'
+    DataSource = DS_padrao
+    TabOrder = 1
   end
   object db_id_forma_pgto: TDBEdit [6]
     Left = 72
     Top = 139
     Width = 121
     Height = 21
-    TabOrder = 3
+    DataField = 'ID_FORMA_PGTO'
+    DataSource = DS_padrao
+    TabOrder = 0
   end
   object db_descricao: TDBEdit [7]
     Left = 72
     Top = 195
     Width = 570
     Height = 21
-    TabOrder = 4
+    DataField = 'DESCRICAO'
+    DataSource = DS_padrao
+    TabOrder = 2
   end
   inherited Q_padrao: TFDQuery
     UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]

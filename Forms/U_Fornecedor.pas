@@ -6,9 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, cxGraphics,
-  cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, cxDBEdit, cxTextEdit, cxMaskEdit, cxSpinEdit,
-  Vcl.Mask;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask;
 
 type
   Tfrm_Fornecedor = class(Tfrm_Padrao)
@@ -36,18 +34,18 @@ type
     Label10: TLabel;
     Label11: TLabel;
     Label12: TLabel;
-    DBEdit1: TDBEdit;
-    DBEdit2: TDBEdit;
-    DBEdit3: TDBEdit;
-    DBEdit4: TDBEdit;
-    DBEdit5: TDBEdit;
-    DBEdit6: TDBEdit;
-    DBEdit7: TDBEdit;
-    DBEdit8: TDBEdit;
-    DBEdit9: TDBEdit;
-    DBEdit10: TDBEdit;
-    DBEdit11: TDBEdit;
-    DBEdit12: TDBEdit;
+    db_id_fornecedor: TDBEdit;
+    db_cadastro: TDBEdit;
+    db_nome: TDBEdit;
+    db_numero: TDBEdit;
+    db_endereco: TDBEdit;
+    db_CEP: TDBEdit;
+    db_CNPJ: TDBEdit;
+    db_telefone: TDBEdit;
+    db_email: TDBEdit;
+    db_bairro: TDBEdit;
+    db_cidade: TDBEdit;
+    db_UF: TDBComboBox;
     procedure btn_NovoClick(Sender: TObject);
   private
     { Private declarations }

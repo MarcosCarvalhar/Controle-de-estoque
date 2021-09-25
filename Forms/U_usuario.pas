@@ -6,9 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, cxGraphics, cxControls,
-  cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, Vcl.DBCtrls, cxDBEdit, cxTextEdit, cxMaskEdit,
-  cxSpinEdit, U_DM, FireDAC.UI.Intf, FireDAC.VCLUI.Wait, FireDAC.Comp.UI, Vcl.Mask;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, U_DM, FireDAC.UI.Intf,
+  FireDAC.VCLUI.Wait, FireDAC.Comp.UI, Vcl.Mask, Vcl.DBCtrls;
 
 type
   Tfrm_Usuarios = class(Tfrm_Padrao)
@@ -23,7 +22,6 @@ type
     Q_padraoCADASTRO: TDateField;
     Q_padraoID_USUARIO: TIntegerField;
     Q_padraoSENHA: TStringField;
-    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     db_id_usuario: TDBEdit;
     db_nome: TDBEdit;
     db_senha: TDBEdit;

@@ -3,36 +3,36 @@ inherited frm_Cliente: Tfrm_Cliente
   ClientHeight = 490
   ClientWidth = 727
   ExplicitWidth = 733
-  ExplicitHeight = 518
+  ExplicitHeight = 519
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel [0]
     Left = 72
     Top = 104
-    Width = 64
+    Width = 44
     Height = 13
-    Caption = 'ID_CLIENTE'
+    Caption = 'C'#211'DIGO'
   end
   object Label2: TLabel [1]
     Left = 72
-    Top = 150
-    Width = 31
+    Top = 155
+    Width = 97
     Height = 13
-    Caption = 'NOME'
+    Caption = 'NOME DO CLIENTE'
   end
   object Label3: TLabel [2]
     Left = 72
     Top = 322
     Width = 56
     Height = 13
-    Caption = 'ENDERECO'
+    Caption = 'ENDERE'#199'O'
   end
   object Label4: TLabel [3]
-    Left = 596
+    Left = 590
     Top = 322
-    Width = 47
+    Width = 28
     Height = 13
-    Caption = 'NUMERO'
+    Caption = 'NUM.'
   end
   object Label5: TLabel [4]
     Left = 330
@@ -49,7 +49,7 @@ inherited frm_Cliente: Tfrm_Cliente
     Caption = 'CIDADE'
   end
   object Label7: TLabel [6]
-    Left = 596
+    Left = 590
     Top = 371
     Width = 14
     Height = 13
@@ -64,21 +64,21 @@ inherited frm_Cliente: Tfrm_Cliente
   end
   object Label9: TLabel [8]
     Left = 522
-    Top = 198
+    Top = 205
     Width = 52
     Height = 13
     Caption = 'TELEFONE'
   end
   object Label10: TLabel [9]
     Left = 522
-    Top = 150
+    Top = 155
     Width = 20
     Height = 13
     Caption = 'CPF'
   end
   object Label11: TLabel [10]
     Left = 72
-    Top = 198
+    Top = 205
     Width = 35
     Height = 13
     Caption = 'EMAIL'
@@ -92,7 +92,7 @@ inherited frm_Cliente: Tfrm_Cliente
   end
   inherited Panel1: TPanel
     Width = 727
-    TabOrder = 12
+    TabOrder = 11
     ExplicitWidth = 727
     inherited btnAtualizar: TBitBtn
       Left = 553
@@ -102,7 +102,7 @@ inherited frm_Cliente: Tfrm_Cliente
   inherited Panel2: TPanel
     Top = 420
     Width = 727
-    TabOrder = 13
+    TabOrder = 12
     ExplicitTop = 420
     ExplicitWidth = 727
     inherited BitBtn10: TBitBtn
@@ -155,7 +155,7 @@ inherited frm_Cliente: Tfrm_Cliente
   end
   object db_nome: TDBEdit [16]
     Left = 72
-    Top = 169
+    Top = 174
     Width = 429
     Height = 21
     CharCase = ecUpperCase
@@ -171,7 +171,7 @@ inherited frm_Cliente: Tfrm_Cliente
   end
   object db_CPF: TDBEdit [17]
     Left = 522
-    Top = 169
+    Top = 174
     Width = 121
     Height = 21
     CharCase = ecUpperCase
@@ -187,7 +187,7 @@ inherited frm_Cliente: Tfrm_Cliente
   end
   object db_email: TDBEdit [18]
     Left = 72
-    Top = 216
+    Top = 223
     Width = 429
     Height = 21
     DataField = 'EMAIL'
@@ -202,7 +202,7 @@ inherited frm_Cliente: Tfrm_Cliente
   end
   object db_telefone: TDBEdit [19]
     Left = 522
-    Top = 216
+    Top = 223
     Width = 121
     Height = 21
     CharCase = ecUpperCase
@@ -249,9 +249,9 @@ inherited frm_Cliente: Tfrm_Cliente
     TabOrder = 7
   end
   object db_numero: TDBEdit [22]
-    Left = 596
+    Left = 590
     Top = 341
-    Width = 47
+    Width = 53
     Height = 21
     CharCase = ecUpperCase
     DataField = 'NUMERO'
@@ -264,23 +264,7 @@ inherited frm_Cliente: Tfrm_Cliente
     ParentFont = False
     TabOrder = 8
   end
-  object db_UF: TDBEdit [23]
-    Left = 596
-    Top = 387
-    Width = 47
-    Height = 21
-    CharCase = ecUpperCase
-    DataField = 'UF'
-    DataSource = DS_padrao
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 11
-  end
-  object db_bairro: TDBEdit [24]
+  object db_bairro: TDBEdit [23]
     Left = 330
     Top = 387
     Width = 242
@@ -296,7 +280,7 @@ inherited frm_Cliente: Tfrm_Cliente
     ParentFont = False
     TabOrder = 10
   end
-  object db_cidade: TDBEdit [25]
+  object db_cidade: TDBEdit [24]
     Left = 72
     Top = 387
     Width = 242
@@ -311,6 +295,43 @@ inherited frm_Cliente: Tfrm_Cliente
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 9
+  end
+  object DBComboBox1: TDBComboBox [25]
+    Left = 590
+    Top = 387
+    Width = 53
+    Height = 21
+    DataField = 'UF'
+    DataSource = DS_padrao
+    Items.Strings = (
+      'AC'
+      'AL'
+      'AP'
+      'AM'
+      'BA'
+      'CE'
+      'ES'
+      'GO'
+      'MA'
+      'MT'
+      'MS'
+      'MG'
+      'PA'
+      'PB'
+      'PR'
+      'PE'
+      'PI'
+      'RJ'
+      'RN'
+      'RS'
+      'RO'
+      'RR'
+      'SC'
+      'SP'
+      'SE'
+      'TO'
+      'DF')
+    TabOrder = 13
   end
   inherited Q_padrao: TFDQuery
     UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
