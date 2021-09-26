@@ -34,7 +34,6 @@ type
   private
     { Private declarations }
   public
-    acao :char;
     { Public declarations }
   end;
 

@@ -29,8 +29,9 @@ type
     procedure btnGravarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnAtualizarClick(Sender: TObject);
-//    procedure trataBotoes();
     procedure FormCreate(Sender: TObject);
+    //procedure trataBotoes();
+
   private
     { Private declarations }
   public

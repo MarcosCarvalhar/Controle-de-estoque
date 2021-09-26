@@ -13,7 +13,7 @@ type
   Tfrm_Pesquisa_Padrao = class(TForm)
     Panel1: TPanel;
     Label1: TLabel;
-    ed_Nome: TEdit;
+    ed_Valor: TEdit;
     mk_Inicio: TMaskEdit;
     mk_Fim: TMaskEdit;
     lbl_Valor: TLabel;
@@ -23,10 +23,10 @@ type
     ds_pesq_padrao: TDataSource;
     q_pesq_padrao: TFDQuery;
     Panel2: TPanel;
-    BitBtn3: TBitBtn;
+    btnSair: TBitBtn;
     btnImprimir: TBitBtn;
     btnBaixar: TBitBtn;
-    BitBtn1: TBitBtn;
+    btnPesquisar: TBitBtn;
     cb_Chave_pesquisa: TComboBox;
     btnVisualizar: TBitBtn;
     btnEditar: TBitBtn;
@@ -36,6 +36,9 @@ type
     procedure cb_Chave_pesquisaChange(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure btnDeletarClick(Sender: TObject);
+    procedure btnAtualizarClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnAdicionarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,7 +52,22 @@ implementation
 
 {$R *.dfm}
 
-uses U_DM, U_usuario;
+uses U_DM, U_usuario, U_padrao;
+
+procedure Tfrm_Pesquisa_Padrao.btnAdicionarClick(Sender: TObject);
+begin
+  // cria um novo registro
+  q_pesq_padrao.Open();
+  q_pesq_padrao.Append;
+end;
+
+procedure Tfrm_Pesquisa_Padrao.btnAtualizarClick(Sender: TObject);
+begin
+  // atualiza os registros
+
+  q_pesq_padrao.Refresh;
+  MessageDlg('Registro atualizado com sucesso!', mtInformation, [mbOK], 0);
+end;
 
 procedure Tfrm_Pesquisa_Padrao.btnDeletarClick(Sender: TObject);
 begin
@@ -66,41 +84,49 @@ begin
     abort;
 end;
 
+procedure Tfrm_Pesquisa_Padrao.btnEditarClick(Sender: TObject);
+begin
+  q_pesq_padrao.Open();
+  q_pesq_padrao.Edit;
+end;
+
 procedure Tfrm_Pesquisa_Padrao.cb_Chave_pesquisaChange(Sender: TObject);
 begin
   case cb_Chave_pesquisa.ItemIndex of
+
     0..1:
     begin        // pesquisa por codigo e nome
-      ed_nome.enabled   := true;
-      mk_inicio.enabled := false;
-      mk_fim.enabled    := false;
-      lbl_Valor.enabled := true;
-      lbl_Data1.enabled := false;
-      lbl_Data2.enabled := false;
-      ed_nome.SetFocus;
+      ed_Valor.visible  := true;
+      mk_inicio.visible := false;
+      mk_fim.visible    := false;
+      lbl_Valor.visible := true;
+      lbl_Data1.visible := false;
+      lbl_Data2.visible := false;
+      ed_Valor.SetFocus;
     end;
 
     2:
     begin      // pesquisa por cadastro
-      ed_nome.enabled   := false;
-      mk_inicio.enabled := true;
-      mk_fim.enabled    := false;
-      lbl_Valor.enabled := false;
-      lbl_Data1.enabled := false;
-      lbl_Data2.enabled := false;
+      ed_Valor.visible  := false;
+      mk_inicio.visible := true;
+      mk_fim.visible    := true;
+      lbl_Valor.visible := false;
+      lbl_Data1.visible := true;
+      lbl_Data2.visible := true;
       mk_Inicio.SetFocus;
     end;
 
     3:
-    begin    // pesquisa por periodo
-      ed_nome.enabled   := false;
-      mk_inicio.enabled := true;
-      mk_fim.enabled    := true;
-      lbl_Valor.enabled := false;
-      lbl_Data1.enabled := true;
-      lbl_Data2.enabled := true;
-      mk_Inicio.SetFocus;
+    begin    // pesquisa por todos
+      ed_Valor.visible  := false;
+      mk_inicio.visible := false;
+      mk_fim.visible    := false;
+      lbl_Valor.visible := false;
+      lbl_Data1.visible := false;
+      lbl_Data2.visible := false;
+      btnPesquisar.SetFocus;
     end;
+
   end;
 
 end;

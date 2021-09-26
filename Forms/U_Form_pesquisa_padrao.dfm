@@ -82,7 +82,7 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
       ParentFont = False
       Visible = False
     end
-    object ed_Nome: TEdit
+    object ed_Valor: TEdit
       Left = 208
       Top = 40
       Width = 169
@@ -113,7 +113,7 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
       Text = ''
       Visible = False
     end
-    object BitBtn1: TBitBtn
+    object btnPesquisar: TBitBtn
       Left = 670
       Top = 32
       Width = 96
@@ -218,6 +218,7 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
     Width = 650
     Height = 324
     Align = alCustom
+    ReadOnly = True
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -359,6 +360,7 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
         00000000000000000000000000001F1F3B3D3D3D6F7400000000000000000000
         0000000000000000000000000000000000000000000000000000}
       TabOrder = 1
+      OnClick = btnEditarClick
     end
     object btnAdicionar: TBitBtn
       Left = 16
@@ -442,6 +444,7 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000}
       TabOrder = 2
+      OnClick = btnAdicionarClick
     end
     object btnDeletar: TBitBtn
       Left = 16
@@ -609,9 +612,10 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
         0000000000000000000100000001000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000}
       TabOrder = 4
+      OnClick = btnAtualizarClick
     end
   end
-  object BitBtn3: TBitBtn
+  object btnSair: TBitBtn
     Left = 670
     Top = 432
     Width = 96

@@ -24,10 +24,10 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
       Text = '  /  /    '
       ExplicitWidth = 118
     end
-    inherited BitBtn1: TBitBtn
+    inherited btnPesquisar: TBitBtn
       Left = 665
       Top = 34
-      OnClick = BitBtn1Click
+      OnClick = btnPesquisarClick
       ExplicitLeft = 665
       ExplicitTop = 34
     end
@@ -70,15 +70,14 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
   inherited Panel2: TPanel
     ParentCtl3D = False
     inherited btnVisualizar: TBitBtn
-      Top = 40
-      OnClick = BitBtn5Click
-      ExplicitTop = 40
+      OnClick = btnVisualizarClick
     end
     inherited btnEditar: TBitBtn
       Top = 97
       Align = alCustom
       Anchors = [akLeft]
       ParentBiDiMode = False
+      OnClick = btnEditarClick
       ExplicitTop = 97
     end
     inherited btnAdicionar: TBitBtn
@@ -90,7 +89,7 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
       ParentFont = False
     end
   end
-  inherited BitBtn3: TBitBtn
+  inherited btnSair: TBitBtn
     Left = 665
     Top = 427
     ExplicitLeft = 665
