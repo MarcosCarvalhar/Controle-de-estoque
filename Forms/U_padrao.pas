@@ -6,22 +6,21 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, System.UITypes,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
-  FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, U_DM, Vcl.DBCtrls;
+  FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, U_DM, Vcl.DBCtrls, dxGDIPlusClasses;
 
 type
   Tfrm_Padrao = class(TForm)
     Panel1: TPanel;
-    btn_Novo: TBitBtn;
-    btn_Deletar: TBitBtn;
-    btn_Editar: TBitBtn;
     btnGravar: TBitBtn;
     btnCancelar: TBitBtn;
-    btnAtualizar: TBitBtn;
     Q_padrao: TFDQuery;
     DS_padrao: TDataSource;
     DBNavigator2: TDBNavigator;
     BitBtn10: TBitBtn;
     Panel2: TPanel;
+    Panel3: TPanel;
+    Label6: TLabel;
+    Image1: TImage;
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure btn_NovoClick(Sender: TObject);
     procedure btn_DeletarClick(Sender: TObject);
@@ -29,7 +28,8 @@ type
     procedure btnGravarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnAtualizarClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+
     //procedure trataBotoes();
 
   private
@@ -44,6 +44,8 @@ var
 implementation
 
 {$R *.dfm}
+
+uses U_Form_pesquisa_padrao;
 
 procedure Tfrm_Padrao.btnAtualizarClick(Sender: TObject);
 begin
@@ -107,12 +109,6 @@ begin
   Q_padrao.Append;
 end;
 
-procedure Tfrm_Padrao.FormCreate(Sender: TObject);
-begin
-  Q_padrao.Open;
-  Q_padrao.Refresh;
-end;
-
 procedure Tfrm_Padrao.FormKeyPress(Sender: TObject; var Key: Char);
 begin
 //   faz a tecla ENTER (#13) receber a função da tecla TAB (#0)
@@ -121,6 +117,19 @@ begin
       key:=#0;
       Perform(wm_nextDlgCtl, 0, 0);
     end;
+end;
+
+procedure Tfrm_Padrao.FormShow(Sender: TObject);
+begin
+  Q_padrao.Open;
+  Q_padrao.Refresh;
+
+  case acao of
+  'A': Q_padrao.Append;
+
+  'E': Q_padrao.Edit;
+
+  end;
 end;
 
 //procedure Tfrm_Padrao.trataBotoes;

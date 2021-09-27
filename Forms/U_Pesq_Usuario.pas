@@ -41,6 +41,7 @@ procedure Tfrm_Pesq_Usuario.abre_cadastro_usuario;
 begin
   frm_Usuarios := Tfrm_Usuarios.Create(self);
   frm_Pesq_Usuario.Hide;
+  U_usuario.frm_Usuarios.Panel3.Enabled := alterarCampos;
 
   // passa o valor do dbgrid para a query e abre o cadastro do usuario
   frm_Usuarios.Q_padrao.close;
@@ -51,6 +52,7 @@ begin
 
   finally
     frm_Usuarios.Q_padrao.close;
+    q_pesq_padrao.Close;
     frm_Pesq_Usuario.Show;
   end;
 end;

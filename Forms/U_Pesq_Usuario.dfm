@@ -69,24 +69,21 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
   end
   inherited Panel2: TPanel
     ParentCtl3D = False
-    inherited btnVisualizar: TBitBtn
-      OnClick = btnVisualizarClick
-    end
     inherited btnEditar: TBitBtn
-      Top = 97
+      Top = 153
       Align = alCustom
       Anchors = [akLeft]
       ParentBiDiMode = False
-      OnClick = btnEditarClick
-      ExplicitTop = 97
+      ExplicitTop = 153
     end
     inherited btnAdicionar: TBitBtn
-      Top = 164
-      OnClick = btnAdicionarClick
-      ExplicitTop = 164
+      Top = 28
+      ExplicitTop = 28
     end
     inherited btnDeletar: TBitBtn
+      Top = 222
       ParentFont = False
+      ExplicitTop = 222
     end
   end
   inherited btnSair: TBitBtn

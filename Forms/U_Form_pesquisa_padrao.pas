@@ -39,14 +39,21 @@ type
     procedure btnAtualizarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnAdicionarClick(Sender: TObject);
+    procedure btnVisualizarClick(Sender: TObject);
+    procedure trataBotoes;
+    procedure q_pesq_padraoAfterOpen(DataSet: TDataSet);
+    procedure q_pesq_padraoAfterClose(DataSet: TDataSet);
   private
     { Private declarations }
   public
     { Public declarations }
+
   end;
 
 var
   frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao;
+  alterarCampos :boolean;
+  acao :char;
 
 implementation
 
@@ -57,8 +64,8 @@ uses U_DM, U_usuario, U_padrao;
 procedure Tfrm_Pesquisa_Padrao.btnAdicionarClick(Sender: TObject);
 begin
   // cria um novo registro
-  q_pesq_padrao.Open();
-  q_pesq_padrao.Append;
+  alterarCampos := true;
+  acao := 'A';
 end;
 
 procedure Tfrm_Pesquisa_Padrao.btnAtualizarClick(Sender: TObject);
@@ -86,8 +93,15 @@ end;
 
 procedure Tfrm_Pesquisa_Padrao.btnEditarClick(Sender: TObject);
 begin
-  q_pesq_padrao.Open();
-  q_pesq_padrao.Edit;
+  alterarCampos := true;
+  acao := 'E';
+end;
+
+
+
+procedure Tfrm_Pesquisa_Padrao.btnVisualizarClick(Sender: TObject);
+begin
+  alterarCampos := false;
 end;
 
 procedure Tfrm_Pesquisa_Padrao.cb_Chave_pesquisaChange(Sender: TObject);
@@ -139,6 +153,29 @@ begin
       key:=#0;
       Perform (wm_nextDlgCtl,0,0);
     end;
+end;
+
+procedure Tfrm_Pesquisa_Padrao.q_pesq_padraoAfterClose(DataSet: TDataSet);
+begin
+  trataBotoes;
+end;
+
+procedure Tfrm_Pesquisa_Padrao.q_pesq_padraoAfterOpen(DataSet: TDataSet);
+begin
+  trataBotoes;
+end;
+
+procedure Tfrm_Pesquisa_Padrao.trataBotoes;
+var
+  VResultado: Boolean;
+begin
+  VResultado := ds_pesq_padrao.DataSet.RecordCount > 0;
+
+  btnVisualizar.Enabled := VResultado;
+  btnEditar.Enabled     := VResultado;
+  btnDeletar.Enabled    := VResultado;
+  btnAtualizar.Enabled  := VResultado;
+  btnImprimir.Enabled   := VResultado;
 end;
 
 end.

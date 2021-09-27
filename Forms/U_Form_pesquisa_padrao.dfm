@@ -225,6 +225,11 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = [fsBold]
+    Columns = <
+      item
+        Expanded = False
+        Visible = True
+      end>
   end
   object Panel2: TPanel
     Left = 0
@@ -237,10 +242,11 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
     TabOrder = 2
     object btnVisualizar: TBitBtn
       Left = 16
-      Top = 24
+      Top = 88
       Width = 96
       Height = 33
       Caption = '&Visualizar'
+      Enabled = False
       Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100
         2000000000000004000000000000000000000000000000000000000000000000
@@ -277,13 +283,15 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000}
       TabOrder = 0
+      OnClick = btnVisualizarClick
     end
     object btnEditar: TBitBtn
       Left = 16
-      Top = 95
+      Top = 159
       Width = 96
       Height = 33
       Caption = '&Editar'
+      Enabled = False
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
         2000000000000009000000000000000000000000000000000000000000000000
@@ -364,7 +372,7 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
     end
     object btnAdicionar: TBitBtn
       Left = 16
-      Top = 160
+      Top = 24
       Width = 96
       Height = 33
       Caption = '&Adicionar'
@@ -452,6 +460,7 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
       Width = 96
       Height = 33
       Caption = '&Deletar'
+      Enabled = False
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
         2000000000000009000000000000000000000000000000000000000000000000
@@ -536,6 +545,7 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
       Width = 96
       Height = 33
       Caption = '&Atualizar'
+      Enabled = False
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
         2000000000000009000000000000000000000000000000000000000000000000
@@ -631,6 +641,7 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
     Width = 96
     Height = 33
     Caption = '&Imprimir'
+    Enabled = False
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000000000000000000000000000000000000000000000000
@@ -674,6 +685,7 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
     Width = 96
     Height = 33
     Caption = '&Baixar'
+    Enabled = False
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000000000000000000000000000000000000000000000000
@@ -716,6 +728,8 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
     Top = 424
   end
   object q_pesq_padrao: TFDQuery
+    AfterOpen = q_pesq_padraoAfterOpen
+    AfterClose = q_pesq_padraoAfterClose
     Connection = DM.conexao
     Left = 168
     Top = 423
