@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_Form_pesquisa_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons,
-  Vcl.Mask, Vcl.ExtCtrls, System.UITypes, Vcl.DBCtrls;
+  Vcl.Mask, Vcl.ExtCtrls, System.UITypes;
 
 type
   Tfrm_Pesq_Usuario = class(Tfrm_Pesquisa_Padrao)
@@ -16,13 +16,12 @@ type
     q_pesq_padraoTIPO: TStringField;
     q_pesq_padraoCADASTRO: TDateField;
     Label5: TLabel;
-    q_pesq_padraoSENHA: TStringField;
-    Label2: TLabel;
     procedure btnPesquisarClick(Sender: TObject);
     procedure btnVisualizarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure abre_cadastro_usuario;
     procedure btnAdicionarClick(Sender: TObject);
+    procedure btnDeletarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,9 +42,6 @@ begin
   frm_Usuarios := Tfrm_Usuarios.Create(self);
   frm_Pesq_Usuario.Hide;
   U_usuario.frm_Usuarios.Panel3.Enabled := alterarCampos;
-  U_usuario.frm_Usuarios.btnGravar.Enabled := alterarCampos;
-  U_usuario.frm_Usuarios.btnCancelar.Enabled := alterarCampos;
-  U_usuario.frm_Usuarios.DBNavigator2.Visible := not alterarCampos;
 
   // passa o valor do dbgrid para a query e abre o cadastro do usuario
   frm_Usuarios.Q_padrao.close;
@@ -68,7 +64,7 @@ begin
   q_pesq_padrao.Params.Clear;   //limpa parametros
   q_pesq_padrao.SQL.Clear;      //limpa sql
 
-  q_pesq_padrao.SQL.Add('SELECT ID_USUARIO, NOME, TIPO, CADASTRO, SENHA FROM USUARIO'); //adiciona SQL
+  q_pesq_padrao.SQL.Add('SELECT ID_USUARIO, NOME, TIPO, CADASTRO FROM USUARIO'); //adiciona SQL
 
   case cb_Chave_pesquisa.ItemIndex of
 
@@ -122,6 +118,18 @@ begin
 end;
 
 procedure Tfrm_Pesq_Usuario.btnEditarClick(Sender: TObject);
+begin
+  inherited;
+  abre_cadastro_usuario;
+//  if MessageDlg('Deseja editar este registro?', mtConfirmation, [mbOK, mbNo], 0) = mrOk then
+//    begin
+//      q_pesq_padrao.edit;
+//    end
+//    else
+//    abort;
+end;
+
+procedure Tfrm_Pesq_Usuario.btnDeletarClick(Sender: TObject);
 begin
   inherited;
   abre_cadastro_usuario;

@@ -166,6 +166,18 @@ begin
   end;
 end;
 
+//procedure TfrmPrincipal.Abre_Tela_Usuario;
+//begin
+//  frm_Usuarios := Tfrm_Usuarios.Create(self);
+//  frm_Usuarios.ShowModal;
+//  try
+//
+//  finally
+//    frm_usuarios.free;
+//    frm_usuarios := nil;
+//  end;
+//end;
+
 procedure TfrmPrincipal.Abre_Tela_Usuario;
 begin
   frm_Pesq_Usuario := Tfrm_Pesq_Usuario.Create(self);

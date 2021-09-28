@@ -10,13 +10,6 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
     Height = 13
     Caption = 'NOME'
   end
-  object Label2: TLabel [1]
-    Left = 360
-    Top = 176
-    Width = 36
-    Height = 13
-    Caption = 'SENHA'
-  end
   inherited Panel1: TPanel
     ParentShowHint = False
     inherited mk_Inicio: TMaskEdit
@@ -76,7 +69,6 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
   end
   inherited Panel2: TPanel
     ParentCtl3D = False
-    ExplicitTop = 105
     inherited btnEditar: TBitBtn
       Top = 153
       Align = alCustom
@@ -119,8 +111,7 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
       '  nome,'
       '  id_usuario,'
       '  tipo,'
-      '  cadastro,'
-      '  senha'
+      '  cadastro'
       ' from usuario'
       ' order by id_usuario')
     object q_pesq_padraoNOME: TStringField
@@ -145,12 +136,6 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
       FieldName = 'CADASTRO'
       Origin = 'CADASTRO'
       Required = True
-    end
-    object q_pesq_padraoSENHA: TStringField
-      FieldName = 'SENHA'
-      Origin = 'SENHA'
-      Required = True
-      Size = 30
     end
   end
 end

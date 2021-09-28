@@ -64,7 +64,6 @@ uses U_DM, U_usuario, U_padrao;
 procedure Tfrm_Pesquisa_Padrao.btnAdicionarClick(Sender: TObject);
 begin
   // cria um novo registro
-
   alterarCampos := true;
   acao := 'A';
 end;
@@ -97,6 +96,8 @@ begin
   alterarCampos := true;
   acao := 'E';
 end;
+
+
 
 procedure Tfrm_Pesquisa_Padrao.btnVisualizarClick(Sender: TObject);
 begin
@@ -147,7 +148,6 @@ end;
 procedure Tfrm_Pesquisa_Padrao.FormKeyPress(Sender: TObject; var Key: Char);
 begin
   // enter faz a função de TAB
-
   if key=#13 then
     begin
       key:=#0;

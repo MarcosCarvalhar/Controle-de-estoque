@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, U_DM, FireDAC.UI.Intf,
-  FireDAC.VCLUI.Wait, FireDAC.Comp.UI, Vcl.Mask, Vcl.DBCtrls;
+  FireDAC.VCLUI.Wait, FireDAC.Comp.UI, Vcl.Mask, Vcl.DBCtrls, dxGDIPlusClasses;
 
 type
   Tfrm_Usuarios = class(Tfrm_Padrao)
@@ -27,7 +27,6 @@ type
     db_senha: TDBEdit;
     db_cadastro: TDBEdit;
     procedure Q_padraoAfterInsert(DataSet: TDataSet);
-    procedure DBNavigator2Click(Sender: TObject; Button: TNavigateBtn);
 
 
   private
@@ -72,12 +71,7 @@ uses U_Pesq_Usuario;
 //  end;
 //end;
 
-procedure Tfrm_Usuarios.DBNavigator2Click(Sender: TObject;
-  Button: TNavigateBtn);
-begin
-  inherited;
-  DS_padrao.DataSet := frm_Pesq_Usuario.q_pesq_padrao;
-end;
+
 
 procedure Tfrm_Usuarios.Q_padraoAfterInsert(DataSet: TDataSet);
 begin
