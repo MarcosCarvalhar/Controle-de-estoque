@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, System.UITypes,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
-  FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, U_DM, Vcl.DBCtrls, dxGDIPlusClasses;
+  FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, U_DM, Vcl.DBCtrls;
 
 type
   Tfrm_Padrao = class(TForm)
@@ -22,7 +22,6 @@ type
     Label6: TLabel;
     Image1: TImage;
     procedure FormKeyPress(Sender: TObject; var Key: Char);
-    procedure btn_NovoClick(Sender: TObject);
     procedure btn_DeletarClick(Sender: TObject);
     procedure btn_EditarClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
@@ -61,6 +60,7 @@ begin
 
   Q_padrao.Cancel;
   MessageDlg('Ação cancelada pelo usuário!', mtInformation, [mbOK], 0);
+  close;
 end;
 
 procedure Tfrm_Padrao.btnGravarClick(Sender: TObject);
@@ -69,6 +69,7 @@ begin
 
   Q_padrao.Post;
   MessageDlg('Registro salvo com sucesso!', mtInformation, [mbOK], 0);
+  close;
 end;
 
 procedure Tfrm_Padrao.btn_DeletarClick(Sender: TObject);
@@ -90,8 +91,6 @@ procedure Tfrm_Padrao.btn_EditarClick(Sender: TObject);
 begin
   // edita o registro
 
-//  if Q_padrao.Active = True then btn_Editar.Enabled := True;
-
   if MessageDlg('Deseja editar este registro?', mtConfirmation, [mbOK, mbNo], 0) = mrOk then
     begin
       Q_padrao.edit;
@@ -101,17 +100,10 @@ begin
     abort;
 end;
 
-procedure Tfrm_Padrao.btn_NovoClick(Sender: TObject);
-begin
-  // cria um novo registro
-
-  Q_padrao.Open();
-  Q_padrao.Append;
-end;
-
 procedure Tfrm_Padrao.FormKeyPress(Sender: TObject; var Key: Char);
 begin
-//   faz a tecla ENTER (#13) receber a função da tecla TAB (#0)
+  // faz a tecla ENTER (#13) receber a função da tecla TAB (#0)
+
   if key=#13 then
     begin
       key:=#0;
@@ -131,17 +123,5 @@ begin
 
   end;
 end;
-
-//procedure Tfrm_Padrao.trataBotoes;
-//begin
-//  // habilita ou desabilita botões
-////  if Q_padrao.Active = True then btn_Editar.Enabled := True;
-//  btn_Novo.Enabled := not btn_Novo.Enabled;
-//  btn_Editar.Enabled := not btn_Editar.Enabled;
-//  btn_Deletar.Enabled := not btn_Deletar.Enabled;
-//  btnGravar.Enabled := not btnGravar.Enabled;
-//  btnAtualizar.Enabled := not btnAtualizar.Enabled;
-//  btnCancelar.Enabled := not btnCancelar.Enabled;
-//end;
 
 end.
