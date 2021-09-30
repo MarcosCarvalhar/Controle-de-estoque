@@ -75,7 +75,7 @@ implementation
 
 {$R *.dfm}
 
-uses U_usuario, U_DM, U_empresa, U_Cliente, U_Fornecedor, U_Produto, U_FormasPGTO, U_Pesq_Usuario;
+uses U_usuario, U_DM, U_empresa, U_Cliente, U_Fornecedor, U_Produto, U_FormasPGTO, U_Pesq_Usuario, U_Pesq_Empresa;
 
 procedure TfrmPrincipal.Timer1Timer(Sender: TObject);
 begin
@@ -133,12 +133,12 @@ end;
 
 procedure TfrmPrincipal.Abre_Tela_Empresa;
 begin
-  frm_empresa := Tfrm_empresa.Create(self);
-  frm_empresa.ShowModal;
+  frm_Pesq_Empresa := Tfrm_Pesq_Empresa.Create(self);
+  frm_Pesq_Empresa.ShowModal;
     try
     finally
-      frm_empresa.free;
-      frm_empresa := nil;
+      frm_Pesq_Empresa.free;
+      frm_Pesq_Empresa := nil;
     end;
 end;
 

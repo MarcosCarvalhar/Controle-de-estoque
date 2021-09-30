@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_Form_pesquisa_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons,
-  Vcl.Mask, Vcl.ExtCtrls, System.UITypes, Vcl.DBCtrls;
+  Vcl.Mask, Vcl.ExtCtrls, System.UITypes, Vcl.DBCtrls, dxGDIPlusClasses;
 
 type
   Tfrm_Pesq_Usuario = class(Tfrm_Pesquisa_Padrao)
@@ -15,14 +15,13 @@ type
     q_pesq_padraoID_USUARIO: TIntegerField;
     q_pesq_padraoTIPO: TStringField;
     q_pesq_padraoCADASTRO: TDateField;
-    Label5: TLabel;
     q_pesq_padraoSENHA: TStringField;
-    Label2: TLabel;
     procedure btnPesquisarClick(Sender: TObject);
     procedure btnVisualizarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure abre_cadastro_usuario;
     procedure btnAdicionarClick(Sender: TObject);
+    procedure cb_Chave_pesquisaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -113,6 +112,22 @@ procedure Tfrm_Pesq_Usuario.btnVisualizarClick(Sender: TObject);
 begin
   inherited;
   abre_cadastro_usuario;
+  acao := 'V';
+end;
+
+procedure Tfrm_Pesq_Usuario.cb_Chave_pesquisaChange(Sender: TObject);
+begin
+  case cb_Chave_pesquisa.ItemIndex of
+
+    0..1: itemPesquisa := 0;
+
+    2: itemPesquisa := 1;
+
+    3: itemPesquisa := 2;
+
+  end;
+  inherited;
+
 end;
 
 procedure Tfrm_Pesq_Usuario.btnAdicionarClick(Sender: TObject);

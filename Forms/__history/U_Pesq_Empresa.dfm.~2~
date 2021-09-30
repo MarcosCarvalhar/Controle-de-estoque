@@ -1,0 +1,12 @@
+inherited frm_Pesquisa_Padrao1: Tfrm_Pesquisa_Padrao1
+  Caption = 'PESQUISA DE EMPRESA'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel3: TPanel
+    inherited lblTitulo: TLabel
+      Width = 132
+      Caption = 'EMPRESA'
+      ExplicitWidth = 132
+    end
+  end
+end

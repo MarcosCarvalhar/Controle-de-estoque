@@ -1,2 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/09/30 12:50:44.000.605,=C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas</Transaction>
+    <Transaction>2021/09/30 12:51:17.000.723,C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.dfm=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Empresa.dfm</Transaction>
+    <Transaction>2021/09/30 12:51:17.000.723,C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Empresa.pas</Transaction>
+  </Transactions>
+</BorlandProject>

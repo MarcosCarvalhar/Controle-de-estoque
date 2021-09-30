@@ -12,7 +12,8 @@ uses
   U_Produto in '..\Forms\U_Produto.pas' {frm_Produto},
   U_FormasPGTO in '..\Forms\U_FormasPGTO.pas' {frm_formasPGTO},
   U_Form_pesquisa_padrao in '..\Forms\U_Form_pesquisa_padrao.pas' {frm_Pesquisa_Padrao},
-  U_Pesq_Usuario in '..\Forms\U_Pesq_Usuario.pas' {frm_Pesq_Usuario};
+  U_Pesq_Usuario in '..\Forms\U_Pesq_Usuario.pas' {frm_Pesq_Usuario},
+  U_Pesq_Empresa in '..\Forms\U_Pesq_Empresa.pas' {frm_Pesq_Empresa};
 
 {$R *.res}
 

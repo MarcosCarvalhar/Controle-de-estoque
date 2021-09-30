@@ -1,0 +1,511 @@
+inherited frm_empresa: Tfrm_empresa
+  Caption = 'CADASTRO DA EMPRESA'
+  ClientHeight = 486
+  ClientWidth = 640
+  ExplicitWidth = 646
+  ExplicitHeight = 514
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 640
+    TabOrder = 2
+    ExplicitWidth = 728
+    inherited lblTitulo: TLabel
+      Left = 275
+      Top = 22
+      Width = 132
+      Caption = 'EMPRESA'
+      ExplicitLeft = 275
+      ExplicitTop = 22
+      ExplicitWidth = 132
+    end
+    inherited Image1: TImage
+      Left = 227
+      Top = 22
+      Picture.Data = {
+        0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000020
+        000000200806000000737A7AF4000000206348524D00007A25000080830000F9
+        FF000080E9000075300000EA6000003A980000176F925FC54600000009704859
+        7300000B1100000B11017F645F91000008F1494441545847E557095093671A66
+        B7DDBA6BD71574F15A2D080458AA158F75757A806DE510AC6D05B58082F60251
+        D4F13E5141D1A2580525801C0A842388805C819070052440C295002124403802
+        49082052B7AE3EFBFD01AB3BAE3B76EAEECCCE3E33CF0CF367BEEF79DEE77DDF
+        FF1FF4FEE7107829D6DA3F28CAE3E485B82F4E07D1174E3CFEEFC0DF3F563F31
+        8D5D19995EFAF8E477B18F4F07C756F9FB87FD7EE267BD2CE7D993592EE6F3B9
+        EB8CF4271EBD5A10B159A91945AD51A96C1C391385932137AB2EEEF9721ACFD3
+        DC92EB6EBAB3DC93C664BBD2AA73D69AD323962EFDCDC4B157875457BDD73855
+        B5DC921A211203F721E7F086FE5277938E6277DAE302171A72D79923DBD91C77
+        086FAFA12524D999CE9B38FACB20D8696678D7C7D2A9C6DBF47CF97E5B4DC98E
+        7751B2D91C9C4D3414B85A207FBD39F23E33470E314089673AD190EE447B90E6
+        68CAA4DA3271CDCF8764AB996163D89E889AE3B623423F4BF0BEB642F1664B70
+        DC2D50B4C902851B2CC07221063E3747EEA7A4FAB5E6C822063288815B6B6860
+        AE31438A83D9ED240733D3892B5F1EA26FAD6932E6852489ACE311AFA808E53B
+        DE01DFD70A65DBACC0F5B0047BA3050A2803EB2D74D5EBE2270628F1F427E284
+        0C47D31F131C4DB3525D4DA64E5CFDEF91EB6036491AB8D1B1BB3CA3B343A946
+        735B071ADA3A51949383B27D1F80EFBD00A55BADC026093C893F978AFF93F1F8
+        C70D982195309930D1D114F18E2688B59FCFBA6E6F6C3121F362B48778FA2A05
+        9CAEB6AE3E344BE5686DEF8462400B7E73277298A9E06DB742E5D76F83E3F6E7
+        7103CFC64FC46FEBE21FAF3EC9D14C277EC3C104310EC60FA3EC8C0B635FB4A2
+        CD076D8C65374E8676CBA59076F640DCDA063131D0A91A42A7660CCDBD5A6457
+        8991969808AEDF4A947911031B2C9F3340860F69CF19988F68C2287B63D03F7E
+        8B1BFAD1FC7F7E81357B1A19B76746726432F983A65619048D62483ABAD1A71D
+        45EFD018DA0746D1A2BC877A8516B74A1B9074231EC55E3470BE782681A7D3AF
+        3340C5CF20066E12037194017B62C0CE18E1AB8D1E5E5B6D5416B6C668D684BC
+        9E5E7D7EAA5C20ED7DCCAF13412469C7807618A30F1E423DFA37746BC7D0460C
+        08BBB4A892A951D2A204A3B8017151B1607DB5940C214DB77E2F67C008576DE7
+        FCFDD27B333A83ACF5DD88F4AF74069233B981FC7AF123717B17542363D0DE7F
+        08151197AB47D1A0D040D0A1461D3150DB35045EFB20D8E25E44E5F211713512
+        2C5723E47F4A7BAE054F0CE85A4018FDD15C84AE32C2A9751F8A8F2F9CE5E86F
+        A5F7864E9C828FCFD179A28EFE4772D57D74A8EF43DA3F8226C520C4BD436823
+        CF24EA3134F68D42D03D820AB9165C890A59C22ED0F305B876F92A72DC172277
+        2DEDB91948261B10F7B111C21CDEC6D99D3E080C4FC2F1D81CDEA2151FFE6942
+        7A1C9FB9EF9ECD97F4FC2825622DCA11B4F48DE8626F1BB88F564291F23EF81D
+        5A944806C069EE47113190DFAC02B35A8E106629AE065F22AD3022298C6F0165
+        2265F53C32706608F2FD16815762712E998D602617E7E3732A962FB7994B647F
+        4D38DE0237B743063C91624C20D7E0168B07667E19722B9BC0164A51DB3988BB
+        320DCAA51A5476DE4345E7288A65C360B50EE28E488D840A192EDD11E0EAD9B3
+        C872B504D3DE04914ED638EDE78713F4349C49E512610E22F2F9B855D381A4F2
+        96CA65EFDB51DF88D77F32E0E1B1F7CDA23AF97059B31221A1B1387A2400070E
+        9C8087E737E03476A15A710FEC0605AE671623952722D5AB91D5D40FA6A01B29
+        4225AE97B4E2D44D16CE1D3E8C33BEDE3876390E27120A11C028C4F7193C2456
+        B421573C80C256359865A2AAC52B571911D94984AFE90CB8BAFABF9159D9DC5F
+        2CEAC5FE6341F8C4F973D8D93960D95FFE8A3CA11CC56D1A24E7F160F3C16A2C
+        59B2028B084F47A52143AC45729D0A37ABFB10C212E118A31847E2D93876B310
+        E7D3798826C632C51A22AE226D5393F919467A497DB5C5C265D41B710A216542
+        4FCFC6C6E6F5B432B1A294F4D767EF712C5EB2148BADADF1D65B46B85D250157
+        AA452ABB1AABEDD6C2D27221A6E94F835F4028D21A0711CFEFC1F5723982B385
+        384A844F30B808C96F407C4D1F9875FDC8160D804D2A2F91AA51D33582CCB286
+        5A33B3771613594342CAC43818DC26492131905DD902467609BEBB12852F77EC
+        4796807C07DA8791CC16C076952366CD9A8B998633B12B300C0935BD88AB5622
+        EA6E2F49408C8BAC26D0C9DFD1FC3E306A7B71BB49853C523D8754CFEF1C8250
+        3104564563BD8989F97B44929A83A7AFE5786E6313AB55833CE298D53C80D2F6
+        211489FB75F1658B54482CE06393AB3B56D93AC2F67D3BEC0EA2235EA04274F5
+        00E8153D082D96815ED9073A4F8158622A59D0878CC67E144A34A4852AD42A86
+        D1AAF901F11905153366CC5949246712FE56274E2196DD28C86B1D26626A6492
+        83D4E1CCC601A4097B9056A7440ABB0ABBB77AC2C969039C9D5CB02B28525769
+        444517C24B65B8C26ED519892009C4547583594F9DEF27F1AB70B7EB1E0A0452
+        75404844FCE4C993A9F8A713520338BE0514C232ABF89964A898C23EA40A7A70
+        8B5C4091BA88D9A04214AB1E5BB6ED82AB8B1736ACF7C4AE73D71149C4E8953D
+        08E775E3325B82F07285CE401C19CA1441AF6E4D8B248388CE2A916EDCE2ED33
+        7DFA1C6AF8DE241C9FFE67712A3A2BE7064F7E3F99AC559A6808A964C0928403
+        88AFEE2103D58B6B7975F866FB117879EEC0D62D3BB027F80622AA94A4EA6E84
+        9775E072610BE97F1F31A3400CBF172975038F63384D4AAF5D4782F4F50D1711
+        893F1052BBFFAFE1E1E7BF604F508C1BA92CE268443AFB627A8532BA5CF68851
+        AF4542DD20C2F21AB0634F20B67B1F82AFF701ECBD1047FA4D5EC79481F22E9D
+        8170AA057C2531D0874357181C7B976D9BC9D5D4578FEAF5D3B85F0653A74E35
+        984F5BB4DCD96BF757DE01F490F3D7223517027C716097370EEDD98783971988
+        AAD52092DF4FAA2643C86DD7B5E314A3A4C179B3DF2172C56CC2DF11FE3CE117
+        60F24EB715A7E9FE0EB9CCEF5D86430E3A09376D3F1C732022AB2624A7FE8748
+        127BF01DE198EFF9B8ACA536CED48A1910BE38EE5F02030383A9868686D47F43
+        546593A64CF9A3F98295F64E96D6EFAEA67E26FCCF08BF042843AF24EEFF27E8
+        E9FD0376A56B59B57992A90000000049454E44AE426082}
+      ExplicitLeft = 227
+      ExplicitTop = 22
+    end
+  end
+  inherited Panel2: TPanel
+    Top = 411
+    Width = 640
+    Height = 75
+    ExplicitTop = 411
+    ExplicitWidth = 728
+    ExplicitHeight = 75
+    inherited BitBtn10: TBitBtn
+      Left = 524
+      Top = 17
+      Height = 27
+      ExplicitLeft = 524
+      ExplicitTop = 17
+      ExplicitHeight = 27
+    end
+    inherited btnCancelar: TBitBtn
+      Left = 428
+      Top = 17
+      Height = 27
+      ExplicitLeft = 428
+      ExplicitTop = 17
+      ExplicitHeight = 27
+    end
+    inherited btnGravar: TBitBtn
+      Left = 326
+      Top = 17
+      Height = 27
+      ExplicitLeft = 326
+      ExplicitTop = 17
+      ExplicitHeight = 27
+    end
+    inherited DBNavigator2: TDBNavigator
+      Left = 43
+      Top = 17
+      Height = 27
+      Hints.Strings = ()
+      ExplicitLeft = 43
+      ExplicitTop = 17
+      ExplicitHeight = 27
+    end
+  end
+  inherited Panel3: TPanel
+    Width = 640
+    Height = 351
+    TabOrder = 0
+    ExplicitWidth = 728
+    ExplicitHeight = 388
+    object Label1: TLabel
+      Left = 43
+      Top = 55
+      Width = 83
+      Height = 13
+      Caption = 'RAZ'#195'O SOCIAL'
+    end
+    object Label10: TLabel
+      Left = 43
+      Top = 151
+      Width = 35
+      Height = 13
+      Caption = 'EMAIL'
+    end
+    object Label12: TLabel
+      Left = 186
+      Top = 5
+      Width = 61
+      Height = 13
+      Caption = 'CADASTRO'
+    end
+    object Label13: TLabel
+      Left = 43
+      Top = 5
+      Width = 44
+      Height = 13
+      Caption = 'C'#211'DIGO'
+    end
+    object Label14: TLabel
+      Left = 562
+      Top = 259
+      Width = 28
+      Height = 13
+      Caption = 'NUM.'
+    end
+    object Label2: TLabel
+      Left = 43
+      Top = 103
+      Width = 90
+      Height = 13
+      Caption = 'NOME FANTASIA'
+    end
+    object Label3: TLabel
+      Left = 43
+      Top = 259
+      Width = 56
+      Height = 13
+      Caption = 'ENDERE'#199'O'
+    end
+    object Label4: TLabel
+      Left = 305
+      Top = 305
+      Width = 44
+      Height = 13
+      Caption = 'BAIRRO'
+    end
+    object Label5: TLabel
+      Left = 43
+      Top = 305
+      Width = 42
+      Height = 13
+      Caption = 'CIDADE'
+    end
+    object Label6: TLabel
+      Left = 562
+      Top = 305
+      Width = 14
+      Height = 13
+      Caption = 'UF'
+    end
+    object Label7: TLabel
+      Left = 43
+      Top = 213
+      Width = 20
+      Height = 13
+      Caption = 'CEP'
+    end
+    object Label8: TLabel
+      Left = 493
+      Top = 151
+      Width = 52
+      Height = 13
+      Caption = 'TELEFONE'
+    end
+    object Label9: TLabel
+      Left = 493
+      Top = 102
+      Width = 27
+      Height = 13
+      Caption = 'CNPJ'
+    end
+    object db_bairro: TDBEdit
+      Left = 305
+      Top = 324
+      Width = 238
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'BAIRRO'
+      DataSource = DS_padrao
+      Enabled = False
+      TabOrder = 0
+    end
+    object db_cadastro: TDBEdit
+      Left = 186
+      Top = 24
+      Width = 121
+      Height = 21
+      DataField = 'CADASTRO'
+      DataSource = DS_padrao
+      Enabled = False
+      TabOrder = 1
+    end
+    object db_CEP: TDBEdit
+      Left = 43
+      Top = 232
+      Width = 120
+      Height = 21
+      DataField = 'CEP'
+      DataSource = DS_padrao
+      Enabled = False
+      TabOrder = 2
+    end
+    object db_cidade: TDBEdit
+      Left = 43
+      Top = 324
+      Width = 250
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'CIDADE'
+      DataSource = DS_padrao
+      Enabled = False
+      TabOrder = 3
+    end
+    object db_CNPJ: TDBEdit
+      Left = 493
+      Top = 121
+      Width = 120
+      Height = 21
+      DataField = 'CNPJ'
+      DataSource = DS_padrao
+      Enabled = False
+      TabOrder = 4
+    end
+    object db_email: TDBEdit
+      Left = 44
+      Top = 170
+      Width = 427
+      Height = 21
+      DataField = 'EMAIL'
+      DataSource = DS_padrao
+      Enabled = False
+      TabOrder = 5
+    end
+    object db_endereco: TDBEdit
+      Left = 44
+      Top = 278
+      Width = 499
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'ENDERECO'
+      DataSource = DS_padrao
+      Enabled = False
+      TabOrder = 6
+    end
+    object db_id_empresa: TDBEdit
+      Left = 43
+      Top = 24
+      Width = 121
+      Height = 21
+      DataField = 'ID_EMPRESA'
+      DataSource = DS_padrao
+      Enabled = False
+      TabOrder = 7
+    end
+    object db_n_fantasia: TDBEdit
+      Left = 43
+      Top = 122
+      Width = 428
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'N_FANTASIA'
+      DataSource = DS_padrao
+      Enabled = False
+      TabOrder = 8
+    end
+    object db_numero: TDBEdit
+      Left = 562
+      Top = 278
+      Width = 51
+      Height = 21
+      DataField = 'NUMERO'
+      DataSource = DS_padrao
+      Enabled = False
+      TabOrder = 9
+    end
+    object db_razao_social: TDBEdit
+      Left = 43
+      Top = 76
+      Width = 570
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'RAZAO_SOCIAL'
+      DataSource = DS_padrao
+      Enabled = False
+      TabOrder = 10
+    end
+    object db_telefone: TDBEdit
+      Left = 493
+      Top = 170
+      Width = 120
+      Height = 21
+      DataField = 'TELEFONE'
+      DataSource = DS_padrao
+      Enabled = False
+      TabOrder = 11
+    end
+    object DBComboBox1: TDBComboBox
+      Left = 562
+      Top = 324
+      Width = 52
+      Height = 21
+      Items.Strings = (
+        'AC'
+        'AL'
+        'AP'
+        'AM'
+        'BA'
+        'CE'
+        'ES'
+        'GO'
+        'MA'
+        'MT'
+        'MS'
+        'MG'
+        'PA'
+        'PB'
+        'PR'
+        'PE'
+        'PI'
+        'RJ'
+        'RN'
+        'RS'
+        'RO'
+        'RR'
+        'SC'
+        'SP'
+        'SE'
+        'TO'
+        'DF')
+      TabOrder = 12
+    end
+  end
+  inherited Q_padrao: TFDQuery
+    UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
+    UpdateOptions.FetchGeneratorsPoint = gpImmediate
+    UpdateOptions.GeneratorName = 'GEN_ID_EMPRESA'
+    UpdateOptions.AutoIncFields = 'ID_EMPRESA'
+    SQL.Strings = (
+      'SELECT ID_EMPRESA,'
+      '       RAZAO_SOCIAL,'
+      '       N_FANTASIA,'
+      '       ENDERECO,'
+      '       NUMERO,'
+      '       BAIRRO,'
+      '       CIDADE,'
+      '       UF,'
+      '       TELEFONE,'
+      '       CNPJ,'
+      '       EMAIL,'
+      '       CADASTRO,'
+      '       CEP'
+      '       FROM EMPRESA')
+    Left = 500
+    Top = 72
+    object Q_padraoID_EMPRESA: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID_EMPRESA'
+      Origin = 'ID_EMPRESA'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object Q_padraoRAZAO_SOCIAL: TStringField
+      FieldName = 'RAZAO_SOCIAL'
+      Origin = 'RAZAO_SOCIAL'
+      Required = True
+      Size = 100
+    end
+    object Q_padraoN_FANTASIA: TStringField
+      FieldName = 'N_FANTASIA'
+      Origin = 'N_FANTASIA'
+      Required = True
+      Size = 100
+    end
+    object Q_padraoENDERECO: TStringField
+      FieldName = 'ENDERECO'
+      Origin = 'ENDERECO'
+      Required = True
+      Size = 100
+    end
+    object Q_padraoBAIRRO: TStringField
+      FieldName = 'BAIRRO'
+      Origin = 'BAIRRO'
+      Required = True
+      Size = 100
+    end
+    object Q_padraoCIDADE: TStringField
+      FieldName = 'CIDADE'
+      Origin = 'CIDADE'
+      Required = True
+      Size = 100
+    end
+    object Q_padraoUF: TStringField
+      FieldName = 'UF'
+      Origin = 'UF'
+      Required = True
+      FixedChar = True
+      Size = 2
+    end
+    object Q_padraoCEP: TStringField
+      FieldName = 'CEP'
+      Origin = 'CEP'
+      Required = True
+      EditMask = '00000\-999;0;_'
+      Size = 14
+    end
+    object Q_padraoTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Origin = 'TELEFONE'
+      Required = True
+      EditMask = '!\(99\)0000-0000;0;_'
+      Size = 15
+    end
+    object Q_padraoCNPJ: TStringField
+      FieldName = 'CNPJ'
+      Origin = 'CNPJ'
+      Required = True
+      EditMask = '00.000.000/0000-00;0;'
+    end
+    object Q_padraoEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Origin = 'EMAIL'
+      Required = True
+      Size = 100
+    end
+    object Q_padraoCADASTRO: TDateField
+      FieldName = 'CADASTRO'
+      Origin = 'CADASTRO'
+      Required = True
+    end
+    object Q_padraoNUMERO: TIntegerField
+      FieldName = 'NUMERO'
+      Origin = 'NUMERO'
+      Required = True
+    end
+  end
+  inherited DS_padrao: TDataSource
+    Left = 428
+    Top = 72
+  end
+end

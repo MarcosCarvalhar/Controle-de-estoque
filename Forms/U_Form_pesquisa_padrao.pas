@@ -23,9 +23,6 @@ type
     ds_pesq_padrao: TDataSource;
     q_pesq_padrao: TFDQuery;
     Panel2: TPanel;
-    btnSair: TBitBtn;
-    btnImprimir: TBitBtn;
-    btnBaixar: TBitBtn;
     btnPesquisar: TBitBtn;
     cb_Chave_pesquisa: TComboBox;
     btnVisualizar: TBitBtn;
@@ -33,6 +30,13 @@ type
     btnAdicionar: TBitBtn;
     btnDeletar: TBitBtn;
     btnAtualizar: TBitBtn;
+    Panel3: TPanel;
+    lblTitulo: TLabel;
+    Image1: TImage;
+    Panel4: TPanel;
+    btnBaixar: TBitBtn;
+    btnImprimir: TBitBtn;
+    btnSair: TBitBtn;
     procedure cb_Chave_pesquisaChange(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure btnDeletarClick(Sender: TObject);
@@ -54,12 +58,13 @@ var
   frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao;
   alterarCampos :boolean;
   acao :char;
+  itemPesquisa: integer;
 
 implementation
 
 {$R *.dfm}
 
-uses U_DM, U_usuario, U_padrao;
+uses U_DM, U_padrao;
 
 procedure Tfrm_Pesquisa_Padrao.btnAdicionarClick(Sender: TObject);
 begin
@@ -101,35 +106,38 @@ end;
 procedure Tfrm_Pesquisa_Padrao.btnVisualizarClick(Sender: TObject);
 begin
   alterarCampos := false;
+  acao := 'V';
 end;
 
 procedure Tfrm_Pesquisa_Padrao.cb_Chave_pesquisaChange(Sender: TObject);
 begin
-  case cb_Chave_pesquisa.ItemIndex of
+  case itemPesquisa of
 
-    0..1:
-    begin        // pesquisa por codigo e nome
+    0:
+    begin        // pesquisa por valor
       ed_Valor.visible  := true;
       mk_inicio.visible := false;
       mk_fim.visible    := false;
       lbl_Valor.visible := true;
       lbl_Data1.visible := false;
       lbl_Data2.visible := false;
+      btnPesquisar.Left := 392;
       ed_Valor.SetFocus;
     end;
 
-    2:
-    begin      // pesquisa por cadastro
+    1:
+    begin      // pesquisa por data
       ed_Valor.visible  := false;
       mk_inicio.visible := true;
       mk_fim.visible    := true;
       lbl_Valor.visible := false;
       lbl_Data1.visible := true;
       lbl_Data2.visible := true;
+      btnPesquisar.Left := 488;
       mk_Inicio.SetFocus;
     end;
 
-    3:
+    2:
     begin    // pesquisa por todos
       ed_Valor.visible  := false;
       mk_inicio.visible := false;
@@ -137,6 +145,7 @@ begin
       lbl_Valor.visible := false;
       lbl_Data1.visible := false;
       lbl_Data2.visible := false;
+      btnPesquisar.Left := 208;
       btnPesquisar.SetFocus;
     end;
 
