@@ -1,7 +1,7 @@
 inherited frm_Usuarios: Tfrm_Usuarios
   Align = alCustom
   BorderStyle = bsToolWindow
-  Caption = 'CADASTRO DE USU'#193'RIOS'
+  Caption = 'CADASTRO DE USU'#193'RIO'
   ClientHeight = 344
   ClientWidth = 634
   ExplicitWidth = 640

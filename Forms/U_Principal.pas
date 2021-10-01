@@ -75,7 +75,8 @@ implementation
 
 {$R *.dfm}
 
-uses U_usuario, U_DM, U_empresa, U_Cliente, U_Fornecedor, U_Produto, U_FormasPGTO, U_Pesq_Usuario, U_Pesq_Empresa;
+uses U_usuario, U_DM, U_empresa, U_Cliente, U_Fornecedor, U_Produto, U_FormasPGTO, U_Pesq_Usuario, U_Pesq_Empresa,
+  U_Pesq_Cliente, U_Pesq_Fornecedor, U_Pesq_Produto, U_Pesq_FormasPGTO;
 
 procedure TfrmPrincipal.Timer1Timer(Sender: TObject);
 begin
@@ -122,12 +123,12 @@ end;
 
 procedure TfrmPrincipal.Abre_Tela_Cliente;
 begin
-  frm_Cliente := Tfrm_Cliente.Create(self);
-  frm_Cliente.ShowModal;
+  frm_Pesq_Cliente := Tfrm_Pesq_Cliente.Create(self);
+  frm_Pesq_Cliente.ShowModal;
     try
     finally
-       frm_Cliente.Free;
-       frm_Cliente := nil;
+       frm_Pesq_Cliente.Free;
+       frm_Pesq_Cliente := nil;
     end;
 end;
 
@@ -144,25 +145,25 @@ end;
 
 procedure TfrmPrincipal.Abre_Tela_FormaDePgto;
 begin
-  frm_formasPGTO := Tfrm_formasPGTO.Create(self);
-  frm_formasPGTO.ShowModal;
+  frm_Pesq_FormasPGTO := Tfrm_Pesq_FormasPGTO.Create(self);
+  frm_Pesq_FormasPGTO.ShowModal;
   try
 
   finally
-    frm_formasPGTO.free;
-    frm_formasPGTO := nil;
+    frm_Pesq_FormasPGTO.free;
+    frm_Pesq_FormasPGTO := nil;
   end;
 end;
 
 procedure TfrmPrincipal.Abre_Tela_Fornecedor;
 begin
-  frm_Fornecedor := Tfrm_Fornecedor.Create(self);
-  frm_Fornecedor.ShowModal;
+  frm_Pesq_Fornecedor := Tfrm_Pesq_Fornecedor.Create(self);
+  frm_Pesq_Fornecedor.ShowModal;
   try
 
   finally
-    frm_Fornecedor.free;
-    frm_Fornecedor := nil;
+    frm_Pesq_Fornecedor.free;
+    frm_Pesq_Fornecedor := nil;
   end;
 end;
 
@@ -180,13 +181,13 @@ end;
 
 procedure TfrmPrincipal.Abre_Tela_Produtos;
 begin
-  frm_Produto := Tfrm_Produto.Create(self);
-  frm_Produto.ShowModal;
+  frm_Pesq_Produto := Tfrm_Pesq_Produto.Create(self);
+  frm_Pesq_Produto.ShowModal;
   try
 
   finally
-    frm_Produto.free;
-    frm_Produto := nil;
+    frm_Pesq_Produto.free;
+    frm_Pesq_Produto := nil;
   end;
 end;
 

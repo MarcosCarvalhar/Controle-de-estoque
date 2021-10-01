@@ -4,5 +4,18 @@
     <Transaction>2021/09/30 12:50:44.000.605,=C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas</Transaction>
     <Transaction>2021/09/30 12:51:17.000.723,C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.dfm=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Empresa.dfm</Transaction>
     <Transaction>2021/09/30 12:51:17.000.723,C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Empresa.pas</Transaction>
+    <Transaction>2021/10/01 09:24:06.000.911,=C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas</Transaction>
+    <Transaction>2021/10/01 09:24:25.000.854,=C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas</Transaction>
+    <Transaction>2021/10/01 09:26:14.000.719,C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.dfm=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Cliente.dfm</Transaction>
+    <Transaction>2021/10/01 09:26:14.000.719,C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Cliente.pas</Transaction>
+    <Transaction>2021/10/01 10:41:27.000.015,=C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas</Transaction>
+    <Transaction>2021/10/01 10:42:55.000.286,C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Fornecedor.pas</Transaction>
+    <Transaction>2021/10/01 10:42:55.000.287,C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.dfm=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Fornecedor.dfm</Transaction>
+    <Transaction>2021/10/01 13:31:31.000.111,=C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas</Transaction>
+    <Transaction>2021/10/01 13:34:12.000.626,C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.dfm=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Produto.dfm</Transaction>
+    <Transaction>2021/10/01 13:34:12.000.626,C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Produto.pas</Transaction>
+    <Transaction>2021/10/01 14:29:56.000.584,=C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas</Transaction>
+    <Transaction>2021/10/01 14:31:18.000.814,C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.dfm=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_FormasPGTO.dfm</Transaction>
+    <Transaction>2021/10/01 14:31:18.000.814,C:\Fontes\Estoque\Controle-de-estoque\Projeto\Unit1.pas=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_FormasPGTO.pas</Transaction>
   </Transactions>
 </BorlandProject>

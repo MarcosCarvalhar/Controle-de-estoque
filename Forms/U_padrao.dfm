@@ -242,12 +242,12 @@ object frm_Padrao: Tfrm_Padrao
       OnClick = btnGravarClick
     end
     object DBNavigator2: TDBNavigator
-      Left = 72
+      Left = 96
       Top = 24
-      Width = 204
+      Width = 112
       Height = 30
       DataSource = DS_padrao
-      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+      VisibleButtons = [nbPrior, nbNext]
       TabOrder = 3
       Visible = False
     end

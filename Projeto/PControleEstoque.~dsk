@@ -1,51 +1,23 @@
 ﻿[Closed Files]
-File_0=TSourceModule,'c:\program files\embarcadero\studio\15.0\SOURCE\VCL\Vcl.Forms.pas',0,1,2152,1,2165,0,0,{{1716,4},{1732,15},{'TScrollWindow'}}{{1819,4},{1919,15},{'TMainMenuBarStyleHook'}},
-File_1=TSourceModule,'c:\program files\embarcadero\studio\15.0\SOURCE\RTL\SYS\System.SysUtils.pas',0,1,5755,14,5759,0,0,,
-File_2=TSourceModule,'c:\program files\embarcadero\studio\15.0\SOURCE\RTL\SYS\System.pas',0,1,4434,1,4447,0,0,,
-File_3=TSourceModule,'c:\program files\embarcadero\studio\15.0\SOURCE\RTL\SYS\SysInit.pas',0,1,1186,1,1201,0,0,,
-File_4=TSourceModule,'c:\program files\embarcadero\studio\15.0\SOURCE\RTL\SYS\GETMEM.INC',0,1,2928,1,2941,0,0,,
-File_5=TSourceModule,'c:\program files\embarcadero\studio\15.0\SOURCE\VCL\Vcl.Controls.pas',0,1,7336,1,7349,0,0,,
-File_6=TSourceModule,'c:\program files\embarcadero\studio\15.0\source\data\Data.DB.pas',0,1,3213,1,3226,0,0,,
-File_7=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Cliente.pas',0,1,70,1,70,0,0,,
-File_8=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Produto.pas',0,1,1,1,1,0,0,,
-File_9=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_FormasPGTO.pas',0,1,1,1,1,0,0,,
-File_10=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Fornecedor.pas',0,1,1,18,51,0,0,,
+File_0=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_padrao.pas',0,1,59,1,49,0,0,,
+File_1=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Cliente.pas',0,1,17,4,26,0,0,,
+File_2=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Cliente.pas',0,1,61,23,79,0,0,,
+File_3=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Produto.pas',0,1,149,1,167,0,0,,
+File_4=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Produto.pas',0,1,61,1,62,0,0,,
+File_5=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_FormasPGTO.pas',0,1,35,6,50,0,0,,
+File_6=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_FormasPGTO.pas',0,1,56,30,69,0,0,,
+File_7=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Fornecedor.pas',0,1,84,1,71,0,0,,
+File_8=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Fornecedor.pas',0,1,39,24,49,0,0,,
+File_9=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_empresa.pas',0,1,64,29,78,0,0,,
+File_10=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Empresa.pas',0,1,64,26,64,0,0,,
+File_11=TSourceModule,'C:\Fontes\Estoque\Controle-de-estoque\Forms\U_usuario.pas',0,1,41,1,53,0,0,,
+File_12=TSourceModule,'c:\program files\embarcadero\studio\15.0\SOURCE\VCL\Vcl.Forms.pas',0,1,5707,1,5720,0,0,{{1716,4}
 
 [Modules]
-Module0=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_usuario.pas
-Module1=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_empresa.pas
-Module2=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Form_pesquisa_padrao.pas
-Module3=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_padrao.pas
-Module4=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Empresa.pas
-Module5=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Usuario.pas
-Module6=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Principal.pas
-Count=7
+Module0=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Usuario.pas
+Module1=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Principal.pas
+Count=2
 EditWindowCount=1
-
-[C:\Fontes\Estoque\Controle-de-estoque\Forms\U_usuario.pas]
-ModuleType=TSourceModule
-FormState=1
-FormOnTop=0
-
-[C:\Fontes\Estoque\Controle-de-estoque\Forms\U_empresa.pas]
-ModuleType=TSourceModule
-FormState=1
-FormOnTop=1
-
-[C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Form_pesquisa_padrao.pas]
-ModuleType=TSourceModule
-FormState=1
-FormOnTop=1
-
-[C:\Fontes\Estoque\Controle-de-estoque\Forms\U_padrao.pas]
-ModuleType=TSourceModule
-FormState=1
-FormOnTop=0
-
-[C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Empresa.pas]
-ModuleType=TSourceModule
-FormState=1
-FormOnTop=1
 
 [C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Usuario.pas]
 ModuleType=TSourceModule
@@ -61,16 +33,15 @@ FormOnTop=0
 FormState=1
 FormOnTop=0
 
+[C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Form_pesquisa_padrao.pas]
+FormState=1
+FormOnTop=0
+
 [EditWindow0]
-ViewCount=7
-CurrentEditView=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_usuario.pas
+ViewCount=2
+CurrentEditView=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Usuario.pas
 View0=0
 View1=1
-View2=2
-View3=3
-View4=4
-View5=5
-View6=6
 PercentageSizes=1
 Create=1
 Visible=1
@@ -89,7 +60,7 @@ BorlandEditorCodeExplorer=BorlandEditorCodeExplorer@EditWindow0
 TopPanelSize=0
 LeftPanelSize=1896
 LeftPanelClients=DockSite3
-LeftPanelData=00000800010000000000841B000000000000002C0D0000000000000100000000841B000009000000446F636B5369746533FFFFFFFF
+LeftPanelData=00000800010000000000000000000000000000000000000000000001000000000000000009000000446F636B5369746533FFFFFFFF
 RightPanelSize=0
 BottomPanelSize=1367
 BottomPanelClients=DockSite1,MessageView
@@ -97,14 +68,14 @@ BottomPanelData=0000080001020100000009000000446F636B53697465317A4500000000000002
 BottomMiddlePanelSize=0
 BottomMiddlePanelClients=GraphDrawingModel
 BottomMiddelPanelData=0000080001000100000010000000477261706844726177696E67566965772443000000000000004F06000000000000FFFFFFFF
-TabDockRightClients=DockSite0=2,DockSite4=0,DockSite2=1
+TabDockRightClients=DockSite0=-1,DockSite4=0,DockSite2=1
 
 [View0]
 CustomEditViewType=TEditView
 Module=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Principal.pas
-CursorX=40
-CursorY=136
-TopLine=16
+CursorX=24
+CursorY=154
+TopLine=137
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -112,65 +83,10 @@ EditViewName=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Principal.pas
 
 [View1]
 CustomEditViewType=TEditView
-Module=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_empresa.pas
-CursorX=50
-CursorY=82
-TopLine=64
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=Borland.FormDesignerView
-
-[View2]
-CustomEditViewType=TEditView
-Module=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Empresa.pas
-CursorX=36
-CursorY=132
-TopLine=127
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=Borland.FormDesignerView
-
-[View3]
-CustomEditViewType=TEditView
-Module=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Form_pesquisa_padrao.pas
-CursorX=32
-CursorY=74
-TopLine=62
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=Borland.FormDesignerView
-
-[View4]
-CustomEditViewType=TEditView
-Module=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_padrao.pas
-CursorX=41
-CursorY=49
-TopLine=20
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_padrao.pas
-
-[View5]
-CustomEditViewType=TEditView
-Module=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_usuario.pas
-CursorX=8
-CursorY=50
-TopLine=32
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_usuario.pas
-
-[View6]
-CustomEditViewType=TEditView
 Module=C:\Fontes\Estoque\Controle-de-estoque\Forms\U_Pesq_Usuario.pas
-CursorX=3
-CursorY=119
-TopLine=60
+CursorX=33
+CursorY=57
+TopLine=52
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -284,12 +200,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=1999
-Height=8640
+Width=1881
+Height=8173
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1999
-ClientHeight=8640
+ClientWidth=1881
+ClientHeight=8173
 TBDockHeight=7157
 LRDockWidth=1999
 Dockable=1
@@ -301,15 +217,15 @@ Create=1
 Visible=1
 Docked=0
 State=0
-Left=6537
-Top=3310
+Left=8067
+Top=2115
 Width=1896
 Height=6538
 MaxLeft=-7
 MaxTop=-14
 ClientWidth=1779
 ClientHeight=6071
-TBDockHeight=7115
+TBDockHeight=6538
 LRDockWidth=1896
 Dockable=1
 StayOnTop=0
@@ -317,8 +233,8 @@ SplitPos=98
 
 [PropInspDesignerSelection]
 ArrangeBy=Name
-SelectedItem=Cancel,OnClick
-ExpandedItems=Anchors=1,BevelEdges=1,Constraints=0,LiveBindings=0,"LiveBindings Designer=0",Margins=1,StyleElements=0,Touch=0,Font=0,BorderIcons=0,DataSource=1,Options=0,Padding=0,DataSource.LiveBindings=0,"DataSource.LiveBindings Designer=0",HorzScrollBar=0,DataSource.DataSet=0,FilterChanges=0,FilterOptions=0,FormatOptions=0,ActiveStoredUsage=0,Connection=0,FetchOptions=0,FieldOptions=0
+SelectedItem=Align,PopupMenu
+ExpandedItems=Constraints=0,DataSource=0,Font=0,LiveBindings=0,"LiveBindings Designer=0",Margins=0,GlassFrame=0,Anchors=0,BevelEdges=0,Padding=0,StyleElements=0,Touch=0,Font.Style=0,BorderIcons=0,ActiveStoredUsage=0,Connection=0,FetchOptions=0,FieldOptions=0,FilterChanges=0,FilterOptions=0,FormatOptions=0,ResourceOptions=0,Title=0,ProviderFlags=0,Title.Font=0,Options=0,TitleFont=0
 
 [ModelViewTool]
 PercentageSizes=1
@@ -366,11 +282,11 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=2335
+Width=2218
 Height=1374
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2335
+ClientWidth=2218
 ClientHeight=1374
 TBDockHeight=4835
 LRDockWidth=3565
@@ -385,11 +301,11 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=2335
+Width=2218
 Height=1374
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2335
+ClientWidth=2218
 ClientHeight=1374
 TBDockHeight=4835
 LRDockWidth=3565
@@ -525,12 +441,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=2335
-Height=1044
+Width=2218
+Height=577
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2335
-ClientHeight=1044
+ClientWidth=2218
+ClientHeight=577
 TBDockHeight=2321
 LRDockWidth=2826
 Dockable=1
@@ -544,12 +460,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=2335
-Height=1044
+Width=2218
+Height=577
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2335
-ClientHeight=1044
+ClientWidth=2218
+ClientHeight=577
 TBDockHeight=3201
 LRDockWidth=2826
 Dockable=1
@@ -563,12 +479,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=2335
-Height=1044
+Width=2218
+Height=577
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2335
-ClientHeight=1044
+ClientWidth=2218
+ClientHeight=577
 TBDockHeight=1154
 LRDockWidth=3675
 Dockable=1
@@ -749,20 +665,20 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=1022
-Top=100
+Left=0
+Top=0
 Width=2335
 Height=1387
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=2335
-ClientHeight=1387
+ClientWidth=2218
+ClientHeight=920
 TBDockHeight=1387
 LRDockWidth=2335
 Dockable=1
 StayOnTop=0
 TabPosition=1
-ActiveTabID=RefactoringForm
+ActiveTabID=ToDo List
 TabDockClients=RefactoringForm,FindReferencsForm,ToDo List,MetricsView,QAView
 
 [DockSite1]
@@ -829,7 +745,7 @@ MaxLeft=-1
 MaxTop=-1
 ClientWidth=1896
 ClientHeight=7115
-TBDockHeight=7115
+TBDockHeight=6538
 LRDockWidth=1896
 Dockable=1
 StayOnTop=0
@@ -845,14 +761,14 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=1068
-Top=100
+Left=0
+Top=0
 Width=1999
 Height=8640
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1999
-ClientHeight=8640
+ClientWidth=1881
+ClientHeight=8173
 TBDockHeight=8640
 LRDockWidth=1999
 Dockable=1

@@ -13,7 +13,11 @@ uses
   U_FormasPGTO in '..\Forms\U_FormasPGTO.pas' {frm_formasPGTO},
   U_Form_pesquisa_padrao in '..\Forms\U_Form_pesquisa_padrao.pas' {frm_Pesquisa_Padrao},
   U_Pesq_Usuario in '..\Forms\U_Pesq_Usuario.pas' {frm_Pesq_Usuario},
-  U_Pesq_Empresa in '..\Forms\U_Pesq_Empresa.pas' {frm_Pesq_Empresa};
+  U_Pesq_Empresa in '..\Forms\U_Pesq_Empresa.pas' {frm_Pesq_Empresa},
+  U_Pesq_Cliente in '..\Forms\U_Pesq_Cliente.pas' {frm_Pesq_Cliente},
+  U_Pesq_Fornecedor in '..\Forms\U_Pesq_Fornecedor.pas' {frm_Pesq_Fornecedor},
+  U_Pesq_Produto in '..\Forms\U_Pesq_Produto.pas' {frm_Pesq_Produto},
+  U_Pesq_FormasPGTO in '..\Forms\U_Pesq_FormasPGTO.pas' {frm_Pesq_FormasPGTO};
 
 {$R *.res}
 

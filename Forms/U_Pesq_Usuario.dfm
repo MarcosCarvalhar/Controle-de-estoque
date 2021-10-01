@@ -1,6 +1,8 @@
 inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
   Align = alCustom
   Caption = 'PESQUISA DE USU'#193'RIOS'
+  ExplicitWidth = 793
+  ExplicitHeight = 529
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
@@ -61,6 +63,8 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
       item
         Expanded = False
         FieldName = 'ID_USUARIO'
+        Title.Caption = 'ID'
+        Width = 50
         Visible = True
       end
       item
@@ -78,6 +82,7 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
       item
         Expanded = False
         FieldName = 'CADASTRO'
+        Width = 80
         Visible = True
       end>
   end

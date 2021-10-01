@@ -1,6 +1,5 @@
 inherited frm_Pesq_Empresa: Tfrm_Pesq_Empresa
   Caption = 'PESQUISA DE EMPRESA'
-  ExplicitTop = -53
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
@@ -167,12 +166,14 @@ inherited frm_Pesq_Empresa: Tfrm_Pesq_Empresa
       FieldName = 'TELEFONE'
       Origin = 'TELEFONE'
       Required = True
+      EditMask = '!\(99\)0000-0000;0;_'
       Size = 15
     end
     object q_pesq_padraoCNPJ: TStringField
       FieldName = 'CNPJ'
       Origin = 'CNPJ'
       Required = True
+      EditMask = '00.000.000/0000-00;0;'
     end
     object q_pesq_padraoEMAIL: TStringField
       FieldName = 'EMAIL'
@@ -189,6 +190,7 @@ inherited frm_Pesq_Empresa: Tfrm_Pesq_Empresa
       FieldName = 'CEP'
       Origin = 'CEP'
       Required = True
+      EditMask = '00000\-999;0;_'
       Size = 14
     end
   end

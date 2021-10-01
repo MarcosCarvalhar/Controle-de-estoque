@@ -1,0 +1,5 @@
+inherited frm_Pesq_FormasPGTO: Tfrm_Pesq_FormasPGTO
+  Caption = 'PESQUISA DE FORMAS DE PAGAMENTO'
+  PixelsPerInch = 96
+  TextHeight = 13
+end

@@ -1,9 +1,9 @@
 inherited frm_empresa: Tfrm_empresa
   Caption = 'CADASTRO DE EMPRESA'
-  ClientHeight = 486
+  ClientHeight = 471
   ClientWidth = 640
   ExplicitWidth = 646
-  ExplicitHeight = 514
+  ExplicitHeight = 499
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
@@ -12,16 +12,16 @@ inherited frm_empresa: Tfrm_empresa
     ExplicitWidth = 640
     inherited lblTitulo: TLabel
       Left = 275
-      Top = 22
+      Top = 14
       Width = 132
       Caption = 'EMPRESA'
       ExplicitLeft = 275
-      ExplicitTop = 22
+      ExplicitTop = 14
       ExplicitWidth = 132
     end
     inherited Image1: TImage
       Left = 227
-      Top = 22
+      Top = 14
       Picture.Data = {
         0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000020
         000000200806000000737A7AF4000000206348524D00007A25000080830000F9
@@ -100,16 +100,16 @@ inherited frm_empresa: Tfrm_empresa
         546593A64CF9A3F98295F64E96D6EFAEA67E26FCCF08BF042843AF24EEFF27E8
         E9FD0376A56B59B57992A90000000049454E44AE426082}
       ExplicitLeft = 227
-      ExplicitTop = 22
+      ExplicitTop = 14
     end
   end
   inherited Panel2: TPanel
-    Top = 411
+    Top = 413
     Width = 640
-    Height = 75
-    ExplicitTop = 411
+    Height = 58
+    ExplicitTop = 432
     ExplicitWidth = 640
-    ExplicitHeight = 75
+    ExplicitHeight = 58
     inherited BitBtn10: TBitBtn
       Left = 524
       Top = 17
@@ -147,7 +147,7 @@ inherited frm_empresa: Tfrm_empresa
   end
   inherited Panel3: TPanel
     Width = 640
-    Height = 351
+    Height = 353
     TabOrder = 0
     ExplicitWidth = 640
     ExplicitHeight = 351
@@ -229,14 +229,14 @@ inherited frm_empresa: Tfrm_empresa
       Caption = 'CEP'
     end
     object Label8: TLabel
-      Left = 493
+      Left = 489
       Top = 151
       Width = 52
       Height = 13
       Caption = 'TELEFONE'
     end
     object Label9: TLabel
-      Left = 493
+      Left = 489
       Top = 102
       Width = 27
       Height = 13
@@ -259,6 +259,7 @@ inherited frm_empresa: Tfrm_empresa
       Height = 21
       DataField = 'CADASTRO'
       DataSource = DS_padrao
+      Enabled = False
       TabOrder = 1
     end
     object db_CEP: TDBEdit
@@ -281,9 +282,9 @@ inherited frm_empresa: Tfrm_empresa
       TabOrder = 10
     end
     object db_CNPJ: TDBEdit
-      Left = 493
+      Left = 489
       Top = 121
-      Width = 120
+      Width = 124
       Height = 21
       DataField = 'CNPJ'
       DataSource = DS_padrao
@@ -315,6 +316,7 @@ inherited frm_empresa: Tfrm_empresa
       Height = 21
       DataField = 'ID_EMPRESA'
       DataSource = DS_padrao
+      Enabled = False
       TabOrder = 0
     end
     object db_n_fantasia: TDBEdit
@@ -347,9 +349,9 @@ inherited frm_empresa: Tfrm_empresa
       TabOrder = 2
     end
     object db_telefone: TDBEdit
-      Left = 493
+      Left = 489
       Top = 170
-      Width = 120
+      Width = 124
       Height = 21
       DataField = 'TELEFONE'
       DataSource = DS_padrao
@@ -360,6 +362,8 @@ inherited frm_empresa: Tfrm_empresa
       Top = 324
       Width = 52
       Height = 21
+      DataField = 'UF'
+      DataSource = DS_padrao
       Items.Strings = (
         'AC'
         'AL'
@@ -392,6 +396,7 @@ inherited frm_empresa: Tfrm_empresa
     end
   end
   inherited Q_padrao: TFDQuery
+    AfterInsert = Q_padraoAfterInsert
     UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
     UpdateOptions.FetchGeneratorsPoint = gpImmediate
     UpdateOptions.GeneratorName = 'GEN_ID_EMPRESA'

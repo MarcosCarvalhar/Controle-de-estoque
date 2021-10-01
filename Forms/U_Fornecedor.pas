@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask,
+  dxGDIPlusClasses;
 
 type
   Tfrm_Fornecedor = class(Tfrm_Padrao)
@@ -46,7 +47,8 @@ type
     db_bairro: TDBEdit;
     db_cidade: TDBEdit;
     db_UF: TDBComboBox;
-    procedure btn_NovoClick(Sender: TObject);
+    procedure DBNavigator2Click(Sender: TObject; Button: TNavigateBtn);
+    procedure Q_padraoAfterInsert(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -60,11 +62,20 @@ implementation
 
 {$R *.dfm}
 
-procedure Tfrm_Fornecedor.btn_NovoClick(Sender: TObject);
+uses U_Pesq_Fornecedor;
+
+procedure Tfrm_Fornecedor.DBNavigator2Click(Sender: TObject; Button: TNavigateBtn);
 begin
   inherited;
-  DB_cadastro.Text := DateToStr(now);
-  DB_nome.SetFocus;
+  DS_padrao.DataSet := frm_Pesq_Fornecedor.q_pesq_padrao;
+
+end;
+
+procedure Tfrm_Fornecedor.Q_padraoAfterInsert(DataSet: TDataSet);
+begin
+  inherited;
+  db_cadastro.Text := DateToStr(now);
+  db_nome.SetFocus;
 end;
 
 end.

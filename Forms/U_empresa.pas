@@ -51,6 +51,7 @@ type
     db_cidade: TDBEdit;
     DBComboBox1: TDBComboBox;
     procedure DBNavigator2Click(Sender: TObject; Button: TNavigateBtn);
+    procedure Q_padraoAfterInsert(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -72,7 +73,11 @@ begin
   DS_padrao.DataSet := frm_Pesq_Empresa.q_pesq_padrao;
 end;
 
-
-
+procedure Tfrm_empresa.Q_padraoAfterInsert(DataSet: TDataSet);
+begin
+  inherited;
+  db_cadastro.Text := DateToStr(now);
+  db_razao_social.SetFocus;
+end;
 
 end.

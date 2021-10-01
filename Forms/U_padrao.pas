@@ -47,7 +47,6 @@ uses U_Form_pesquisa_padrao;
 procedure Tfrm_Padrao.BitBtn10Click(Sender: TObject);
 begin
   Q_padrao.Cancel;
-  MessageDlg('Ação cancelada pelo usuário!', mtInformation, [mbOK], 0);
   close;
 end;
 

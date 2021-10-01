@@ -63,7 +63,6 @@ begin
 
   finally
     frm_empresa.Q_padrao.close;
-    q_pesq_padrao.Close;
     frm_Pesq_empresa.Show;
   end;
 end;

@@ -55,7 +55,6 @@ begin
 
   finally
     frm_Usuarios.Q_padrao.close;
-    q_pesq_padrao.Close;
     frm_Pesq_Usuario.Show;
   end;
 end;
@@ -112,7 +111,6 @@ procedure Tfrm_Pesq_Usuario.btnVisualizarClick(Sender: TObject);
 begin
   inherited;
   abre_cadastro_usuario;
-  acao := 'V';
 end;
 
 procedure Tfrm_Pesq_Usuario.cb_Chave_pesquisaChange(Sender: TObject);
