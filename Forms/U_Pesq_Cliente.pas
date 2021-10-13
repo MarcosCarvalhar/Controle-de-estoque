@@ -147,6 +147,8 @@ begin
   abre_cadastro_cliente;
 end;
 
+
+
 procedure Tfrm_Pesq_cliente.btnEditarClick(Sender: TObject);
 begin
   inherited;
