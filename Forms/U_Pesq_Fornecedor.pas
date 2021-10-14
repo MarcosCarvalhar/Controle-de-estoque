@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_Form_pesquisa_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, dxGDIPlusClasses, Vcl.ExtCtrls, Vcl.Grids,
-  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.Mask, System.UITypes;
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.Mask, System.UITypes, frxClass, frxDBSet;
 
 type
   Tfrm_Pesq_Fornecedor = class(Tfrm_Pesquisa_Padrao)
@@ -29,6 +29,7 @@ type
     procedure abre_cadastro_fornecedor;
     procedure btnAdicionarClick(Sender: TObject);
     procedure cb_Chave_pesquisaChange(Sender: TObject);
+    procedure btnImprimirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -151,6 +152,12 @@ procedure Tfrm_Pesq_fornecedor.btnEditarClick(Sender: TObject);
 begin
   inherited;
   abre_cadastro_fornecedor;
+end;
+
+procedure Tfrm_Pesq_Fornecedor.btnImprimirClick(Sender: TObject);
+begin
+  nomeRelatorio := 'rel_Fornecedores.fr3';
+  inherited;
 end;
 
 end.

@@ -228,4 +228,27 @@ inherited frm_Pesq_Produto: Tfrm_Pesq_Produto
       Size = 100
     end
   end
+  inherited dst_rel_pesq_padrao: TfrxDBDataset
+    UserName = 'frxDB_Produtos'
+  end
+  inherited rel_pesq_padrao: TfrxReport
+    Datasets = <>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      Orientation = poLandscape
+      PaperWidth = 297.000000000000000000
+      PaperHeight = 210.000000000000000000
+      PaperSize = 9
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      Frame.Typ = []
+    end
+  end
 end

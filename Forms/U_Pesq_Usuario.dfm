@@ -201,17 +201,12 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
         1856530000000049454E44AE426082}
     end
   end
-  inherited Panel4: TPanel
-    ExplicitLeft = -8
-    ExplicitTop = 440
-  end
   inherited ds_pesq_padrao: TDataSource
     DataSet = q_pesq_padrao
     Left = 367
-    Top = 461
+    Top = 453
   end
   inherited q_pesq_padrao: TFDQuery
-    Active = True
     SQL.Strings = (
       'select'
       '  nome,'
@@ -260,9 +255,9 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
   end
   inherited rel_pesq_padrao: TfrxReport
     ReportOptions.CreateDate = 44482.599725254600000000
-    ReportOptions.LastChange = 44482.649492245400000000
-    Left = 64
-    Top = 448
+    ReportOptions.LastChange = 44483.456508182870000000
+    Left = 120
+    Top = 456
     Datasets = <
       item
         DataSet = dst_rel_pesq_padrao
@@ -485,7 +480,7 @@ inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
           Frame.Typ = [ftBottom]
           HAlign = haCenter
           Memo.UTF8W = (
-            'C'#211'DIGO')
+            'C'#211'D.')
           ParentFont = False
           VAlign = vaCenter
         end

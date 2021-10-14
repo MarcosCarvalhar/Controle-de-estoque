@@ -22,6 +22,7 @@ type
     procedure abre_cadastro_usuario;
     procedure btnAdicionarClick(Sender: TObject);
     procedure cb_Chave_pesquisaChange(Sender: TObject);
+    procedure btnImprimirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -138,6 +139,12 @@ procedure Tfrm_Pesq_Usuario.btnEditarClick(Sender: TObject);
 begin
   inherited;
   abre_cadastro_usuario;
+end;
+
+procedure Tfrm_Pesq_Usuario.btnImprimirClick(Sender: TObject);
+begin
+  nomeRelatorio := 'rel_Usuarios.fr3';
+  inherited;
 end;
 
 end.
