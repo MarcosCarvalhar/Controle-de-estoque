@@ -1,0 +1,28 @@
+inherited frm_Compra: Tfrm_Compra
+  Caption = 'ENTRADA DE MATERIAIS'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited PageControl1: TPageControl
+    ActivePage = TabSheet2
+    inherited TabSheet1: TTabSheet
+      Caption = 'Itens'
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Contas a Pagar'
+      ImageIndex = 1
+      object DBGrid2: TDBGrid
+        Left = 0
+        Top = 0
+        Width = 716
+        Height = 197
+        Align = alClient
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+      end
+    end
+  end
+end

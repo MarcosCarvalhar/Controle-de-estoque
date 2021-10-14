@@ -48,6 +48,7 @@ type
     procedure Abre_Tela_Fornecedor;
     procedure Abre_Tela_Produtos;
     procedure Abre_Tela_FormaDePgto;
+    procedure Abre_Tela_Compras;
     procedure Timer1Timer(Sender: TObject);
     procedure btn_CloseClick(Sender: TObject);
     procedure btn_UsuarioClick(Sender: TObject);
@@ -62,6 +63,7 @@ type
     procedure Produtos1Click(Sender: TObject);
     procedure btn_Frma_pgtoClick(Sender: TObject);
     procedure FormasdePgto1Click(Sender: TObject);
+    procedure btn_ComprasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -76,7 +78,7 @@ implementation
 {$R *.dfm}
 
 uses U_usuario, U_DM, U_empresa, U_Cliente, U_Fornecedor, U_Produto, U_FormasPGTO, U_Pesq_Usuario, U_Pesq_Empresa,
-  U_Pesq_Cliente, U_Pesq_Fornecedor, U_Pesq_Produto, U_Pesq_FormasPGTO;
+  U_Pesq_Cliente, U_Pesq_Fornecedor, U_Pesq_Produto, U_Pesq_FormasPGTO, U_Pesq_Compras, U_Compras;
 
 procedure TfrmPrincipal.Timer1Timer(Sender: TObject);
 begin
@@ -89,6 +91,11 @@ end;
 procedure TfrmPrincipal.btn_CloseClick(Sender: TObject);
 begin
   close;
+end;
+
+procedure TfrmPrincipal.btn_ComprasClick(Sender: TObject);
+begin
+  Abre_Tela_Compras;
 end;
 
 procedure TfrmPrincipal.btn_UsuarioClick(Sender: TObject);
@@ -129,6 +136,17 @@ begin
     finally
        frm_Pesq_Cliente.Free;
        frm_Pesq_Cliente := nil;
+    end;
+end;
+
+procedure TfrmPrincipal.Abre_Tela_Compras;
+begin
+  frm_Pesq_Compras := Tfrm_Pesq_Compras.Create(self);
+  frm_Pesq_Compras.ShowModal;
+    try
+    finally
+      frm_Pesq_Compras.free;
+      frm_Pesq_Compras := nil;
     end;
 end;
 

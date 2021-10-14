@@ -17,7 +17,10 @@ uses
   U_Pesq_Cliente in '..\Forms\U_Pesq_Cliente.pas' {frm_Pesq_Cliente},
   U_Pesq_Fornecedor in '..\Forms\U_Pesq_Fornecedor.pas' {frm_Pesq_Fornecedor},
   U_Pesq_Produto in '..\Forms\U_Pesq_Produto.pas' {frm_Pesq_Produto},
-  U_Pesq_FormasPGTO in '..\Forms\U_Pesq_FormasPGTO.pas' {frm_Pesq_FormasPGTO};
+  U_Pesq_FormasPGTO in '..\Forms\U_Pesq_FormasPGTO.pas' {frm_Pesq_FormasPGTO},
+  U_Mov_Padrao in '..\Forms\U_Mov_Padrao.pas' {frm_Mov_Padrao},
+  U_Compras in '..\Forms\U_Compras.pas' {frm_Compras},
+  U_Pesq_Compras in '..\Forms\U_Pesq_Compras.pas' {frm_Pesq_Compras};
 
 {$R *.res}
 

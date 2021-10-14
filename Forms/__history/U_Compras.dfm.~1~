@@ -1,0 +1,5 @@
+inherited frm_Compra: Tfrm_Compra
+  Caption = 'CADASTRO DE COMPRAS'
+  PixelsPerInch = 96
+  TextHeight = 13
+end
