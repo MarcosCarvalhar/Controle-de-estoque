@@ -1,12 +1,12 @@
 inherited frm_Compras: Tfrm_Compras
   Caption = 'ENTRADA DE MATERIAIS'
   OnShow = FormShow
+  ExplicitTop = -24
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
     Font.Color = clNone
     ParentFont = False
-    ExplicitTop = -6
     object Label1: TLabel
       Left = 24
       Top = 16
@@ -140,10 +140,19 @@ inherited frm_Compras: Tfrm_Compras
       TabOrder = 5
     end
   end
+  inherited Panel2: TPanel
+    inherited btnGravar: TBitBtn
+      OnClick = btnGravarClick
+    end
+  end
   inherited PageControl1: TPageControl
     ActivePage = TabSheet2
     inherited TabSheet1: TTabSheet
       Caption = 'Itens'
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 716
+      ExplicitHeight = 197
     end
     object TabSheet2: TTabSheet
       Caption = 'Contas a Pagar'
@@ -193,6 +202,7 @@ inherited frm_Compras: Tfrm_Compras
       FieldName = 'ID_COMPRA'
       Origin = 'ID_COMPRA'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object Q_padraoID_FORNECEDOR: TIntegerField
       FieldName = 'ID_FORNECEDOR'
@@ -221,5 +231,21 @@ inherited frm_Compras: Tfrm_Compras
       Precision = 18
       Size = 2
     end
+  end
+  object FDQuery1: TFDQuery
+    Left = 360
+    Top = 240
+  end
+  object FDQuery2: TFDQuery
+    Left = 432
+    Top = 240
+  end
+  object DataSource1: TDataSource
+    Left = 424
+    Top = 304
+  end
+  object DataSource2: TDataSource
+    Left = 544
+    Top = 264
   end
 end

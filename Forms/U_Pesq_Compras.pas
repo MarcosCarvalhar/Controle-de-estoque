@@ -36,7 +36,7 @@ implementation
 
 {$R *.dfm}
 
-uses U_Compras;
+uses U_Compras, DM_Compras;
 
 procedure Tfrm_Pesq_compras.abre_cadastro_compras;
 begin
@@ -46,14 +46,14 @@ begin
   U_compras.frm_compras.btnGravar.Enabled := alterarCampos;
 
   // passa o valor do dbgrid para a query e abre o cadastro do compras
-  frm_compras.Q_padrao.close;
-  frm_compras.Q_padrao.ParamByName('PID_COMPRA').AsInteger := q_pesq_padraoID_COMPRA.AsInteger;
-  frm_compras.Q_padrao.Open;
+  TDataModule1.Q_padrao.close;
+  TDataModule1.Q_padrao.ParamByName('PID_COMPRA').AsInteger := q_pesq_padraoID_COMPRA.AsInteger;
+  TDataModule1.Q_padrao.Open;
   frm_compras.ShowModal;
   try
 
   finally
-    frm_compras.Q_padrao.close;
+    TDataModule1.Q_padrao.close;
     frm_Pesq_compras.Show;
   end;
 end;

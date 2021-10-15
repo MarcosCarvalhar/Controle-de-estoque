@@ -31,8 +31,13 @@ type
     db_usuario: TDBEdit;
     db_cadastro: TDBEdit;
     db_valor: TDBEdit;
+    FDQuery1: TFDQuery;
+    FDQuery2: TFDQuery;
+    DataSource1: TDataSource;
+    DataSource2: TDataSource;
     procedure Q_padraoAfterInsert(DataSet: TDataSet);
     procedure FormShow(Sender: TObject);
+    procedure btnGravarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,7 +51,7 @@ implementation
 
 {$R *.dfm}
 
-uses U_DM, U_Pesq_Compras, U_Form_pesquisa_padrao;
+uses U_DM, U_Pesq_Compras, U_Form_pesquisa_padrao, DM_Compras;
 
 procedure Tfrm_Compras.Q_padraoAfterInsert(DataSet: TDataSet);
 begin
@@ -58,14 +63,14 @@ end;
 
 procedure Tfrm_Compras.FormShow(Sender: TObject);
 begin
-  Q_padrao.Open;
-  Q_padrao.Refresh;
+  TDataModule1.Q_padrao.Open;
+  TDataModule1.Q_padrao.Refresh;
 
   case acao of
 
-  'A': Q_padrao.Append;
+  'A': TDataModule1.Q_padrao.Append;
 
-  'E': Q_padrao.Edit;
+  'E': TDataModule1.Q_padrao.Edit;
 
   end;
 

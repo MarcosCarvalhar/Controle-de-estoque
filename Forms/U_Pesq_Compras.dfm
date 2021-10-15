@@ -1,7 +1,6 @@
 inherited frm_Pesq_Compras: Tfrm_Pesq_Compras
   Caption = 'PESQUISA DE COMPRAS'
-  ExplicitWidth = 793
-  ExplicitHeight = 529
+  ExplicitTop = -53
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
@@ -119,5 +118,20 @@ inherited frm_Pesq_Compras: Tfrm_Pesq_Compras
     Datasets = <>
     Variables = <>
     Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      Orientation = poLandscape
+      PaperWidth = 297.000000000000000000
+      PaperHeight = 210.000000000000000000
+      PaperSize = 9
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      Frame.Typ = []
+    end
   end
 end

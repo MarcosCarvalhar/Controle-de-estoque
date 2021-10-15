@@ -20,7 +20,8 @@ uses
   U_Pesq_FormasPGTO in '..\Forms\U_Pesq_FormasPGTO.pas' {frm_Pesq_FormasPGTO},
   U_Mov_Padrao in '..\Forms\U_Mov_Padrao.pas' {frm_Mov_Padrao},
   U_Compras in '..\Forms\U_Compras.pas' {frm_Compras},
-  U_Pesq_Compras in '..\Forms\U_Pesq_Compras.pas' {frm_Pesq_Compras};
+  U_Pesq_Compras in '..\Forms\U_Pesq_Compras.pas' {frm_Pesq_Compras},
+  DM_Compras in '..\Forms\DM_Compras.pas' {DataModule1: TDataModule};
 
 {$R *.res}
 
