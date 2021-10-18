@@ -17,10 +17,18 @@ type
     FDQuery3: TFDQuery;
     Q_padrao_item: TFDQuery;
     ds_padrao_item: TDataSource;
+    Q_padraoID_COMPRA: TIntegerField;
+    Q_padraoID_FORNECEDOR: TIntegerField;
+    Q_padraoID_FORMA_PGTO: TIntegerField;
+    Q_padraoUSUARIO: TStringField;
+    Q_padraoCADASTRO: TDateField;
+    Q_padraoVALOR: TFMTBCDField;
+
   private
     { Private declarations }
   public
     { Public declarations }
+    procedure Q_padraoAfterInsert(DataSet: TDataSet);
   end;
 
 var
@@ -30,8 +38,15 @@ implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
-uses U_DM;
+uses U_DM, U_Compras;
 
 {$R *.dfm}
+
+procedure TDataModule1.Q_padraoAfterInsert(DataSet: TDataSet);
+begin
+  Tfrm_Compras.setData(TEdit: db_cadastro);
+  Tfrm_Compras.setFocus(Tfrm_Compras.db_id_fornecedor);
+  Q_PadraoUSUARIO := 'USUARIO';
+end;
 
 end.

@@ -1,7 +1,5 @@
 inherited frm_Compras: Tfrm_Compras
   Caption = 'ENTRADA DE MATERIAIS'
-  OnShow = FormShow
-  ExplicitTop = -24
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
@@ -138,11 +136,6 @@ inherited frm_Compras: Tfrm_Compras
       DataField = 'VALOR'
       DataSource = ds_padrao
       TabOrder = 5
-    end
-  end
-  inherited Panel2: TPanel
-    inherited btnGravar: TBitBtn
-      OnClick = btnGravarClick
     end
   end
   inherited PageControl1: TPageControl

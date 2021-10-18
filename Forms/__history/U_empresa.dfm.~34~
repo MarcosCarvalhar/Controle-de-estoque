@@ -1,32 +1,32 @@
 inherited frm_empresa: Tfrm_empresa
-  Caption = 'CADASTRO DA EMPRESA'
-  ClientHeight = 486
+  Caption = 'CADASTRO DE EMPRESA'
+  ClientHeight = 471
   ClientWidth = 640
   ExplicitWidth = 646
-  ExplicitHeight = 514
+  ExplicitHeight = 499
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
     Width = 640
     TabOrder = 2
-    ExplicitWidth = 728
+    ExplicitWidth = 640
     inherited lblTitulo: TLabel
       Left = 275
-      Top = 22
+      Top = 14
       Width = 132
       Caption = 'EMPRESA'
       ExplicitLeft = 275
-      ExplicitTop = 22
+      ExplicitTop = 14
       ExplicitWidth = 132
     end
     inherited Image1: TImage
       Left = 227
-      Top = 22
+      Top = 14
       Picture.Data = {
         0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000020
         000000200806000000737A7AF4000000206348524D00007A25000080830000F9
         FF000080E9000075300000EA6000003A980000176F925FC54600000009704859
-        7300000B1100000B11017F645F91000008F1494441545847E557095093671A66
+        7300000B0C00000B0C013F4022C8000008F1494441545847E557095093671A66
         B7DDBA6BD71574F15A2D080458AA158F75757A806DE510AC6D05B58082F60251
         D4F13E5141D1A2580525801C0A842388805C819070052440C295002124403802
         49082052B7AE3EFBFD01AB3BAE3B76EAEECCCE3E33CF0CF367BEEF79DEE77DDF
@@ -100,16 +100,16 @@ inherited frm_empresa: Tfrm_empresa
         546593A64CF9A3F98295F64E96D6EFAEA67E26FCCF08BF042843AF24EEFF27E8
         E9FD0376A56B59B57992A90000000049454E44AE426082}
       ExplicitLeft = 227
-      ExplicitTop = 22
+      ExplicitTop = 14
     end
   end
   inherited Panel2: TPanel
-    Top = 411
+    Top = 413
     Width = 640
-    Height = 75
-    ExplicitTop = 411
-    ExplicitWidth = 728
-    ExplicitHeight = 75
+    Height = 58
+    ExplicitTop = 432
+    ExplicitWidth = 640
+    ExplicitHeight = 58
     inherited BitBtn10: TBitBtn
       Left = 524
       Top = 17
@@ -139,6 +139,7 @@ inherited frm_empresa: Tfrm_empresa
       Top = 17
       Height = 27
       Hints.Strings = ()
+      OnClick = DBNavigator2Click
       ExplicitLeft = 43
       ExplicitTop = 17
       ExplicitHeight = 27
@@ -146,10 +147,10 @@ inherited frm_empresa: Tfrm_empresa
   end
   inherited Panel3: TPanel
     Width = 640
-    Height = 351
+    Height = 353
     TabOrder = 0
-    ExplicitWidth = 728
-    ExplicitHeight = 388
+    ExplicitWidth = 640
+    ExplicitHeight = 351
     object Label1: TLabel
       Left = 43
       Top = 55
@@ -228,14 +229,14 @@ inherited frm_empresa: Tfrm_empresa
       Caption = 'CEP'
     end
     object Label8: TLabel
-      Left = 493
+      Left = 489
       Top = 151
       Width = 52
       Height = 13
       Caption = 'TELEFONE'
     end
     object Label9: TLabel
-      Left = 493
+      Left = 489
       Top = 102
       Width = 27
       Height = 13
@@ -249,8 +250,7 @@ inherited frm_empresa: Tfrm_empresa
       CharCase = ecUpperCase
       DataField = 'BAIRRO'
       DataSource = DS_padrao
-      Enabled = False
-      TabOrder = 0
+      TabOrder = 11
     end
     object db_cadastro: TDBEdit
       Left = 186
@@ -269,8 +269,7 @@ inherited frm_empresa: Tfrm_empresa
       Height = 21
       DataField = 'CEP'
       DataSource = DS_padrao
-      Enabled = False
-      TabOrder = 2
+      TabOrder = 7
     end
     object db_cidade: TDBEdit
       Left = 43
@@ -280,17 +279,15 @@ inherited frm_empresa: Tfrm_empresa
       CharCase = ecUpperCase
       DataField = 'CIDADE'
       DataSource = DS_padrao
-      Enabled = False
-      TabOrder = 3
+      TabOrder = 10
     end
     object db_CNPJ: TDBEdit
-      Left = 493
+      Left = 489
       Top = 121
-      Width = 120
+      Width = 124
       Height = 21
       DataField = 'CNPJ'
       DataSource = DS_padrao
-      Enabled = False
       TabOrder = 4
     end
     object db_email: TDBEdit
@@ -300,7 +297,6 @@ inherited frm_empresa: Tfrm_empresa
       Height = 21
       DataField = 'EMAIL'
       DataSource = DS_padrao
-      Enabled = False
       TabOrder = 5
     end
     object db_endereco: TDBEdit
@@ -311,8 +307,7 @@ inherited frm_empresa: Tfrm_empresa
       CharCase = ecUpperCase
       DataField = 'ENDERECO'
       DataSource = DS_padrao
-      Enabled = False
-      TabOrder = 6
+      TabOrder = 8
     end
     object db_id_empresa: TDBEdit
       Left = 43
@@ -322,7 +317,7 @@ inherited frm_empresa: Tfrm_empresa
       DataField = 'ID_EMPRESA'
       DataSource = DS_padrao
       Enabled = False
-      TabOrder = 7
+      TabOrder = 0
     end
     object db_n_fantasia: TDBEdit
       Left = 43
@@ -332,8 +327,7 @@ inherited frm_empresa: Tfrm_empresa
       CharCase = ecUpperCase
       DataField = 'N_FANTASIA'
       DataSource = DS_padrao
-      Enabled = False
-      TabOrder = 8
+      TabOrder = 3
     end
     object db_numero: TDBEdit
       Left = 562
@@ -342,7 +336,6 @@ inherited frm_empresa: Tfrm_empresa
       Height = 21
       DataField = 'NUMERO'
       DataSource = DS_padrao
-      Enabled = False
       TabOrder = 9
     end
     object db_razao_social: TDBEdit
@@ -353,24 +346,24 @@ inherited frm_empresa: Tfrm_empresa
       CharCase = ecUpperCase
       DataField = 'RAZAO_SOCIAL'
       DataSource = DS_padrao
-      Enabled = False
-      TabOrder = 10
+      TabOrder = 2
     end
     object db_telefone: TDBEdit
-      Left = 493
+      Left = 489
       Top = 170
-      Width = 120
+      Width = 124
       Height = 21
       DataField = 'TELEFONE'
       DataSource = DS_padrao
-      Enabled = False
-      TabOrder = 11
+      TabOrder = 6
     end
     object DBComboBox1: TDBComboBox
       Left = 562
       Top = 324
       Width = 52
       Height = 21
+      DataField = 'UF'
+      DataSource = DS_padrao
       Items.Strings = (
         'AC'
         'AL'
@@ -403,6 +396,7 @@ inherited frm_empresa: Tfrm_empresa
     end
   end
   inherited Q_padrao: TFDQuery
+    AfterInsert = Q_padraoAfterInsert
     UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
     UpdateOptions.FetchGeneratorsPoint = gpImmediate
     UpdateOptions.GeneratorName = 'GEN_ID_EMPRESA'
@@ -421,9 +415,16 @@ inherited frm_empresa: Tfrm_empresa
       '       EMAIL,'
       '       CADASTRO,'
       '       CEP'
-      '       FROM EMPRESA')
+      'FROM EMPRESA'
+      'WHERE ID_EMPRESA = :PID_EMPRESA')
     Left = 500
     Top = 72
+    ParamData = <
+      item
+        Name = 'PID_EMPRESA'
+        DataType = ftInteger
+        ParamType = ptInput
+      end>
     object Q_padraoID_EMPRESA: TIntegerField
       AutoGenerateValue = arAutoInc
       FieldName = 'ID_EMPRESA'

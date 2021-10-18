@@ -26,10 +26,9 @@ type
     db_nome: TDBEdit;
     db_senha: TDBEdit;
     db_cadastro: TDBEdit;
-//    procedure btn_NovoClick(Sender: TObject);
-//    procedure btn_EditarClick(Sender: TObject);
-//    procedure btn_PesquisarClick(Sender: TObject);
-    procedure btnCancelarClick(Sender: TObject);
+    procedure Q_padraoAfterInsert(DataSet: TDataSet);
+    procedure DBNavigator2Click(Sender: TObject; Button: TNavigateBtn);
+
   private
     { Private declarations }
   public
@@ -45,37 +44,18 @@ implementation
 
 uses U_Pesq_Usuario;
 
-
-procedure Tfrm_Usuarios.btnCancelarClick(Sender: TObject);
+procedure Tfrm_Usuarios.DBNavigator2Click(Sender: TObject; Button: TNavigateBtn);
 begin
   inherited;
+  DS_padrao.DataSet := frm_Pesq_Usuario.q_pesq_padrao;
 end;
 
-//procedure Tfrm_Usuarios.btn_EditarClick(Sender: TObject);
-//begin
-//  inherited;
-//  trataCampos();
-//  db_nome.SetFocus;
-//end;
-//
-//procedure Tfrm_Usuarios.btn_NovoClick(Sender: TObject);
-//begin
-//  inherited;
-//  trataCampos();
-//  db_cadastro.Text := DateToStr(now);
-//  db_nome.SetFocus;
-//end;
-//
-//procedure Tfrm_Usuarios.btn_PesquisarClick(Sender: TObject);
-//begin
-//  frm_Pesq_Usuario := Tfrm_Pesq_Usuario.Create(self);
-//  frm_Pesq_Usuario.ShowModal;
-//  try
-//
-//  finally
-//    frm_pesq_usuario.Free;
-//    frm_Pesq_Usuario := nil;
-//  end;
-//end;
+procedure Tfrm_Usuarios.Q_padraoAfterInsert(DataSet: TDataSet);
+begin
+  inherited;
+  db_cadastro.Text := DateToStr(now);
+  db_nome.SetFocus;
+end;
+
 
 end.

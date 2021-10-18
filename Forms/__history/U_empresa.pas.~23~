@@ -6,9 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, cxGraphics, cxControls,
-  cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, cxSpinEdit, cxDBEdit, cxCalendar, cxMaskEdit,
-  cxDropDownEdit, cxBlobEdit, cxTextEdit, Vcl.DBCtrls;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Mask,
+  dxGDIPlusClasses;
 
 type
   Tfrm_empresa = class(Tfrm_Padrao)
@@ -25,33 +24,34 @@ type
     Q_padraoEMAIL: TStringField;
     Q_padraoCADASTRO: TDateField;
     Label1: TLabel;
-    DB_razao_social: TcxDBTextEdit;
     Label2: TLabel;
-    DB_n_fantasia: TcxDBTextEdit;
     Label3: TLabel;
-    DB_endereco: TcxDBTextEdit;
     Label4: TLabel;
-    DB_bairro: TcxDBTextEdit;
     Label5: TLabel;
-    DB_cidade: TcxDBTextEdit;
     Label6: TLabel;
-    DB_uf: TcxDBTextEdit;
     Label7: TLabel;
-    DB_cep: TcxDBTextEdit;
     Label8: TLabel;
-    DB_telefone: TcxDBTextEdit;
     Label9: TLabel;
-    DB_cnpj: TcxDBTextEdit;
     Label10: TLabel;
-    DB_email: TcxDBTextEdit;
     Label12: TLabel;
-    DB_cadastro: TcxDBDateEdit;
     Label13: TLabel;
-    DB_id_empresa: TcxDBSpinEdit;
     Q_padraoNUMERO: TIntegerField;
     Label14: TLabel;
-    DB_numero: TcxDBTextEdit;
-    procedure btn_NovoClick(Sender: TObject);
+    db_id_empresa: TDBEdit;
+    db_cadastro: TDBEdit;
+    db_razao_social: TDBEdit;
+    db_n_fantasia: TDBEdit;
+    db_email: TDBEdit;
+    db_telefone: TDBEdit;
+    db_CNPJ: TDBEdit;
+    db_CEP: TDBEdit;
+    db_endereco: TDBEdit;
+    db_numero: TDBEdit;
+    db_bairro: TDBEdit;
+    db_cidade: TDBEdit;
+    DBComboBox1: TDBComboBox;
+    procedure DBNavigator2Click(Sender: TObject; Button: TNavigateBtn);
+    procedure Q_padraoAfterInsert(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -65,11 +65,19 @@ implementation
 
 {$R *.dfm}
 
-procedure Tfrm_empresa.btn_NovoClick(Sender: TObject);
+uses U_Pesq_Empresa;
+
+procedure Tfrm_empresa.DBNavigator2Click(Sender: TObject; Button: TNavigateBtn);
 begin
   inherited;
-  DB_cadastro.Text := DateToStr(now);
-  DB_razao_social.SetFocus;
+  DS_padrao.DataSet := frm_Pesq_Empresa.q_pesq_padrao;
+end;
+
+procedure Tfrm_empresa.Q_padraoAfterInsert(DataSet: TDataSet);
+begin
+  inherited;
+  db_cadastro.Text := DateToStr(now);
+  db_razao_social.SetFocus;
 end;
 
 end.
