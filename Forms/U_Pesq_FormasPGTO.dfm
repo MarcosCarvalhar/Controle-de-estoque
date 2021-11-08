@@ -68,9 +68,4 @@ inherited frm_Pesq_FormasPGTO: Tfrm_Pesq_FormasPGTO
       Required = True
     end
   end
-  inherited rel_pesq_padrao: TfrxReport
-    Datasets = <>
-    Variables = <>
-    Style = <>
-  end
 end

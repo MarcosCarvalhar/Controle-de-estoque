@@ -15,27 +15,49 @@ object frm_Padrao: Tfrm_Padrao
   KeyPreview = True
   OldCreateOrder = False
   Position = poScreenCenter
-  OnCreate = FormCreate
   OnKeyPress = FormKeyPress
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 734
-    Height = 81
+    Height = 60
     Align = alTop
-    Color = 8355711
+    Color = 5263654
     ParentBackground = False
     TabOrder = 0
+    object lblTitulo: TLabel
+      Left = 315
+      Top = 9
+      Width = 114
+      Height = 31
+      Align = alCustom
+      Alignment = taCenter
+      Caption = 'PADR'#195'O'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Image1: TImage
+      Left = 267
+      Top = 9
+      Width = 32
+      Height = 32
+      AutoSize = True
+    end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 384
+    Top = 394
     Width = 734
-    Height = 70
+    Height = 60
     Align = alBottom
-    Color = 8355711
+    Color = 5263654
     ParentBackground = False
     TabOrder = 1
     object BitBtn10: TBitBtn
@@ -47,6 +69,7 @@ object frm_Padrao: Tfrm_Padrao
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 0
+      OnClick = BitBtn10Click
     end
     object btnCancelar: TBitBtn
       Left = 464
@@ -54,6 +77,7 @@ object frm_Padrao: Tfrm_Padrao
       Width = 90
       Height = 30
       Caption = '&Cancelar'
+      Enabled = False
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
         2000000000000009000000000000000000000000000000000000000000000000
@@ -138,6 +162,7 @@ object frm_Padrao: Tfrm_Padrao
       Width = 96
       Height = 30
       Caption = '&Confirmar'
+      Enabled = False
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
         2000000000000009000000000000000000000000000000000000000000000000
@@ -217,14 +242,25 @@ object frm_Padrao: Tfrm_Padrao
       OnClick = btnGravarClick
     end
     object DBNavigator2: TDBNavigator
-      Left = 72
+      Left = 96
       Top = 24
-      Width = 204
+      Width = 112
       Height = 30
       DataSource = DS_padrao
-      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+      VisibleButtons = [nbPrior, nbNext]
       TabOrder = 3
+      Visible = False
     end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 60
+    Width = 734
+    Height = 334
+    Align = alClient
+    Color = clActiveBorder
+    ParentBackground = False
+    TabOrder = 2
   end
   object Q_padrao: TFDQuery
     Connection = DM.conexao

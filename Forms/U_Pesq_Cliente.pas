@@ -64,6 +64,7 @@ begin
   finally
     frm_cliente.Q_padrao.close;
     frm_Pesq_cliente.Show;
+    frm_Pesq_Cliente.q_pesq_padrao.Refresh;
   end;
 end;
 

@@ -36,8 +36,6 @@ type
     Panel4: TPanel;
     btnImprimir: TBitBtn;
     btnSair: TBitBtn;
-    dst_rel_pesq_padrao: TfrxDBDataset;
-    rel_pesq_padrao: TfrxReport;
     procedure cb_Chave_pesquisaChange(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure btnDeletarClick(Sender: TObject);
@@ -49,11 +47,12 @@ type
     procedure q_pesq_padraoAfterOpen(DataSet: TDataSet);
     procedure q_pesq_padraoAfterClose(DataSet: TDataSet);
     procedure btnImprimirClick(Sender: TObject);
+
   private
     { Private declarations }
   public
     { Public declarations }
-    nomeRelatorio    : string;
+    nomeRelatorio: string;
   end;
 
 var
@@ -74,6 +73,7 @@ begin
 
   alterarCampos := true;
   acao := 'A';
+  q_pesq_padrao.Open();
 end;
 
 procedure Tfrm_Pesquisa_Padrao.btnAtualizarClick(Sender: TObject);
@@ -110,7 +110,7 @@ var
   caminhoRelatorio : string;
 begin
   //Abre relatório
-  caminhoRelatorio := ExtractFilePath(Application.ExeName);
+{  caminhoRelatorio := ExtractFilePath(Application.ExeName);
   if rel_pesq_padrao.LoadFromFile(caminhoRelatorio + nomeRelatorio) then
     begin
       rel_pesq_padrao.Clear; //Limpa relatório
@@ -119,7 +119,7 @@ begin
       rel_pesq_padrao.ShowPreparedReport;
     end
     else
-    MessageDlg('Relatório não encontrado', mtError, [mbOk], 0);
+    MessageDlg('Relatório não encontrado', mtError, [mbOk], 0);}
 end;
 
 procedure Tfrm_Pesquisa_Padrao.btnVisualizarClick(Sender: TObject);

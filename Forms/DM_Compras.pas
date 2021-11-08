@@ -28,7 +28,7 @@ type
     { Private declarations }
   public
     { Public declarations }
-    procedure Q_padraoAfterInsert(DataSet: TDataSet);
+//    procedure Q_padraoAfterInsert(DataSet: TDataSet);
   end;
 
 var
@@ -42,11 +42,11 @@ uses U_DM, U_Compras;
 
 {$R *.dfm}
 
-procedure TDataModule1.Q_padraoAfterInsert(DataSet: TDataSet);
+{procedure TDataModule1.Q_padraoAfterInsert(DataSet: TDataSet);
 begin
   Tfrm_Compras.setData(TEdit: db_cadastro);
   Tfrm_Compras.setFocus(Tfrm_Compras.db_id_fornecedor);
   Q_PadraoUSUARIO := 'USUARIO';
-end;
+end;}
 
 end.

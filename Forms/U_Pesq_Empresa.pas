@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_Form_pesquisa_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls,
-  Vcl.Buttons, Vcl.Mask, System.UITypes;
+  Vcl.Buttons, Vcl.Mask, System.UITypes, frxClass, frxDBSet;
 
 type
   Tfrm_Pesq_Empresa = class(Tfrm_Pesquisa_Padrao)
@@ -64,6 +64,7 @@ begin
   finally
     frm_empresa.Q_padrao.close;
     frm_Pesq_empresa.Show;
+    frm_Pesq_Empresa.q_pesq_padrao.Refresh;
   end;
 end;
 

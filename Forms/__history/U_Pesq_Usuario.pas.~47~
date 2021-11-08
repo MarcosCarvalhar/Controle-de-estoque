@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_Form_pesquisa_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons,
-  Vcl.Mask, Vcl.ExtCtrls, System.UITypes, Vcl.DBCtrls;
+  Vcl.Mask, Vcl.ExtCtrls, System.UITypes, Vcl.DBCtrls, frxClass, frxDBSet;
 
 type
   Tfrm_Pesq_Usuario = class(Tfrm_Pesquisa_Padrao)
@@ -21,6 +21,8 @@ type
     procedure btnEditarClick(Sender: TObject);
     procedure abre_cadastro_usuario;
     procedure btnAdicionarClick(Sender: TObject);
+    procedure cb_Chave_pesquisaChange(Sender: TObject);
+    procedure btnImprimirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,7 +56,6 @@ begin
 
   finally
     frm_Usuarios.Q_padrao.close;
-    q_pesq_padrao.Close;
     frm_Pesq_Usuario.Show;
   end;
 end;
@@ -113,6 +114,21 @@ begin
   abre_cadastro_usuario;
 end;
 
+procedure Tfrm_Pesq_Usuario.cb_Chave_pesquisaChange(Sender: TObject);
+begin
+  case cb_Chave_pesquisa.ItemIndex of
+
+    0..1: itemPesquisa := 0;
+
+    2: itemPesquisa := 1;
+
+    3: itemPesquisa := 2;
+
+  end;
+  inherited;
+
+end;
+
 procedure Tfrm_Pesq_Usuario.btnAdicionarClick(Sender: TObject);
 begin
   inherited;
@@ -123,6 +139,12 @@ procedure Tfrm_Pesq_Usuario.btnEditarClick(Sender: TObject);
 begin
   inherited;
   abre_cadastro_usuario;
+end;
+
+procedure Tfrm_Pesq_Usuario.btnImprimirClick(Sender: TObject);
+begin
+  nomeRelatorio := 'rel_Usuarios.fr3';
+  inherited;
 end;
 
 end.

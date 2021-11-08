@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_Form_pesquisa_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, Data.DB, frxClass, frxDBSet, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.ExtCtrls, Vcl.Grids,
-  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.Mask;
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.Mask, System.UITypes;
 
 type
   Tfrm_Pesq_Compras = class(Tfrm_Pesquisa_Padrao)
@@ -46,15 +46,16 @@ begin
   U_compras.frm_compras.btnGravar.Enabled := alterarCampos;
 
   // passa o valor do dbgrid para a query e abre o cadastro do compras
-  TDataModule1.Q_padrao.close;
-  TDataModule1.Q_padrao.ParamByName('PID_COMPRA').AsInteger := q_pesq_padraoID_COMPRA.AsInteger;
-  TDataModule1.Q_padrao.Open;
+  q_pesq_padrao.close;
+  q_pesq_padrao.ParamByName('PID_COMPRA').AsInteger := q_pesq_padraoID_COMPRA.AsInteger;
+  q_pesq_padrao.Open;
   frm_compras.ShowModal;
   try
 
   finally
-    TDataModule1.Q_padrao.close;
+    q_pesq_padrao.close;
     frm_Pesq_compras.Show;
+    frm_Pesq_Compras.q_pesq_padrao.Refresh;
   end;
 end;
 

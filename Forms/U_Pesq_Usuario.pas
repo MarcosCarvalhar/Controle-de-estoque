@@ -57,6 +57,7 @@ begin
   finally
     frm_Usuarios.Q_padrao.close;
     frm_Pesq_Usuario.Show;
+    frm_Pesq_Usuario.q_pesq_padrao.Refresh;
   end;
 end;
 

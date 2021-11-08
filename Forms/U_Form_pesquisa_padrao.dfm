@@ -738,33 +738,4 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
     Left = 336
     Top = 454
   end
-  object dst_rel_pesq_padrao: TfrxDBDataset
-    UserName = 'frxDBDataset1'
-    CloseDataSource = False
-    DataSet = q_pesq_padrao
-    BCDToCurrency = False
-    Left = 288
-    Top = 456
-  end
-  object rel_pesq_padrao: TfrxReport
-    Version = '6.2.11'
-    DotMatrixReport = False
-    IniFile = '\Software\Fast Reports'
-    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick, pbCopy, pbSelection]
-    PreviewOptions.Zoom = 1.000000000000000000
-    PrintOptions.Printer = 'Padr'#227'o'
-    PrintOptions.PrintOnSheet = 0
-    ReportOptions.CreateDate = 44482.599725254630000000
-    ReportOptions.LastChange = 44482.599725254630000000
-    ScriptLanguage = 'PascalScript'
-    ScriptText.Strings = (
-      'begin'
-      ''
-      'end.')
-    Left = 208
-    Top = 448
-    Datasets = <>
-    Variables = <>
-    Style = <>
-  end
 end

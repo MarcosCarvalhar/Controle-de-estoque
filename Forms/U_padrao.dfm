@@ -68,7 +68,7 @@ object frm_Padrao: Tfrm_Padrao
       Caption = '&Sair'
       Kind = bkClose
       NumGlyphs = 2
-      TabOrder = 0
+      TabOrder = 2
       OnClick = BitBtn10Click
     end
     object btnCancelar: TBitBtn
@@ -238,7 +238,7 @@ object frm_Padrao: Tfrm_Padrao
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000}
-      TabOrder = 2
+      TabOrder = 0
       OnClick = btnGravarClick
     end
     object DBNavigator2: TDBNavigator

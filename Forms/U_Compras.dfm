@@ -142,10 +142,6 @@ inherited frm_Compras: Tfrm_Compras
     ActivePage = TabSheet2
     inherited TabSheet1: TTabSheet
       Caption = 'Itens'
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 716
-      ExplicitHeight = 197
     end
     object TabSheet2: TTabSheet
       Caption = 'Contas a Pagar'
@@ -166,7 +162,6 @@ inherited frm_Compras: Tfrm_Compras
     end
   end
   inherited Q_padrao: TFDQuery
-    AfterInsert = Q_padraoAfterInsert
     Connection = DM.conexao
     UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
     UpdateOptions.FetchGeneratorsPoint = gpImmediate

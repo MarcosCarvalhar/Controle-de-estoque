@@ -61,6 +61,7 @@ begin
   finally
     frm_produto.Q_padrao.close;
     frm_Pesq_produto.Show;
+    frm_Pesq_produto.q_pesq_padrao.Refresh;
   end;
 end;
 

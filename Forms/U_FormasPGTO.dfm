@@ -97,6 +97,7 @@ inherited frm_formasPGTO: Tfrm_formasPGTO
       Top = 99
       Width = 571
       Height = 21
+      CharCase = ecUpperCase
       DataField = 'DESCRICAO'
       DataSource = DS_padrao
       TabOrder = 2

@@ -86,7 +86,7 @@ begin
 
   case acao of
 
-  'A': Q_padrao.Append;
+  'A':Q_padrao.Append;
 
   'E': Q_padrao.Edit;
 

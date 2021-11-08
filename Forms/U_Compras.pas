@@ -35,9 +35,8 @@ type
     FDQuery2: TFDQuery;
     DataSource1: TDataSource;
     DataSource2: TDataSource;
-    procedure Q_padraoAfterInsert(DataSet: TDataSet);
-    procedure setData(Sender: Tobject);
-    procedure setFocus(Sender: TObject);
+
+
   private
     { Private declarations }
   public
@@ -51,31 +50,7 @@ implementation
 
 {$R *.dfm}
 
-uses U_DM, U_Pesq_Compras, U_Form_pesquisa_padrao, DM_Compras;
+uses U_DM, U_Pesq_Compras, U_Form_pesquisa_padrao;
 
-procedure Tfrm_Compras.setData(db_cadastro: TDBEdit);
-begin
-  db_cadastro.Text := DateToStr(now);
-end;
-
-procedure Tfrm_Compras.setFocus(TObject);
-begin
-  db_id_fornecedor.SetFocus;
-end;
-
-{procedure Tfrm_Compras.FormShow(Sender: TObject);
-begin
-  TDataModule1.Q_padrao.Open;
-  TDataModule1.Q_padrao.Refresh;
-
-  case acao of
-
-  'A': TDataModule1.Q_padrao.Append;
-
-  'E': TDataModule1.Q_padrao.Edit;
-
-  end;}
-
-end;
 
 end.
