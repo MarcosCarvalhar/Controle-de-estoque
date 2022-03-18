@@ -41,6 +41,7 @@ type
     ListaVendas1: TMenuItem;
     Sobre1: TMenuItem;
     SpeedButton1: TSpeedButton;
+    Panel2: TPanel;
 
     procedure Abre_Tela_Usuario;
     procedure Abre_Tela_Empresa;
@@ -188,7 +189,9 @@ end;
 procedure TfrmPrincipal.Abre_Tela_Usuario;
 begin
   frm_Pesq_Usuario := Tfrm_Pesq_Usuario.Create(self);
-  frm_Pesq_Usuario.ShowModal;
+  frm_Pesq_Usuario.Parent := frmPrincipal.Panel2;
+
+  frm_Pesq_Usuario.Show;
   try
 
   finally

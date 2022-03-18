@@ -2,6 +2,7 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
   AlignWithMargins = True
   Left = 0
   Top = 0
+  Align = alClient
   BorderStyle = bsDialog
   Caption = 'Formul'#225'rio de pesquisa padr'#227'o'
   ClientHeight = 501
@@ -13,7 +14,6 @@ object frm_Pesquisa_Padrao: Tfrm_Pesquisa_Padrao
   Font.Name = 'Tahoma'
   Font.Style = [fsBold]
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnKeyPress = FormKeyPress
   PixelsPerInch = 96

@@ -1,7 +1,7 @@
 object DM: TDM
-  OldCreateOrder = False
   Height = 405
   Width = 481
+  PixelsPerInch = 96
   object conexao: TFDConnection
     ConnectionName = 'ESTOQUE'
     Params.Strings = (

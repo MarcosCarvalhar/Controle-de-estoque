@@ -1,0 +1,159 @@
+inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
+  Align = alCustom
+  Caption = 'PESQUISA DE USU'#193'RIOS'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Margins.Left = 0
+    Margins.Top = 0
+    Margins.Right = 0
+    Margins.Bottom = 0
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    ParentShowHint = False
+    inherited Label1: TLabel
+      Left = 14
+      ExplicitLeft = 14
+    end
+    inherited lbl_Valor: TLabel
+      Left = 206
+      ExplicitLeft = 206
+    end
+    inherited lbl_Data1: TLabel
+      Left = 206
+      ExplicitLeft = 206
+    end
+    inherited lbl_Data2: TLabel
+      Left = 342
+      ExplicitLeft = 342
+    end
+    inherited ed_Valor: TEdit
+      Left = 206
+      ExplicitLeft = 206
+    end
+    inherited mk_Inicio: TMaskEdit
+      Left = 206
+      ExplicitLeft = 206
+    end
+    inherited mk_Fim: TMaskEdit
+      Left = 342
+      ExplicitLeft = 342
+    end
+    inherited btnPesquisar: TBitBtn
+      Left = 206
+      Top = 23
+      OnClick = btnPesquisarClick
+      ExplicitLeft = 206
+      ExplicitTop = 23
+    end
+    inherited cb_Chave_pesquisa: TComboBox
+      Left = 14
+      Items.Strings = (
+        'C'#211'DIGO'
+        'NOME'
+        'CADASTRO'
+        'TODOS')
+      ExplicitLeft = 14
+    end
+  end
+  inherited DBGrid1: TDBGrid
+    DataSource = ds_pesq_padrao
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID_USUARIO'
+        Title.Caption = 'ID'
+        Width = 50
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOME'
+        Width = 350
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TIPO'
+        Width = 128
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CADASTRO'
+        Width = 80
+        Visible = True
+      end>
+  end
+  inherited Panel2: TPanel
+    Margins.Top = 0
+    Anchors = [akLeft, akBottom]
+    inherited btnEditar: TBitBtn
+      Top = 145
+      Align = alCustom
+      Anchors = [akLeft]
+      ParentBiDiMode = False
+      ExplicitTop = 145
+    end
+    inherited btnAdicionar: TBitBtn
+      Top = 28
+      ExplicitTop = 28
+    end
+    inherited btnDeletar: TBitBtn
+      ParentFont = False
+    end
+  end
+  inherited Panel3: TPanel
+    inherited lblTitulo: TLabel
+      Width = 125
+      Caption = 'USU'#193'RIO'
+      ExplicitWidth = 125
+    end
+  end
+  inherited ds_pesq_padrao: TDataSource
+    DataSet = q_pesq_padrao
+    Left = 367
+    Top = 453
+  end
+  inherited q_pesq_padrao: TFDQuery
+    SQL.Strings = (
+      'select'
+      '  nome,'
+      '  id_usuario,'
+      '  tipo,'
+      '  cadastro,'
+      '  senha'
+      ' from usuario'
+      ' order by id_usuario')
+    Left = 279
+    Top = 452
+    object q_pesq_padraoNOME: TStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Required = True
+      Size = 100
+    end
+    object q_pesq_padraoID_USUARIO: TIntegerField
+      FieldName = 'ID_USUARIO'
+      Origin = 'ID_USUARIO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object q_pesq_padraoTIPO: TStringField
+      FieldName = 'TIPO'
+      Origin = 'TIPO'
+      Required = True
+      Size = 30
+    end
+    object q_pesq_padraoCADASTRO: TDateField
+      FieldName = 'CADASTRO'
+      Origin = 'CADASTRO'
+      Required = True
+    end
+    object q_pesq_padraoSENHA: TStringField
+      FieldName = 'SENHA'
+      Origin = 'SENHA'
+      Required = True
+      Size = 30
+    end
+  end
+end

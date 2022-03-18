@@ -1,5 +1,5 @@
 inherited frm_Pesq_Usuario: Tfrm_Pesq_Usuario
-  Align = alCustom
+  Align = alNone
   Caption = 'PESQUISA DE USU'#193'RIOS'
   PixelsPerInch = 96
   TextHeight = 13

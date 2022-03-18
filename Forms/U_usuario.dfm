@@ -4,8 +4,8 @@ inherited frm_Usuarios: Tfrm_Usuarios
   Caption = 'CADASTRO DE USU'#193'RIO'
   ClientHeight = 344
   ClientWidth = 634
-  ExplicitWidth = 640
-  ExplicitHeight = 373
+  ExplicitWidth = 650
+  ExplicitHeight = 383
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel

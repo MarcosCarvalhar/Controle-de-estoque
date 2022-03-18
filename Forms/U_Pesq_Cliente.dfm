@@ -1,15 +1,15 @@
 inherited frm_Pesq_Cliente: Tfrm_Pesq_Cliente
   AutoSize = True
   Caption = 'PESQUISA DE CLIENTE'
-  ClientHeight = 211
-  ClientWidth = 314
-  ExplicitWidth = 320
-  ExplicitHeight = 240
+  ClientHeight = 441
+  ClientWidth = 624
+  ExplicitWidth = 640
+  ExplicitHeight = 480
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 314
-    ExplicitWidth = 314
+    Width = 624
+    ExplicitWidth = 624
     inherited btnPesquisar: TBitBtn
       OnClick = btnPesquisarClick
     end
@@ -24,8 +24,8 @@ inherited frm_Pesq_Cliente: Tfrm_Pesq_Cliente
     end
   end
   inherited DBGrid1: TDBGrid
-    Width = 185
-    Height = 29
+    Width = 495
+    Height = 264
     DataSource = ds_pesq_padrao
     Columns = <
       item
@@ -90,23 +90,37 @@ inherited frm_Pesq_Cliente: Tfrm_Pesq_Cliente
       end>
   end
   inherited Panel2: TPanel
-    Height = 29
-    ExplicitHeight = 29
+    Height = 264
+    ExplicitLeft = 40
+    ExplicitTop = -15
+    ExplicitHeight = 259
   end
   inherited Panel3: TPanel
-    Width = 314
-    ExplicitWidth = 314
+    Width = 624
+    ExplicitWidth = 624
     inherited lblTitulo: TLabel
+      Left = 233
       Width = 122
       Caption = 'CLIENTE'
+      ExplicitLeft = 233
       ExplicitWidth = 122
+    end
+    inherited Image1: TImage
+      Left = 195
+      ExplicitLeft = 195
     end
   end
   inherited Panel4: TPanel
-    Top = 158
-    Width = 314
-    ExplicitTop = 158
-    ExplicitWidth = 314
+    Top = 393
+    Width = 624
+    Height = 48
+    ExplicitTop = 393
+    ExplicitWidth = 624
+    ExplicitHeight = 48
+    inherited btnSair: TBitBtn
+      Left = 510
+      ExplicitLeft = 510
+    end
   end
   inherited ds_pesq_padrao: TDataSource
     DataSet = q_pesq_padrao

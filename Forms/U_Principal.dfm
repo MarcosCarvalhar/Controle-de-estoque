@@ -11,7 +11,6 @@ object frmPrincipal: TfrmPrincipal
   Font.Name = 'Tahoma'
   Font.Style = []
   Menu = MainMenu1
-  OldCreateOrder = False
   WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
@@ -3415,6 +3414,16 @@ object frmPrincipal: TfrmPrincipal
       item
         Width = 50
       end>
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 90
+    Width = 1163
+    Height = 323
+    Align = alClient
+    TabOrder = 2
+    ExplicitLeft = -1
+    ExplicitTop = 96
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
