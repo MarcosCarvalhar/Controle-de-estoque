@@ -7,7 +7,8 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_Form_pesquisa_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.ExtCtrls, Vcl.Grids,
-  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.Mask;
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.Mask, Vcl.Imaging.pngimage,
+  frxClass, frxDBSet;
 
 type
   Tfrm_Pesq_Produto = class(Tfrm_Pesquisa_Padrao)
@@ -15,10 +16,10 @@ type
     q_pesq_padraoCADASTRO: TDateField;
     q_pesq_padraoPRODUTO_DESCRICAO: TStringField;
     q_pesq_padraoID_FORNECEDOR: TIntegerField;
-    q_pesq_padraoVL_CUSTO: TBCDField;
-    q_pesq_padraoVL_VENDA: TBCDField;
-    q_pesq_padraoESTOQUE: TBCDField;
-    q_pesq_padraoESTOQUE_MIN: TBCDField;
+    q_pesq_padraoVL_CUSTO: TFMTBCDField;
+    q_pesq_padraoVL_VENDA: TFMTBCDField;
+    q_pesq_padraoESTOQUE: TFMTBCDField;
+    q_pesq_padraoESTOQUE_MIN: TFMTBCDField;
     q_pesq_padraoUNIDADE: TStringField;
     q_pesq_padraoNOME: TStringField;
     procedure btnPesquisarClick(Sender: TObject);
@@ -27,6 +28,7 @@ type
     procedure abre_cadastro_produto;
     procedure btnAdicionarClick(Sender: TObject);
     procedure cb_Chave_pesquisaChange(Sender: TObject);
+
   private
     { Private declarations }
   public

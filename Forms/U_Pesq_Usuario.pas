@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, U_Form_pesquisa_padrao, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons,
-  Vcl.Mask, Vcl.ExtCtrls, System.UITypes, Vcl.DBCtrls;
+  Vcl.Mask, Vcl.ExtCtrls, System.UITypes, Vcl.DBCtrls, Vcl.Imaging.pngimage;
 
 type
   Tfrm_Pesq_Usuario = class(Tfrm_Pesquisa_Padrao)
@@ -23,6 +23,7 @@ type
     procedure btnAdicionarClick(Sender: TObject);
     procedure cb_Chave_pesquisaChange(Sender: TObject);
     procedure btnImprimirClick(Sender: TObject);
+
   private
     { Private declarations }
   public

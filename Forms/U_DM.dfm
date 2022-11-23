@@ -1,7 +1,7 @@
 object DM: TDM
+  OldCreateOrder = True
   Height = 405
   Width = 481
-  PixelsPerInch = 96
   object conexao: TFDConnection
     ConnectionName = 'ESTOQUE'
     Params.Strings = (
@@ -15,6 +15,7 @@ object DM: TDM
       'Port=3050'
       'CharacterSet=WIN1252'
       'DriverID=FB')
+    Connected = True
     LoginPrompt = False
     Left = 32
     Top = 40

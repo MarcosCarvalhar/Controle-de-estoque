@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Mask, Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons,
   Data.FMTBcd, Data.DB, Data.SqlExpr, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, System.UITypes;
+  FireDAC.Comp.Client, System.UITypes, frxClass, frxDBSet;
 
 type
   Tfrm_Pesquisa_Padrao = class(TForm)
@@ -36,6 +36,8 @@ type
     Panel4: TPanel;
     btnImprimir: TBitBtn;
     btnSair: TBitBtn;
+    ds_rel_pesq_padrao: TfrxDBDataset;
+    rel_pesq_padrao: TfrxReport;
     procedure cb_Chave_pesquisaChange(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure btnDeletarClick(Sender: TObject);

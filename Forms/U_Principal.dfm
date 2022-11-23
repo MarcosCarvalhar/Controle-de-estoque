@@ -11,6 +11,7 @@ object frmPrincipal: TfrmPrincipal
   Font.Name = 'Tahoma'
   Font.Style = []
   Menu = MainMenu1
+  OldCreateOrder = True
   WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
@@ -3091,7 +3092,7 @@ object frmPrincipal: TfrmPrincipal
       ParentFont = False
       OnClick = btn_CloseClick
     end
-    object SpeedButton1: TSpeedButton
+    object btn_Crediario: TSpeedButton
       Left = 320
       Top = 0
       Width = 100
@@ -3396,7 +3397,7 @@ object frmPrincipal: TfrmPrincipal
         0000000000000000000000000000000000000000000000000000}
       Layout = blGlyphTop
       ParentFont = False
-      OnClick = btn_ClientesClick
+      OnClick = btn_CrediarioClick
     end
   end
   object StatusBar1: TStatusBar
@@ -3422,8 +3423,6 @@ object frmPrincipal: TfrmPrincipal
     Height = 323
     Align = alClient
     TabOrder = 2
-    ExplicitLeft = -1
-    ExplicitTop = 96
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer

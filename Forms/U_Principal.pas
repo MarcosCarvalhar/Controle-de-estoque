@@ -40,7 +40,7 @@ type
     ListaCompras1: TMenuItem;
     ListaVendas1: TMenuItem;
     Sobre1: TMenuItem;
-    SpeedButton1: TSpeedButton;
+    btn_Crediario: TSpeedButton;
     Panel2: TPanel;
 
     procedure Abre_Tela_Usuario;
@@ -65,6 +65,7 @@ type
     procedure btn_Frma_pgtoClick(Sender: TObject);
     procedure FormasdePgto1Click(Sender: TObject);
     procedure btn_ComprasClick(Sender: TObject);
+    procedure btn_CrediarioClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -97,6 +98,11 @@ end;
 procedure TfrmPrincipal.btn_ComprasClick(Sender: TObject);
 begin
   Abre_Tela_Compras;
+end;
+
+procedure TfrmPrincipal.btn_CrediarioClick(Sender: TObject);
+begin
+  MessageDlg('Opção indisponível!', mtInformation, [mbOK], 0);
 end;
 
 procedure TfrmPrincipal.btn_UsuarioClick(Sender: TObject);
@@ -189,9 +195,8 @@ end;
 procedure TfrmPrincipal.Abre_Tela_Usuario;
 begin
   frm_Pesq_Usuario := Tfrm_Pesq_Usuario.Create(self);
-  frm_Pesq_Usuario.Parent := frmPrincipal.Panel2;
 
-  frm_Pesq_Usuario.Show;
+  frm_Pesq_Usuario.ShowModal;
   try
 
   finally
